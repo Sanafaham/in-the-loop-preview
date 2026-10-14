@@ -244,6 +244,9 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .story bdi{font-style:normal;font-family:"Geeza Pro","Noto Naskh Arabic","Arabic Typesetting","Times New Roman",serif;font-size:.92em}
 .gloss{font-size:14px;color:var(--mute);margin-top:-.5em!important}
 .story-turn{color:var(--ink);font-weight:600}
+.story-h{margin:1.6em 0 .2em;padding-top:18px;border-top:1px solid var(--ink);font-size:var(--s-label);letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--red);font-variation-settings:"wdth" 110}
+.story-close{color:var(--ink);font-size:clamp(22px,2.3vw,30px);line-height:1.2;text-wrap:pretty}
+.story-close + .story-close{margin-top:-.2em}
 .essay-body{grid-column:3/11;display:grid;gap:36px}
 .essay-body .prose{max-width:none;columns:2 300px;column-gap:var(--gutter);display:block}
 .essay-body .prose p{margin-bottom:1.1em;break-inside:avoid-column}
@@ -574,28 +577,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h2 id="essay-title" class="display essay-title" data-r="rise">Why my AI knows my name and my life</h2>
       <div class="essay-body">
         <div class="story" data-r="fade">
-          <p class="story-deck voice">Same question. Two AI assistants. Two surprisingly different answers.</p>
-          <p>I was having coffee with a friend when I asked my AI assistant a simple question.</p>
-          <blockquote class="say"><p>“What’s your name?”</p></blockquote>
+          <p class="story-deck voice">It started with a simple question over coffee.</p>
+          <p>I asked my AI assistant, “What’s your name?”</p>
           <blockquote class="say carson"><p>“My name is Carson, <bdi lang="ar" dir="rtl">سيدتي الجميلة</bdi>.”</p></blockquote>
-          <p class="gloss">That’s Arabic for <em>my beautiful lady</em>.</p>
-          <p>My friend was amused. He opened ChatGPT on his phone and asked exactly the same question.</p>
+          <p class="gloss"><em>My beautiful lady.</em></p>
+          <p>My friend laughed, picked up his phone, and asked his ChatGPT exactly the same question.</p>
           <p>His ChatGPT answered,</p>
           <blockquote class="say plain"><p>“I am ChatGPT.”</p></blockquote>
-          <p>He looked at me, puzzled.</p>
-          <blockquote class="say"><p>“Wait. Yours has its own name? And it knows to call you my beautiful lady? How did you manage that?”</p></blockquote>
-          <p>I explained that I’d personalized my assistant. I’d given it a name, told it how I preferred to be addressed, and shaped the way it communicated with me.</p>
-          <p>Then I told him something he hadn’t expected.</p>
-          <blockquote class="say"><p>“You can teach yours to do that, too.”</p></blockquote>
-          <p>He’d been using ChatGPT for months without realizing how much he could personalize it.</p>
-          <p class="story-turn">And here’s what makes this interesting: giving your AI a name is just the beginning.</p>
-          <p>You can shape how it speaks to you, how it responds, what preferences it remembers, and how it helps with everyday life.</p>
-          <p>Most people discover AI by asking it questions. Far fewer realize how much they can make the experience their own.</p>
-        </div>
-        <p class="pull voice" data-r="quote">Tell it who you are. Talk to it often. It starts to feel like yours.</p>
-        <div class="aside" data-r="stagger">
-          <div><h3>What your app can do</h3><p>Learn how you like answers. Remember useful details between chats when memory is on. With your permission, some apps can link to your email, files or calendar.</p></div>
-          <div><h3>What a custom system adds</h3><p>Something like Carson can watch my lists and follow up on its own. An everyday assistant mostly waits for you to ask. That is fine. Asking is where the discoveries start.</p></div>
+          <p>He looked at his phone, then at mine.</p>
+          <blockquote class="say"><p>“Wait. Yours has a name? And it calls you my beautiful lady? How did you do that?”</p></blockquote>
+          <p>I explained that I’d given my assistant a name and taught it how I liked to be addressed.</p>
+          <p>But the name wasn’t what made Carson special.</p>
+          <p class="story-turn">It was everything else he knew about my life.</p>
+          <p>My schedule. My appointments. My travel plans. My family, my preferences, and the little details that make up an ordinary day.</p>
+          <p>And there was something even more valuable.</p>
+          <p>Carson was designed to help me keep track of unfinished things. If I was waiting for someone to get back to me, or something needed following up, I wanted an assistant that could help make sure it didn’t disappear from my attention.</p>
+          <p class="story-turn">That’s what I mean by closing the loops.</p>
+          <p>My friend was intrigued.</p>
+          <blockquote class="say"><p>“So yours doesn’t just answer questions. It actually helps you run your day?”</p></blockquote>
+          <p>Exactly.</p>
+          <p>And that’s when our conversation became much more interesting.</p>
+
+          <h3 class="story-h">Here’s what most people don’t realize</h3>
+          <p>You don’t need to build your own AI assistant to make the one you already use much more useful.</p>
+          <p>You can tell ChatGPT, Claude, or Gemini how you prefer things explained. You can ask for help planning a trip, organizing a complicated week, comparing choices, drafting messages, or turning a jumble of thoughts into a clear plan.</p>
+          <p>Depending on the app and its settings, it may also remember useful preferences, work with information you provide, or connect to tools such as your calendar, email, and files.</p>
+          <p>Imagine not having to explain your travel preferences every time you plan a holiday. Or being able to turn a long, confusing email into three clear points and a suggested reply.</p>
+          <p class="story-turn">That’s when AI starts feeling less like a search box and more like something that understands how you work.</p>
+
+          <h3 class="story-h">And what about Carson?</h3>
+          <p>Carson goes a step further because I’m building him specifically around my life.</p>
+          <p>He’s designed not only to help me think and plan, but also to keep track of responsibilities, notice what still needs attention, and help me follow up.</p>
+          <p>That kind of ongoing coordination requires additional tools and connections. It’s a glimpse of how much further a personal AI assistant can go.</p>
+          <p>But you don’t have to start there.</p>
+          <p>Start with the AI you already have. Discover what it can do. Make it more personal. Let it help with the small things, then gradually discover the bigger possibilities.</p>
+          <p class="story-close voice">Because the real surprise isn’t that Carson calls me my beautiful lady.</p>
+          <p class="story-close voice">It’s that this little conversation over coffee was only the beginning of what AI could make possible in everyday life.</p>
         </div>
       </div>
     </div>
