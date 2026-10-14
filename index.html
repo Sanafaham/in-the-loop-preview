@@ -235,11 +235,15 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 
 /* Essay */
 .essay-title{grid-column:1/-1;font-size:var(--s-h2);margin-bottom:clamp(40px,6vw,72px)}
-.dialogue{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:clamp(48px,7vw,96px)}
-.dialogue > div{padding:clamp(24px,4vw,48px) clamp(0px,3vw,40px) clamp(24px,4vw,48px) 0;display:grid;gap:14px;align-content:start;min-width:0}
-.dialogue > div + div{border-left:1px solid var(--rule);padding-left:clamp(16px,3vw,40px)}
-.dialogue .q{font-size:clamp(30px,4.2vw,60px);line-height:1.02}
-.dialogue .cold .q{color:var(--mute);font-family:var(--f-body);font-style:normal;font-weight:400;font-size:clamp(22px,2.6vw,34px);line-height:1.2;letter-spacing:0}
+.story{display:grid;gap:1.05em;max-width:62ch;color:var(--ink-2);font-size:clamp(17px,1.35vw,19px);line-height:1.62}
+.story p{margin:0}
+.story-deck{color:var(--ink);font-size:clamp(28px,3.4vw,46px);line-height:1.1;max-width:22ch;text-wrap:balance;margin-bottom:.35em}
+.say{margin:.35em 0;padding-left:clamp(16px,2vw,24px);border-left:2px solid var(--red);font-family:var(--f-voice);font-style:italic;color:var(--ink);font-size:clamp(23px,2.5vw,32px);line-height:1.2;text-wrap:pretty}
+.say.carson{font-size:clamp(30px,3.8vw,52px);line-height:1.08}
+.say.plain{border-left-color:var(--rule);font-family:var(--f-body);font-style:normal;color:var(--mute);font-size:clamp(20px,2.2vw,28px);letter-spacing:0}
+.story bdi{font-style:normal;font-family:"Geeza Pro","Noto Naskh Arabic","Arabic Typesetting","Times New Roman",serif;font-size:.92em}
+.gloss{font-size:14px;color:var(--mute);margin-top:-.5em!important}
+.story-turn{color:var(--ink);font-weight:600}
 .essay-body{grid-column:3/11;display:grid;gap:36px}
 .essay-body .prose{max-width:none;columns:2 300px;column-gap:var(--gutter);display:block}
 .essay-body .prose p{margin-bottom:1.1em;break-inside:avoid-column}
@@ -249,7 +253,7 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .aside h3{font-size:var(--s-label);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
 .aside p{color:var(--ink-2);font-size:16px}
 @media (max-width:900px){.essay-body{grid-column:1/-1}}
-@media (max-width:620px){.dialogue{grid-template-columns:1fr}.dialogue > div + div{border-left:0;border-top:1px solid var(--rule);padding-left:0}.aside{grid-template-columns:1fr}}
+@media (max-width:620px){.aside{grid-template-columns:1fr}}
 
 /* Meet the three */
 .three-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
@@ -568,23 +572,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="section-head"><span class="label">The Essay</span><span class="label mute">By Sana Faham</span></div>
     <div class="grid">
       <h2 id="essay-title" class="display essay-title" data-r="rise">Why my AI knows my name and my life</h2>
-      <div class="dialogue" role="group" aria-label="Two answers to the same question" data-r="side">
-        <div class="warm">
-          <span class="label mute">My assistant, asked “What is your name?”</span>
-          <p class="q voice">“My name is Carson, Sayyidat al-Jamila.”</p>
-          <span class="mute" style="font-size:14px">My beautiful lady.</span>
-        </div>
-        <div class="cold">
-          <span class="label mute">My friend’s ChatGPT, same question</span>
-          <p class="q">“I am ChatGPT.”</p>
-        </div>
-      </div>
       <div class="essay-body">
-        <div class="prose" data-r="fade">
-          <p>I was having coffee with a friend when I asked my assistant its name. Carson answered warmly. My friend asked his ChatGPT the same thing and got a plain reply. He looked at me, confused.</p>
-          <p>Anyone can give an AI a nickname. What he noticed was bigger. Carson knew my schedule, my appointments and my travel. He knew my family’s needs, my taste and my work. And he closes the loops. If something is left unfinished, he brings it back until it is done.</p>
-          <p>“How come yours runs your day,” my friend asked, “and mine feels like a search box?”</p>
-          <p>Here is the honest answer. Carson is a custom assistant I built for my own life, connected to my calendar and my tools. Your everyday assistant is simpler. But much of what surprised my friend is already in your hands.</p>
+        <div class="story" data-r="fade">
+          <p class="story-deck voice">Same question. Two AI assistants. Two surprisingly different answers.</p>
+          <p>I was having coffee with a friend when I asked my AI assistant a simple question.</p>
+          <blockquote class="say"><p>“What’s your name?”</p></blockquote>
+          <blockquote class="say carson"><p>“My name is Carson, <bdi lang="ar" dir="rtl">سيدتي الجميلة</bdi>.”</p></blockquote>
+          <p class="gloss">That’s Arabic for <em>my beautiful lady</em>.</p>
+          <p>My friend was amused. He opened ChatGPT on his phone and asked exactly the same question.</p>
+          <p>His ChatGPT answered,</p>
+          <blockquote class="say plain"><p>“I am ChatGPT.”</p></blockquote>
+          <p>He looked at me, puzzled.</p>
+          <blockquote class="say"><p>“Wait. Yours has its own name? And it knows to call you my beautiful lady? How did you manage that?”</p></blockquote>
+          <p>I explained that I’d personalized my assistant. I’d given it a name, told it how I preferred to be addressed, and shaped the way it communicated with me.</p>
+          <p>Then I told him something he hadn’t expected.</p>
+          <blockquote class="say"><p>“You can teach yours to do that, too.”</p></blockquote>
+          <p>He’d been using ChatGPT for months without realizing how much he could personalize it.</p>
+          <p class="story-turn">And here’s what makes this interesting: giving your AI a name is just the beginning.</p>
+          <p>You can shape how it speaks to you, how it responds, what preferences it remembers, and how it helps with everyday life.</p>
+          <p>Most people discover AI by asking it questions. Far fewer realize how much they can make the experience their own.</p>
         </div>
         <p class="pull voice" data-r="quote">Tell it who you are. Talk to it often. It starts to feel like yours.</p>
         <div class="aside" data-r="stagger">
