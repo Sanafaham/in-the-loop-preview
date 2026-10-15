@@ -139,6 +139,8 @@ figcaption{font-size:var(--s-label);color:var(--mute);margin-top:10px;letter-spa
 .cover h1 .ln > span{display:block}
 .cover h1 .red{color:var(--red)}
 .deck{font-family:var(--f-voice);font-size:clamp(22px,2.3vw,30px);line-height:1.25;max-width:30ch;text-wrap:pretty}
+.deck p:not(.deck-lead){font-size:clamp(18px,1.55vw,21px);line-height:1.45;color:var(--ink-2);max-width:36ch}
+.deck p+p{margin-top:.8em}
 .cover-lines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px var(--gutter);border-top:1px solid var(--rule);padding-top:20px}
 .cover-lines a{text-decoration:none;display:grid;gap:4px;padding-block:4px;transition:transform .2s}
 .cover-lines a:hover .cl-t{color:var(--red)}
@@ -581,7 +583,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <div class="cover-text">
         <h1 id="cover-title" class="display"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
-        <p class="deck">The phone in your bag can read the small print on a contract, turn a photo of your fridge into a week of dinners, and explain a confusing error screen. I collected the moments where AI made my days easier, so you can try them too.</p>
+        <div class="deck">
+          <p class="deck-lead">What if AI is nowhere near as complicated as you’ve been led to believe?</p>
+          <p>You’ve heard about it. Everyone’s talking about it.</p>
+          <p>But between the headlines, the technical jargon, and all the talk about ChatGPT, it’s easy to think AI belongs to a world you don’t quite understand.</p>
+          <p>What if you’ve been missing the most interesting part?</p>
+          <p>Beyond all that noise is a world of possibilities that might surprise you. Things you can create, explore, discover, and do, without knowing the first thing about technology.</p>
+          <p>I’ve spent almost four years exploring this world, and I’m still discovering things I never imagined were possible.</p>
+          <p>So I thought, why not share the interesting bits?</p>
+          <p>No complicated explanations. No lessons. Just fascinating discoveries that might make you say, “Wait. AI can do that?”</p>
+        </div>
         <div class="cover-lines">
           <a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
           <a href="#doing"><span class="cl-n">Beyond the chatbox</span><span class="cl-t">From answering to doing</span></a>
@@ -631,8 +642,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <p>That’s why I created IN THE LOOP.</p>
           <p class="ed-mission">Because I believe nobody should feel left behind by the AI revolution.</p>
           <p>Not because they’re busy living their lives. Not because technology isn’t their thing. And certainly not because someone has made a perfectly useful tool sound impossibly complicated.</p>
-          <p class="beat">I’m here to separate what’s genuinely exciting from what’s just noise.</p>
-          <p>To explain what’s happening, show you what’s possible, and share the discoveries that are actually worth your attention.</p>
+          <p>The more I explored, the more I realized how much there was to discover beyond what we usually hear about AI.</p>
+          <p>And I thought it might be interesting to share some of it.</p>
+          <p>The things that surprised me. The things I found useful. The possibilities I never even knew existed.</p>
+          <p>Not because I have all the answers. I’m still discovering new things myself.</p>
+          <p class="beat">But because something this interesting shouldn’t feel out of reach.</p>
           <p>No computer science degree. No coding skills. No need to become a software developer, database engineer, or anything else with a complicated job title.</p>
           <p>No expensive courses. No impossible promises.</p>
           <p>Just fascinating discoveries, useful ideas, and the occasional moment that makes you stop and think:</p>
