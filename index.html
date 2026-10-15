@@ -524,14 +524,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ed .concl-sign{color:var(--red);font-size:clamp(30px,3.6vw,52px)}
 .buy-main .status{justify-self:start}
 
-.wtt{margin-top:.6em;border-left:2px solid var(--red);padding:4px 0 4px clamp(14px,2vw,20px);display:grid;gap:6px}
-.wtt-label{color:var(--red)}
-.ed .wtt-do{color:var(--ink);font-family:var(--f-voice);font-style:italic;font-size:clamp(19px,1.8vw,23px);line-height:1.35}
-.ed .wtt-note{font-size:14px;color:var(--mute)}
-.spread-ed{color:var(--night-2)}
-.spread-ed .spread-line{color:var(--paper);font-size:clamp(24px,2.6vw,34px);line-height:1.15}
-.spread-note{font-size:14px;color:var(--night-2);border-top:1px solid var(--night-rule);padding-top:14px}
-
 /* Toast */
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:12px 20px;font-size:14px;letter-spacing:.02em;pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;max-width:calc(100% - 32px)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -562,14 +554,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </div>
   <div class="menu" id="menu" hidden>
-    <a href="#changing">Another door <span>Chapter 01</span></a>
+    <a href="#changing">The world is changing <span>Chapter 01</span></a>
     <a href="#possibilities">Wait. It can do that? <span>Chapter 02</span></a>
     <a href="#doing">From answering to doing <span>Chapter 03</span></a>
     <a href="#essay">The essay <span>Chapter 04</span></a>
     <a href="#reality">The magic. And the reality. <span>Chapter 05</span></a>
     <a href="#yourlife">In your own life <span>Chapter 06</span></a>
     <a href="#checklist">Start small <span>Chapter 07</span></a>
-    <a href="#conclusion">Stay curious <span>Chapter 08</span></a>
+    <a href="#conclusion">Only the beginning <span>Chapter 08</span></a>
     <a href="#buy">The digital edition <span>Coming soon</span></a>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -590,10 +582,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h1 id="cover-title" class="display"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
         <p class="deck">The phone in your bag can read the small print on a contract, turn a photo of your fridge into a week of dinners, and explain a confusing error screen. I collected the moments where AI made my days easier, so you can try them too.</p>
         <div class="cover-lines">
-          <a href="#possibilities"><span class="cl-n">The New Possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
-          <a href="#doing"><span class="cl-n">Beyond the Chatbox</span><span class="cl-t">From answering to doing</span></a>
-          <a href="#essay"><span class="cl-n">The Essay</span><span class="cl-t">Why my AI knows my name and my life</span></a>
-          <a href="#reality"><span class="cl-n">Look Beyond the Headlines</span><span class="cl-t">The magic. And the reality.</span></a>
+          <a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
+          <a href="#doing"><span class="cl-n">Beyond the chatbox</span><span class="cl-t">From answering to doing</span></a>
+          <a href="#essay"><span class="cl-n">The essay</span><span class="cl-t">Why my AI knows my name and my life</span></a>
+          <a href="#reality"><span class="cl-n">Look beyond the headlines</span><span class="cl-t">The magic. And the reality.</span></a>
         </div>
         <div class="cover-buy">
           <a class="btn red" href="#changing">Start reading <span class="arrow" aria-hidden="true">→</span></a>
@@ -657,16 +649,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="section chapter" id="changing" aria-labelledby="changing-title">
   <div class="wrap">
     <div class="section-head"><span class="label">The world is changing</span><span class="label mute">Chapter 01</span></div>
-    <h2 id="changing-title" class="display ch-title" data-r="rise">AI is opening another door.</h2>
+    <h2 id="changing-title" class="display ch-title" data-r="rise">Something big is happening</h2>
     <div class="ch-body">
       <div class="ed" data-r="fade">
-          <p>For years, your phone has helped you look things up and stay in touch.</p>
-          <p class="beat">AI goes a step further.</p>
-          <p>You can describe a picture you've only imagined, and watch it appear.</p>
-          <p>You can talk to an app about a document, a problem or an idea.</p>
-          <p>And with the right connections and permissions, some AI apps can help you actually do a task instead of only explaining it.</p>
-          <p class="ed-q voice">The best part? You don't need to understand how it's built to start using it.</p>
+          <p>For a long time, AI was something most of us heard about but never used.</p>
+          <p>It lived in science fiction films, university labs and conversations between people who seemed to speak another language.</p>
+          <p>And then, almost overnight, it started turning up everywhere.</p>
+          <p>On our phones. In the apps we already use. In photos, videos, search, at work and in everyday conversations.</p>
+          <p>But this time is different.</p>
+          <p>For years, we've been learning how to use computers. Which button to press. Which menu to open. Which instructions to follow.</p>
+          <p>Now we're starting to use technology that understands what we ask in plain words.</p>
+          <p>You can just say what you want, instead of working out which buttons and commands will get you there.</p>
+          <p>That doesn't mean AI understands everything, knows everything or always gets it right.</p>
+          <p class="beat">Far from it.</p>
+          <p>But it does change the way we use technology.</p>
+          <p>For the first time, some very powerful tools are open to anyone who can do something we've always known how to do: talk.</p>
+          <p>And that's worth paying attention to.</p>
       </div>
+    </div>
+    <div class="moment" data-r="rise">
+      <p class="moment-big">You don't have to learn the machine's language.</p>
+      <p class="moment-sub voice">More and more, it can work with yours.</p>
     </div>
   </div>
 </section>
@@ -675,33 +678,41 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
     <h2 id="possibilities-title" class="display ch-title" data-r="rise">WAIT. IT CAN DO THAT?</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>Most people know they can type a question into an AI app and get an answer.</p>
+          <p class="beat">That's only the beginning.</p>
+          <p>Writing was the part I expected.</p>
+          <p>What surprised me was how many different kinds of things it could work with.</p>
+      </div>
+    </div>
     <div class="discs">
       <article class="disc-block">
         <p class="label disc-n">Discovery 01</p>
-        <h3 class="display disc-h" data-r="rise">YOUR CAMERA CAN ASK QUESTIONS.</h3>
+        <h3 class="display disc-h" data-r="rise">Your camera can do more than take pictures.</h3>
         <div class="ed" data-r="fade">
-          <p>A plant you don't recognize. A strange symbol on your washing machine. Something in a shop window.</p>
-          <p>You don't always need the right words to describe it.</p>
-          <p>Some AI apps can look at a photo and tell you what you're seeing. With supported camera features, some can even look at whatever you point your phone at.</p>
-        <div class="wtt">
-          <p class="label wtt-label">Want to try?</p>
-          <p class="wtt-do">Take a photo of something ordinary and ask: "What am I looking at, and what should I know about it?"</p>
-          <p class="wtt-note">AI can get things wrong. Don't rely on it alone when safety matters.</p>
-        </div>
+          <p>Imagine finding an old handwritten letter in a drawer.</p>
+          <p class="beat">You take a photo of it.</p>
+          <p>An AI app that can read images can help you make out the handwriting, turn it into text you can edit, translate it and explain phrases you don't know.</p>
+          <p>Now point the same camera at a strange warning on your TV.</p>
+          <p>Instead of digging through the manual, you can show the message to AI and ask what it means.</p>
+          <p>Or take a photo of a painting in a museum and ask about its history.</p>
+          <p>One photo. Very different uses.</p>
+          <p>You don't need to learn a special command.</p>
+          <p>A photo can be the start of a conversation.</p>
         </div>
       </article>
       <article class="disc-block">
         <p class="label disc-n">Discovery 02</p>
-        <h3 class="display disc-h" data-r="rise">A PHOTOGRAPH CAN TELL MORE THAN ONE STORY.</h3>
+        <h3 class="display disc-h" data-r="rise">You can actually talk to it.</h3>
         <div class="ed" data-r="fade">
-          <p>Imagine finding an old family photo.</p>
-          <p>You could ask AI what it notices, what the clothes or the setting suggest, and what you could look into about that time.</p>
-          <p>It won't know who your relatives are or what happened that day.</p>
-          <p>But it might point out details you would have missed.</p>
-        <div class="wtt">
-          <p class="label wtt-label">Want to try?</p>
-          <p class="wtt-do">Pick an old photo and ask: "What details can you see, and what might they tell me about the time or place? Keep what you can see separate from what you're guessing."</p>
-        </div>
+          <p>I don't mean dictating a message and waiting for it to turn into text.</p>
+          <p class="beat">I mean a real spoken conversation.</p>
+          <p>Ask a question, hear the answer, interrupt, ask what it meant or change your mind halfway through.</p>
+          <p>Some AI apps can also see what you show them through your camera or screen. It depends on the app and the features you have.</p>
+          <p>Say you're looking right at something you don't understand.</p>
+          <p>Instead of trying to describe every detail, you might be able to just show it and ask.</p>
+          <p>The keyboard is no longer the only way in.</p>
         </div>
       </article>
     </div>
@@ -718,19 +729,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="spread-text">
         <span class="label">The art of conversation</span>
         <h2 id="voice-title" class="display" style="font-size:clamp(48px,7vw,104px)" data-r="rise">Hate typing? Talk.</h2>
-        <div class="ed spread-ed" data-r="fade">
-          <p>You don't always have to type.</p>
-          <p>Some AI apps let you just talk. You ask, it answers out loud, and you can keep going with follow-up questions.</p>
-          <p>Ask about a trip. Practice another language. Or just think out loud.</p>
-          <p class="voice spread-line">Talk the way you normally would.</p>
-          <p class="spread-note">Voice and camera features depend on the app, your device, your plan and where you live.</p>
+        <p class="voice" data-r="fade">Talk to your AI out loud, like a phone call. It answers in a natural voice.</p>
+        <div class="apps3" data-r="stagger">
+          <div><b>ChatGPT</b><p>Tap the Voice icon in the message bar and start speaking. Free plans include limited voice time.</p></div>
+          <div><b>Gemini</b><p>Tap the Live icon to start a conversation. You can also show it what your camera sees.</p></div>
+          <div><b>Claude</b><p>Tap the sound wave icon next to the microphone, choose a voice and speak. It's included on the Free plan.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section chapter" id="possibilities-more" aria-label="The New Possibilities, continued">
+<section class="section chapter" id="possibilities-more" aria-label="THE NEW POSSIBILITIES, continued">
   <div class="wrap">
     <div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
     <div class="discs">
@@ -738,29 +748,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p class="label disc-n">Discovery 03</p>
         <h3 class="display disc-h" data-r="rise">A DOCUMENT CAN BECOME A CONVERSATION.</h3>
         <div class="ed" data-r="fade">
-          <p>A confusing insurance letter. A contract. A manual full of words nobody uses.</p>
-          <p>Instead of struggling through every paragraph, you can ask:</p>
-          <p>"What does this mean in plain English? What matters here?"</p>
-          <p>Many AI apps let you upload a document and ask questions about it.</p>
-        <div class="wtt">
-          <p class="label wtt-label">Want to try?</p>
-          <p class="wtt-do">Upload a document with nothing private in it to ChatGPT, Gemini or Claude. Ask it to explain the important parts simply.</p>
-          <p class="wtt-note">For anything legal, medical or financial, check the original yourself and talk to a professional when it matters.</p>
-        </div>
+          <p>Think about the last time someone sent you a document you didn't understand.</p>
+          <p>A contract. An insurance letter. A medical report. A confusing instruction manual.</p>
+          <p>Until now, you had two choices: read every line yourself or find someone to explain it.</p>
+          <p>Now, many AI apps let you upload a document and ask questions about what's inside.</p>
+          <p>You can ask it to explain things in plain words, find a certain clause, compare sections or help you prepare questions for a professional.</p>
+          <p>Instead of searching through twenty pages, you can ask about the part that matters to you.</p>
+          <p>AI can still miss details or misread important wording. It doesn't replace a doctor, a lawyer or any other professional.</p>
+          <p>But it can help you walk into that conversation better prepared.</p>
         </div>
       </article>
       <article class="disc-block">
         <p class="label disc-n">Discovery 04</p>
-        <h3 class="display disc-h" data-r="rise">YOUR IMAGINATION CAN BECOME SOMETHING YOU CAN SEE.</h3>
+        <h3 class="display disc-h" data-r="rise">An idea in your head can become something you can see.</h3>
         <div class="ed" data-r="fade">
           <p>A room you've thought about redecorating.</p>
           <p class="beat">An outfit you can't quite picture.</p>
           <p class="beat">A scene from a story.</p>
+          <p>A photo of something that could never exist in real life.</p>
           <p>Describe it to an AI image tool and you'll see a picture of it.</p>
-          <p>Change the colors. Try another style. Keep playing.</p>
-          <p>Some specialist tools can even turn an image or a description into a short video.</p>
-          <p>You don't need to know how to draw.</p>
-
+          <p>Change the lighting. Change the colors. Try another style.</p>
+          <p>And with specialist video tools, an image or a description can sometimes become a short video.</p>
+          <p>It won't always be perfect. Getting something really good takes patience, a lot of tries and your own eye.</p>
+          <p class="beat">But this is the best part:</p>
+          <p>You don't need to know how to draw to start playing with a visual idea.</p>
+          <p>The idea starts with you.</p>
         </div>
       </article>
     </div>
@@ -770,14 +782,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="section chapter" id="doing" aria-labelledby="doing-title">
   <div class="wrap">
     <div class="section-head"><span class="label">Beyond the chatbox</span><span class="label mute">Chapter 03</span></div>
-    <h2 id="doing-title" class="display ch-title" data-r="rise">FROM ANSWERING TO DOING.</h2>
+    <h2 id="doing-title" class="display ch-title" data-r="rise">From answering to doing</h2>
     <div class="ch-body">
       <div class="ed" data-r="fade">
-          <p>There's a difference between AI telling you how to do something and AI helping you do it.</p>
-          <p>Ask it to plan a trip, and it suggests places to go and a plan for each day.</p>
-          <p>Connect it to the right tools, and some AI apps can search other services, prepare a booking or finish certain tasks for you.</p>
-          <p>That's what people mean by an AI agent: AI that can take steps toward a goal using tools.</p>
-          <p>Not every app can do this. It depends on what you give it access to. And the important decisions stay yours.</p>
+          <p>This is something I wish more people explained.</p>
+          <p>There's a difference between AI that tells you how to do something and AI that can help you do it.</p>
+          <p class="beat">Say you're planning a trip.</p>
+          <p>You can ask AI to suggest places to go, compare plans or explain the difference between two neighborhoods.</p>
+          <p class="beat">That's useful.</p>
+          <p>But some AI apps can go further.</p>
+          <p>With the right connections and permissions, they can sometimes look at information in your other apps, search for options, prepare a booking or do certain things for you.</p>
+          <p>That's where you hear the words AI agent.</p>
+          <p>It sounds more complicated than it is.</p>
+          <p>An AI agent is AI that can take steps toward a goal using tools, instead of only giving you an answer.</p>
+          <p>A chatbot can tell you what needs doing. An agent can sometimes help you do the steps.</p>
+          <p>Not every AI app can do this. Not every connection is available to everyone. Some actions ask you to confirm first, and the important decisions should always stay with you.</p>
+          <p class="beat">But where this is going is really interesting.</p>
+          <p>Technology used to help us find information. Now it can sometimes help us act on it.</p>
       </div>
     </div>
     <div class="moment" data-r="rise">
@@ -785,13 +806,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <p class="moment-sub voice">Helping you get it done is another.</p>
     </div>
     <aside class="feature" data-r="fade">
-      <h3 class="display feature-h">WHAT DOES "CONNECT AN APP" MEAN?</h3>
+      <h3 class="display feature-h">What does "connect an app" actually mean?</h3>
       <div class="ed">
-          <p>Say you ask AI to find a hotel confirmation in your email.</p>
-          <p>If it can't see your inbox, it has no way of knowing what's there.</p>
-          <p>But if your AI app can connect to email and you allow it, it can search for that confirmation.</p>
-          <p>That's all a connection is. It lets two tools work together.</p>
-          <p class="beat">One rule: only connect services you trust, and check what you're letting them see.</p>
+          <p>Say you ask AI to find an appointment confirmation buried in your email.</p>
+          <p>If it can't see your email, it has no way of knowing what's in your inbox.</p>
+          <p>You'd have to copy the message into the chat yourself.</p>
+          <p>But if the app can connect securely to your email, and you allow it, it can search for the confirmation itself.</p>
+          <p>The same goes for your calendar, your files and other services it supports.</p>
+          <p>The connection lets the AI work with information outside the chat.</p>
+          <p>It doesn't mean you should connect everything.</p>
+          <p>Only allow access when you understand what the connection does, what it can see and whether you really need it.</p>
       </div>
     </aside>
   </div>
@@ -824,9 +848,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <blockquote class="say"><p>"So yours doesn't just answer questions. It actually helps you run your day?"</p></blockquote>
           <p>Exactly. And most people haven't discovered that part yet.</p>
 
+          <h3 class="story-h">What most people don't realize</h3>
           <p>You don't need to build your own AI assistant to make the AI you already use much more useful.</p>
+          <p>Tell ChatGPT, Gemini or Claude how you like things explained, and it adjusts. Hand it a trip to plan, a complicated week to untangle, a choice to weigh up, or a jumble of thoughts to turn into a clear plan.</p>
+          <p>Depending on the app, your plan and your settings, it may also remember useful preferences between chats, or connect to your calendar, email and files with your permission.</p>
+          <p>Imagine planning a holiday without explaining, yet again, that you hate early flights. Or turning a long, confusing email into three clear points and a draft reply.</p>
+          <p class="story-turn">That's when AI starts feeling less like a search box and more like something that understands how you live.</p>
 
+          <h3 class="story-h">And what about Carson?</h3>
           <p>Carson goes further because I'm building him around my own life.</p>
+          <p>As well as helping me think and plan, I'm building him to keep track of what I'm responsible for, notice what still needs attention and help me follow up. That takes extra tools and connections that everyday AI apps don't come with.</p>
           <p>Think of him as a glimpse of where personal AI is heading.</p>
           <p>You don't have to start there. Start with the AI you already have. Make it a little more yours, let it help with the small things, and see what you find.</p>
           <p class="story-close voice">Carson calling me my beautiful lady got the laugh.</p>
@@ -844,14 +875,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h2 id="reality-title" class="display ch-title" data-r="rise">THE MAGIC. AND THE REALITY.</h2>
     <div class="ch-body">
       <div class="ed" data-r="fade">
-          <p>You've probably seen the videos.</p>
-          <p>An AI image that stops you scrolling. A scene that looks like a film. Someone saying they built a whole business while they slept.</p>
+          <p>If you've watched AI videos online, you've probably seen something that made you stop.</p>
+          <p>An image that appears in seconds.</p>
+          <p>A video that looks like a real film.</p>
+          <p>Someone saying they built a whole business while they slept.</p>
           <p>And, of course, someone selling you the secret.</p>
           <p>Some of it really is impressive.</p>
-          <p>What you don't see is everything that happened before the final result.</p>
+          <p>Some demos are carefully picked.</p>
+          <p>And some promises need a much closer look.</p>
+          <p>What you don't see is everything that happened before that result.</p>
           <p class="beat">The attempts that didn't work.</p>
-          <p class="beat">The hours spent fixing them.</p>
-          <p class="beat">AI makes a lot possible. Great results still don't happen on their own.</p>
+          <p class="beat">The fixes.</p>
+          <p class="beat">The hours spent getting one idea right.</p>
+          <p>The choices a person made along the way.</p>
+          <p>AI makes a lot possible. Great results still don't happen on their own.</p>
+          <p>What's possible is exciting enough. I don't need to pretend there's a magic button for everything.</p>
       </div>
     </div>
     <div class="moment" data-r="rise">
@@ -892,9 +930,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
       <div class="studio-tool" data-r="fade">
         <span class="label">AI plus a specialist tool</span>
-        <p>ChatGPT and Gemini can make images in the chat. For video, I connect Higgsfield, a specialist image and video tool, to ChatGPT and Claude, and direct it from the conversation. Claude doesn't create photos on its own. What's available depends on your plan.</p>
+        <p>Some apps make pictures themselves: ChatGPT and Gemini can create images right in the chat. Others work through a connected specialist tool. I connect Higgsfield, a creative tool for images and video, to both ChatGPT and Claude. I describe the scene in the chat, and the AI works with Higgsfield to make it. Claude doesn't create photos on its own, but with a connected tool it can take part. What's available depends on the app and your plan.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section chapter" id="wrong" aria-labelledby="wrong-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">Look beyond the headlines</span><span class="label mute">Chapter 05</span></div>
+    <aside class="feature" data-r="fade">
+      <h3 id="wrong-title" class="display feature-h">And yes, AI gets things wrong.</h3>
+      <div class="ed">
+          <p>Sometimes AI gives you a well-written answer that's just wrong.</p>
+          <p>It can misread a photo, miss something in a document or sound sure about something it doesn't actually know.</p>
+          <p>So I use it as a powerful tool to work with. I don't believe everything it says.</p>
+          <p>For ideas, explanations, drafts and creative play, it can be brilliant.</p>
+          <p>For medical decisions, legal matters, money or anything else with serious consequences, check it.</p>
+          <p>You still do the thinking. AI just gives you better tools to think with.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -922,20 +977,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><span class="label">Make it personal</span><span class="label mute">Chapter 06</span></div>
     <div class="grid">
-      <h2 id="yourlife-title" class="display ch-title yl-title" data-r="rise">A little of this, in your own life.</h2>
+      <h2 id="yourlife-title" class="display ch-title yl-title" data-r="rise">A little of this, in your own life</h2>
       <div class="yl-text ed" data-r="fade">
-          <p>You don't have to change the way you live.</p>
-          <p>Maybe AI helps you understand a confusing letter.</p>
-          <p>Maybe it gives you an idea for dinner.</p>
-          <p>Maybe it helps you plan a trip, look again at an old photo, or finally put an idea into words.</p>
-          <p>One small discovery can be enough.</p>
-          <p class="ed-q voice">That's where I'd start.</p>
+          <p>By now, you may be wondering what any of this looks like in an ordinary day.</p>
+          <p class="beat">Not in a tech demo.</p>
+          <p>Not in a video promising you'll become a millionaire.</p>
+          <p class="beat">In your actual life.</p>
+          <p>Maybe it's understanding a letter that came in the post.</p>
+          <p>Making sense of a confusing error message.</p>
+          <p>Finding a new way to use what's already in your fridge.</p>
+          <p>Or finding out that an idea you've had in your head for ages can become a picture.</p>
+          <p class="beat">You don't have to try everything.</p>
+          <p>Sometimes one small discovery is enough to change what you think is possible.</p>
       </div>
       <figure class="pf-side" data-r="wipe">
         <div class="ph" data-drift><img src="assets/jewel-lash.jpg" alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." width="428" height="642" decoding="async"></div>
         <figcaption>It's in the details.</figcaption>
       </figure>
     </div>
+    <div class="fcards" id="fcards"></div>
   </div>
 </section>
 
@@ -944,7 +1004,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><span class="label">The three</span><span class="label mute">Tap a name</span></div>
     <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">Meet the big three</h2>
-    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. The one you already have is a fine place to start.</p>
+    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. Each one has moments where it's the obvious choice. There's no single winner, and the one you already have is a fine place to start.</p>
     <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
     <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
     <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
@@ -956,15 +1016,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><span class="label">The full collection</span><span class="label mute">Chapter 06</span></div>
     <div class="grid">
-      <h2 id="portfolio-title" class="display ch-title ex-title" data-r="rise">23 little doors to open.</h2>
+      <h2 id="portfolio-title" class="display ch-title ex-title" data-r="rise">Curious what else is possible?</h2>
       <div class="ex-text">
         <div class="ed" data-r="fade">
-          <p>You don't need to try them all.</p>
-          <p>Look through them until one makes you think, "That would actually help me."</p>
-          <p>Tap one to see what AI can do with it, and how to try it.</p>
-          <p class="beat">Three are open to try today.</p>
+          <p>I've collected 23 everyday situations where AI can help, surprise you or get creative.</p>
+          <p>Open whichever one catches your eye.</p>
+          <p>You don't need to work through them in order.</p>
         </div>
-        <button class="btn red explore-btn" id="exploreBtn" type="button" aria-expanded="false" aria-controls="collection">Explore all 23 ideas <span class="plus" aria-hidden="true">+</span></button>
+        <button class="btn red explore-btn" id="exploreBtn" type="button" aria-expanded="false" aria-controls="collection">EXPLORE ALL 23 IDEAS <span class="plus" aria-hidden="true">+</span></button>
       </div>
     </div>
     <div class="collection" id="collection" hidden>
@@ -982,13 +1041,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <div class="ch-head">
         <h2 id="check-title" class="display" data-r="rise">Start small</h2>
+        <div class="ed" data-r="fade">
+          <p>You don't need a new hobby, a tech course or another complicated project.</p>
+          <p>Just start with something you're already curious about.</p>
+          <p>Open an AI app and ask a real question.</p>
+          <p class="beat">Show it a photograph.</p>
+          <p class="beat">Try speaking instead of typing.</p>
+          <p>Or ask it to explain something you've never quite understood.</p>
+          <p>You don't have to master AI to start finding out what it can do.</p>
+        </div>
       </div>
       <div class="ck-side">
         <p class="label mute ck-opt">Optional</p>
+        <p class="ck-lead">You can start today without setting anything up. Each step takes a few minutes, and every one after the first is up to you.</p>
       <ol id="checklist-list" data-r="stagger">
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask AI one question you've been curious about.</b></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Try one discovery that caught your eye.</b></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Remember: the final call is always yours.</b></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask one real question</b><p>Open the AI app you already have and give it something from your actual day: a confusing letter, a dinner idea, a trip. Nothing needs connecting.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Tell it how you like answers</b><p>Each app has a place to describe yourself and how you like things explained. ChatGPT calls it Personalization. Claude calls it Instructions for Claude. Gemini keeps saved details in Personal context.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Share a little context</b><p>Mention your plans, trips and preferences as you chat. Where memory is available and switched on, it can bring useful details into later chats. It won't remember everything, and each app has its own controls for what it keeps.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Talk naturally</b><p>Use voice, or write the way you speak. You don't need special commands.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Connect a tool <span class="opt">Optional</span></b><p>Only if it helps. Linking your email or calendar means it can find a booking or sum up a long thread without you copying and pasting. Each app connects differently, some connections depend on your plan or country, and you can skip this step entirely.</p></span></button></li>
       </ol>
       </div>
     </div>
@@ -999,13 +1070,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="section conclusion" id="conclusion" aria-labelledby="conclusion-title">
   <div class="wrap">
     <div class="section-head"><span class="label">A note from me</span><span class="label mute">Chapter 08</span></div>
-    <h2 id="conclusion-title" class="display ch-title concl-title" data-r="rise">Stay curious. Stay in the loop.</h2>
+    <h2 id="conclusion-title" class="display ch-title concl-title" data-r="rise">And this is only the beginning.</h2>
     <div class="ch-body">
       <div class="ed" data-r="fade">
-          <p>You don't have to learn everything about AI.</p>
-          <p>There will always be something new to find.</p>
-          <p>I'll keep exploring, testing and sharing what I think is worth knowing.</p>
-          <p>Take what interests you and leave the rest.</p>
+          <p>Four years ago, I couldn't have imagined how much this world would change.</p>
+          <p>And I don't pretend to know what's coming next.</p>
+          <p class="beat">Nobody does.</p>
+          <p>But I've learned something from spending so much time exploring it.</p>
+          <p>The endless new apps and the people promising the next big secret aren't what interest me.</p>
+          <p>What interests me is the moment someone finds a possibility they didn't know existed.</p>
+          <p>When something complicated suddenly makes sense.</p>
+          <p>When a little curiosity opens a door.</p>
+          <p>And when technology that used to feel out of reach starts to feel like yours.</p>
+          <p>That's what I want IN THE LOOP to be.</p>
+          <p>A place where I share what I'm finding, sort the interesting from the noise and make all this a little easier to understand.</p>
+          <p>Not because everyone needs to become an expert.</p>
+          <p>But because everyone deserves to know what's happening around them, and to have the chance to be part of it.</p>
+          <p class="beat">I'll keep exploring.</p>
+          <p class="beat">And I'll keep sharing what I find.</p>
           <p class="ed-sign concl-sign voice">See you in the loop.</p>
       </div>
     </div>
@@ -1039,10 +1121,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <h2 id="faq-title" class="display" style="font-size:clamp(40px,5vw,72px)" data-r="rise">Questions</h2>
       <div class="qa">
-        <details><summary>Do I need to know anything technical?</summary><p>No. IN THE LOOP is for curious people, not computer experts. You don't need to set anything up or learn to code.</p></details>
+        <details><summary>Do I need to know anything technical?</summary><p>Not at all. IN THE LOOP is for curious people, not computer experts. You don't need to set anything up or learn to code.</p></details>
         <details><summary>Do I need a paid AI plan?</summary><p>No. Many AI features work on free plans. What you get depends on the app, your country and your plan. Some advanced tools cost money.</p></details>
-        <details><summary>Is this an AI course?</summary><p>No. It's a magazine about what AI can do in everyday life. The practical examples are there if you feel like trying something yourself.</p></details>
-        <details><summary>Which AI apps does it cover?</summary><p>The practical examples use ChatGPT, Gemini and Claude. The magazine also shows a few specialist creative tools.</p></details>
+        <details><summary>Is this an AI course?</summary><p>No. It's a magazine about what's happening in AI, what it can do and why it matters. The practical examples are there if you feel like trying something yourself.</p></details>
+        <details><summary>Which AI apps does it cover?</summary><p>The practical examples use ChatGPT, Gemini and Claude. The magazine also shows other kinds of AI tools, including specialist creative tools.</p></details>
         <details><summary>How will I get the digital edition?</summary><p>I'm still making it, and it isn't on sale yet. I'll share how to buy it and how you'll receive it when it's ready.</p></details>
         <details><summary>Is my private information safe?</summary><p>Be careful what you share with any AI app. Don't upload passwords, ID numbers or private details it doesn't need. Check each app's privacy settings, especially before you connect other services.</p></details>
       </div>
@@ -1105,14 +1187,14 @@ if (CONFIG.contact && $(".js-contact")){ const c=$(".js-contact"); c.textContent
 /* ---- Meet the three ---- */
 const THREE = [
   {id:"chatgpt",name:"ChatGPT",by:"By OpenAI",intro:"Open it when you want to make something: a picture, a plan, a letter, or a long conversation out loud.",
-   tries:["Describe the birthday card you have in mind and it makes the image right in the chat."],
-   know:""},
+   tries:["Describe the birthday card you have in mind and it creates the image right in the chat.","Talk things through with voice while you cook or walk. Free plans include limited voice time.","Tell it how warm or chatty to be under Personalization, then Characteristics.","Add plugins for other apps from the Plugins page. What you can add depends on your plan and region."],
+   know:"With memory on, it can carry useful details between chats, though not every detail. You can review or delete what it keeps under Settings, then Personalization."},
   {id:"gemini",name:"Gemini",by:"By Google",intro:"Open it when your life already runs through Google, from Gmail to Maps.",
-   tries:["Ask which café near your hotel opens earliest. It can use public Google Maps information."],
-   know:""},
+   tries:["Type @, pick Gmail once it's connected, and ask it to find your hotel confirmation.","Ask which café near your hotel opens earliest. It can use public Google Maps information.","Start Gemini Live, point your camera at a plant or a label, and ask about it.","Create or edit an image from the Images page."],
+   know:"Things you ask it to remember are kept in Personal context. Some features depend on your age, country and plan."},
   {id:"claude",name:"Claude",by:"By Anthropic",intro:"Open it when you have something long or tricky to read, write or think through.",
-   tries:["Start a Project for one topic, like a house move, and keep the files and notes together."],
-   know:"Claude doesn't create photos itself."}
+   tries:["Upload a long document or a photo of a letter and ask for the three points that matter.","Start a Project for one topic, like a house move, and keep the files and notes together. Free plans include up to five.","Tap the sound wave icon to use voice mode. It's included on the Free plan.","Connect tools like Gmail, Google Drive or Canva from the Connectors directory. It asks before it acts."],
+   know:"Claude doesn't create photos itself. It can write, organize and analyze, and work with connected creative tools. Memory is on by default, and you can view or edit it in Settings."}
 ];
 let threeSel = "chatgpt";
 function renderThreeTabs(){
@@ -1121,7 +1203,7 @@ function renderThreeTabs(){
 function renderThreePanel(animate){
   const t=THREE.find(x=>x.id===threeSel), p=$("#threePanel");
   p.setAttribute("aria-labelledby","tt-"+t.id);
-  p.innerHTML = `<p class="three-intro">${esc(t.intro)}</p><div><span class="label">Try this</span><ul class="try" style="margin-top:12px">${t.tries.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ul>${t.know?`<div class="know">${esc(t.know)}</div>`:""}</div>`;
+  p.innerHTML = `<p class="three-intro">${esc(t.intro)}</p><div><span class="label">Try this</span><ul class="try" style="margin-top:12px">${t.tries.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ul><div class="know"><b>Good to know</b>${esc(t.know)}</div></div>`;
   if (animate && MOTION){ p.classList.remove("swap"); void p.offsetWidth; p.classList.add("swap"); }
 }
 function selectThree(id,focus){
@@ -1248,6 +1330,7 @@ function copyText(btn){
 filters.addEventListener("click",e=>{
   const b=e.target.closest(".chip"); if(!b) return;
   filter=b.dataset.f; renderFilters(); renderIndex(true);
+  if (filter==="free") openRow(2);
 });
 function accClicks(root,btnSel){
   root.addEventListener("click",e=>{
@@ -1264,6 +1347,19 @@ function accClicks(root,btnSel){
 }
 accClicks(index,".row-btn");
 
+/* ---- Featured discoveries (Chapter 6): reuse workflows 04, 14, 02, 22 ---- */
+const FEAT=[4,14,2,22];
+const fcards=$("#fcards");
+fcards.innerHTML=FEAT.map(n=>{const w=W[n-1], free=!!FREE[n];
+  return `<div class="fcard" data-n="${n}" data-px="f">
+    <button class="fcard-q" type="button" aria-expanded="false" aria-controls="fd-${n}" id="fr-${n}">
+      <span class="fcard-n">${pad(n)}</span><span class="fcard-t">${esc(w[0])}</span><span class="fcard-p">${esc(w[2])}</span>
+      <span class="fcard-hint"><span class="${free?"free":"lock"}">${free?"Free preview":"Paid edition"}</span><span class="plus" aria-hidden="true">+</span></span>
+    </button>
+    <div class="reveal" id="fd-${n}" role="region" aria-labelledby="fr-${n}" inert><div><div class="inner"></div></div></div>
+  </div>`;}).join("");
+accClicks(fcards,".fcard-q");
+
 /* ---- Full collection toggle ---- */
 const exploreBtn=$("#exploreBtn"), collection=$("#collection");
 exploreBtn.addEventListener("click",()=>{
@@ -1271,7 +1367,7 @@ exploreBtn.addEventListener("click",()=>{
   exploreBtn.setAttribute("aria-expanded",open); collection.hidden=!open;
   if(open && MOTION){ index.classList.remove("swap"); void index.offsetWidth; index.classList.add("swap"); }
 });
-renderFilters(); renderIndex(false);
+renderFilters(); renderIndex(false); openRow(2);
 
 /* ---- Checklist ticks ---- */
 $("#checklist-list").addEventListener("click",e=>{
