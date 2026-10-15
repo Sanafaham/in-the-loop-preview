@@ -409,7 +409,7 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .check .grid{row-gap:40px}
 .check .ch-head{grid-column:1/6;display:grid;gap:20px;align-content:start}
 .check .ch-head p{color:var(--ink-2);max-width:34ch}
-.check ol{grid-column:7/13;list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.check ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
 .check li{border-bottom:1px solid var(--rule)}
 .tick{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;padding-block:20px;cursor:pointer}
 .tick:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
@@ -420,7 +420,7 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .tick b{display:block;font-size:19px;margin-bottom:4px}
 .tick p{color:var(--ink-2)}
 .tick .opt{font-size:var(--s-label);letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700;margin-left:8px}
-@media (max-width:900px){.check .ch-head,.check ol{grid-column:1/-1}}
+@media (max-width:900px){.check .ch-head{grid-column:1/-1}}
 
 /* Buy */
 .buy .grid{row-gap:48px;align-items:start}
@@ -474,6 +474,57 @@ html.motion .faq details[open] p{animation:fadeUp .4s var(--ease) both}
 footer{border-top:1px solid var(--ink);padding-block:20px 40px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+/* Chapters */
+.ch-title{font-size:var(--s-h2);margin-bottom:clamp(36px,5vw,64px);max-width:16ch}
+.ch-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter)}
+.ch-body > .ed{grid-column:4/11}
+@media (max-width:900px){.ch-body > .ed{grid-column:1/-1}}
+.moment{margin-top:clamp(48px,7vw,96px);padding-block:clamp(32px,5vw,64px);border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);display:grid;gap:clamp(12px,2vw,20px)}
+.moment-big{font-family:var(--f-display);font-weight:800;font-variation-settings:"wdth" 64;text-transform:uppercase;letter-spacing:-.02em;line-height:.9;font-size:clamp(40px,7.2vw,112px);color:var(--ink);text-wrap:balance;max-width:18ch}
+.moment-sub{color:var(--red);font-size:clamp(24px,3vw,42px);line-height:1.12;max-width:30ch;text-wrap:balance}
+.discs{display:grid;gap:clamp(56px,8vw,112px);margin-top:clamp(48px,7vw,96px)}
+.disc-block{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter);row-gap:20px;border-top:1px solid var(--ink);padding-top:18px}
+.disc-n{grid-column:1/-1;color:var(--red)}
+.disc-h{grid-column:1/9;font-size:clamp(34px,4.6vw,72px);line-height:.92}
+.disc-block > .ed{grid-column:4/11}
+@media (max-width:900px){.disc-h,.disc-block > .ed{grid-column:1/-1}}
+.feature{margin-top:clamp(48px,7vw,96px);background:var(--tint);padding:clamp(24px,4vw,56px);display:grid;gap:24px;border-left:3px solid var(--red)}
+.feature-h{font-size:clamp(28px,3.6vw,52px);line-height:.95;max-width:20ch}
+.feature .ed{max-width:62ch}
+.yl-title{grid-column:1/-1}
+.yl-text{grid-column:1/8}
+#yourlife .pf-side{grid-column:9/13;align-self:end}
+#yourlife .pf-side .ph{aspect-ratio:428/642;max-width:300px;margin-left:auto}
+@media (max-width:900px){.yl-text,#yourlife .pf-side{grid-column:1/-1}#yourlife .pf-side .ph{margin-left:0;max-width:240px}}
+.fcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:clamp(48px,7vw,88px);border-top:2px solid var(--ink);border-left:1px solid var(--rule)}
+.fcard{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0;transition:background .3s}
+.fcard.open{background:var(--tint);grid-column:1/-1}
+.fcard-q{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;padding:24px 22px;cursor:pointer;transition:transform .15s}
+.fcard-q:active{transform:scale(.99)}
+.fcard-q:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.fcard-n{grid-row:1/4;font-family:var(--f-display);font-weight:800;font-variation-settings:"wdth" 64;font-size:clamp(44px,5vw,72px);line-height:.85;color:var(--red);font-variant-numeric:tabular-nums}
+.fcard-t{font-family:var(--f-display);font-weight:800;font-variation-settings:"wdth" 64;text-transform:uppercase;font-size:clamp(24px,2.6vw,36px);line-height:.95;letter-spacing:-.01em;color:var(--ink)}
+.fcard-p{color:var(--ink-2);font-size:15px;line-height:1.45}
+.fcard-hint{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:var(--s-label);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.fcard-hint .free{color:var(--red)}.fcard-hint .lock{color:var(--mute)}
+.fcard.open .plus{transform:rotate(45deg);background:var(--red);border-color:var(--red);color:var(--on-red)}
+.fcard .inner{padding:0 22px 28px}
+@media (max-width:760px){.fcards{grid-template-columns:1fr}}
+.ex-title{grid-column:1/8}
+.ex-text{grid-column:8/13;align-self:end;display:grid;gap:24px;justify-items:start}
+@media (max-width:900px){.ex-title,.ex-text{grid-column:1/-1}}
+.explore-btn .plus{border-color:currentColor;transition:transform .35s var(--ease)}
+.explore-btn[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.collection{margin-top:clamp(32px,5vw,56px)}
+.check .ck-side{grid-column:7/13;display:grid;gap:12px;align-content:start}
+.ck-opt{color:var(--red)}
+.ck-lead{color:var(--ink-2);max-width:44ch;margin-bottom:12px}
+.check .ck-side ol{border-top:1px solid var(--ink)}
+@media (max-width:900px){.check .ck-side{grid-column:1/-1}}
+.concl-title{font-size:var(--s-hero);max-width:none}
+.ed .concl-sign{color:var(--red);font-size:clamp(30px,3.6vw,52px)}
+.buy-main .status{justify-self:start}
+
 /* Toast */
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:12px 20px;font-size:14px;letter-spacing:.02em;pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;max-width:calc(100% - 32px)}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -492,11 +543,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <a href="#top" class="label brand">The Editorial Issue</a>
     <nav class="label" aria-label="Sections" id="nav">
-      <a href="#discoveries">Discoveries</a>
+      <a href="#possibilities">Possibilities</a>
+      <a href="#doing">Beyond the Chatbox</a>
       <a href="#essay">The Essay</a>
-      <a href="#three">The Three</a>
-      <a href="#portfolio">The Portfolio</a>
-      <a href="#studio">The Studio</a>
+      <a href="#reality">The Reality</a>
+      <a href="#yourlife">Your Life</a>
     </nav>
     <div class="top-actions">
       <button class="btn ghost small menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Contents</button>
@@ -504,14 +555,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </div>
   <div class="menu" id="menu" hidden>
-    <a href="#discoveries">Discoveries <span>Six questions</span></a>
-    <a href="#essay">The Essay <span>My name and my life</span></a>
-    <a href="#three">The Three <span>ChatGPT, Gemini, Claude</span></a>
-    <a href="#rules">The Rules <span>Before you begin</span></a>
-    <a href="#portfolio">The Portfolio <span>23 workflows</span></a>
-    <a href="#studio">The Studio <span>No magic button</span></a>
-    <a href="#checklist">The Checklist <span>Start small</span></a>
-    <a href="#buy">The Issue <span>Digital edition</span></a>
+    <a href="#changing">The World Is Changing <span>Chapter 01</span></a>
+    <a href="#possibilities">Wait. It Can Do That? <span>Chapter 02</span></a>
+    <a href="#doing">From Answering to Doing <span>Chapter 03</span></a>
+    <a href="#essay">The Essay <span>Chapter 04</span></a>
+    <a href="#reality">The Magic. And the Reality. <span>Chapter 05</span></a>
+    <a href="#yourlife">In Your Own Life <span>Chapter 06</span></a>
+    <a href="#checklist">Start Small <span>Chapter 07</span></a>
+    <a href="#conclusion">Only the Beginning <span>Chapter 08</span></a>
+    <a href="#buy">The Digital Edition <span>Coming soon</span></a>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
@@ -524,7 +576,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="mast">
       <span class="name">THE EDITORIAL ISSUE</span>
       <span class="label mute">Volume I</span>
-      <span class="label mute hide-s">23 Workflows</span>
       <span class="label mute hide-s">ChatGPT · Gemini · Claude</span>
     </div>
     <div class="grid">
@@ -532,13 +583,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <h1 id="cover-title" class="display"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
         <p class="deck">The phone in your bag can read the small print on a contract, turn a photo of your fridge into a week of dinners, and explain a confusing error screen. I collected the moments where AI made my days easier, so you can try them too.</p>
         <div class="cover-lines">
-          <a href="#discoveries"><span class="cl-n">Discoveries</span><span class="cl-t">Six questions worth tapping</span></a>
+          <a href="#possibilities"><span class="cl-n">The New Possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
+          <a href="#doing"><span class="cl-n">Beyond the Chatbox</span><span class="cl-t">From answering to doing</span></a>
           <a href="#essay"><span class="cl-n">The Essay</span><span class="cl-t">Why my AI knows my name and my life</span></a>
-          <a href="#portfolio"><span class="cl-n">The Portfolio</span><span class="cl-t">23 everyday workflows, three free to try</span></a>
-          <a href="#studio"><span class="cl-n">The Studio</span><span class="cl-t">There is no magic button</span></a>
+          <a href="#reality"><span class="cl-n">Look Beyond the Headlines</span><span class="cl-t">The magic. And the reality.</span></a>
         </div>
         <div class="cover-buy">
-          <a class="btn red" href="#portfolio">Try 3 free <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn red" href="#changing">Start reading <span class="arrow" aria-hidden="true">→</span></a>
           <a class="btn ghost" href="#buy">About the issue</a>
         </div>
       </div>
@@ -596,15 +647,178 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- DISCOVERIES -->
-<section class="section discoveries" id="discoveries" aria-labelledby="disc-title">
+<section class="section chapter" id="changing" aria-labelledby="changing-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">Discoveries</span><span class="label mute">Tap a question</span></div>
-    <div class="disc-head">
-      <h2 id="disc-title" class="display" data-r="rise">Six things people are surprised it can do</h2>
-      <p data-r="fade">Short answers about ChatGPT, Gemini and Claude. Features can vary by app, plan and country.</p>
+    <div class="section-head"><span class="label">THE WORLD IS CHANGING</span><span class="label mute">Chapter 01</span></div>
+    <h2 id="changing-title" class="display ch-title" data-r="rise">SOMETHING EXTRAORDINARY IS HAPPENING</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>For a long time, artificial intelligence was something most of us heard about rather than experienced.</p>
+          <p>It belonged in science-fiction films, university laboratories, or conversations between people who seemed to speak an entirely different language.</p>
+          <p>And then, almost overnight, it started turning up everywhere.</p>
+          <p>On our phones. In the apps we already use. In photographs, videos, search engines, workplaces, and everyday conversations.</p>
+          <p>But here’s what makes this moment different.</p>
+          <p>For years, we’ve been learning how to use computers. Which button to press. Which menu to open. Which instructions to follow.</p>
+          <p>Now we’re beginning to use technology that can understand what we’re asking in ordinary language.</p>
+          <p>You can describe what you want instead of figuring out which complicated set of commands will get you there.</p>
+          <p>That doesn’t mean AI understands everything, knows everything, or always gets things right.</p>
+          <p class="beat">Far from it.</p>
+          <p>But it does mean the relationship between people and technology is changing.</p>
+          <p>For the first time, some remarkably powerful tools are becoming accessible through something we’ve always known how to do: have a conversation.</p>
+          <p>And that’s worth paying attention to.</p>
+      </div>
     </div>
-    <div class="cards" id="cards" data-r="stagger"></div>
+    <div class="moment" data-r="rise">
+      <p class="moment-big">YOU DON’T HAVE TO LEARN THE MACHINE’S LANGUAGE.</p>
+      <p class="moment-sub voice">Increasingly, the machine can work with yours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section chapter" id="possibilities" aria-labelledby="possibilities-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">THE NEW POSSIBILITIES</span><span class="label mute">Chapter 02</span></div>
+    <h2 id="possibilities-title" class="display ch-title" data-r="rise">WAIT. IT CAN DO THAT?</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>Most people know they can type a question into an AI app and get an answer.</p>
+          <p class="beat">That’s only the beginning.</p>
+          <p>What surprised me most wasn’t that AI could write something.</p>
+          <p>It was discovering how many different kinds of information it could work with.</p>
+      </div>
+    </div>
+    <div class="discs">
+      <article class="disc-block">
+        <p class="label disc-n">Discovery 01</p>
+        <h3 class="display disc-h" data-r="rise">YOUR CAMERA IS NO LONGER JUST A CAMERA.</h3>
+        <div class="ed" data-r="fade">
+          <p>Imagine finding an old handwritten letter in a drawer.</p>
+          <p class="beat">You photograph it.</p>
+          <p>An AI app with image understanding can help you read difficult handwriting, turn the words into editable text, translate them, and explain expressions you don’t recognize.</p>
+          <p>Now imagine pointing that same camera at an unfamiliar warning on your television.</p>
+          <p>Instead of searching through pages of technical instructions, you can show the message to AI and ask what it means.</p>
+          <p>Or photograph a painting in a museum and ask about its history.</p>
+          <p>One photograph. Completely different possibilities.</p>
+          <p>The interesting part isn’t learning a special command.</p>
+          <p>It’s realizing that a photograph can become the beginning of a conversation.</p>
+        </div>
+      </article>
+      <article class="disc-block">
+        <p class="label disc-n">Discovery 02</p>
+        <h3 class="display disc-h" data-r="rise">YOU CAN ACTUALLY TALK TO IT.</h3>
+        <div class="ed" data-r="fade">
+          <p>Not dictate a message and wait for it to turn into text.</p>
+          <p class="beat">Have a spoken conversation.</p>
+          <p>Ask a question, hear an answer, interrupt, ask for clarification, or change your mind halfway through.</p>
+          <p>Some AI apps can also work with what you show them through a camera or screen, depending on the app and available features.</p>
+          <p>Imagine trying to understand something unfamiliar while you’re looking directly at it.</p>
+          <p>Instead of struggling to describe every detail, you may be able to show it and ask.</p>
+          <p>The keyboard is no longer the only way in.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE SPREAD -->
+<section class="section spread" id="voice" aria-labelledby="voice-title">
+  <div class="wrap">
+    <div class="grid" style="padding-block:8px">
+      <figure class="spread-img" data-r="wipe">
+        <div class="ph" data-drift><img src="assets/red-lips.jpg" alt="Close-up of lips covered in red crystals with a gold detail." width="428" height="528" decoding="async"></div>
+      </figure>
+      <div class="spread-text">
+        <span class="label">The Art of Conversation</span>
+        <h2 id="voice-title" class="display" style="font-size:clamp(48px,7vw,104px)" data-r="rise">Hate typing? Talk.</h2>
+        <p class="voice" data-r="fade">Talk to your AI out loud, like a phone call. It answers in a natural voice.</p>
+        <div class="apps3" data-r="stagger">
+          <div><b>ChatGPT</b><p>Tap the Voice icon in the message bar and start speaking. Free plans include limited voice time.</p></div>
+          <div><b>Gemini</b><p>Tap the Live icon to start a conversation. You can also show it what your camera sees.</p></div>
+          <div><b>Claude</b><p>Tap the sound wave icon next to the microphone, choose a voice, and speak. Included on the Free plan.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section chapter" id="possibilities-more" aria-label="THE NEW POSSIBILITIES, continued">
+  <div class="wrap">
+    <div class="section-head"><span class="label">THE NEW POSSIBILITIES</span><span class="label mute">Chapter 02</span></div>
+    <div class="discs">
+      <article class="disc-block">
+        <p class="label disc-n">Discovery 03</p>
+        <h3 class="display disc-h" data-r="rise">A DOCUMENT CAN BECOME A CONVERSATION.</h3>
+        <div class="ed" data-r="fade">
+          <p>Think about the last time someone sent you a document you didn’t understand.</p>
+          <p>A contract. An insurance letter. A medical report. A complicated instruction manual.</p>
+          <p>Traditionally, you had two choices: read every line yourself or find someone who could explain it.</p>
+          <p>Now, many AI apps let you upload a document and ask questions about what’s inside.</p>
+          <p>You can ask for a plain-language explanation, find a particular clause, compare sections, or prepare questions to ask a professional.</p>
+          <p>Instead of searching through twenty pages, you can ask about the part that matters to you.</p>
+          <p>Of course, AI can miss details or misunderstand important wording. It isn’t a replacement for a doctor, lawyer, or other qualified professional.</p>
+          <p>But it can help you arrive at the conversation better prepared.</p>
+        </div>
+      </article>
+      <article class="disc-block">
+        <p class="label disc-n">Discovery 04</p>
+        <h3 class="display disc-h" data-r="rise">AN IDEA IN YOUR HEAD CAN BECOME SOMETHING YOU CAN SEE.</h3>
+        <div class="ed" data-r="fade">
+          <p>A room you’ve imagined redecorating.</p>
+          <p class="beat">An outfit you can’t quite picture.</p>
+          <p class="beat">A scene from a story.</p>
+          <p>A fantastical photograph that could never exist in real life.</p>
+          <p>You can describe the idea to an AI image tool and see a visual interpretation of it.</p>
+          <p>Change the lighting. Change the colors. Try another style.</p>
+          <p>And with specialized video tools, an image or description can sometimes become a short moving scene.</p>
+          <p>The results aren’t always perfect. Getting something truly good can take patience, experimentation, and creative judgment.</p>
+          <p class="beat">But the remarkable part is this:</p>
+          <p>You no longer need to know how to draw to begin exploring a visual idea.</p>
+          <p>The creative direction can start with you.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section chapter" id="doing" aria-labelledby="doing-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">BEYOND THE CHATBOX</span><span class="label mute">Chapter 03</span></div>
+    <h2 id="doing-title" class="display ch-title" data-r="rise">FROM ANSWERING TO DOING</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>Here’s a distinction I wish more people explained.</p>
+          <p>There’s a difference between an AI that tells you how to do something and an AI that can help actually do it.</p>
+          <p class="beat">Suppose you’re planning a trip.</p>
+          <p>You can ask AI to suggest destinations, compare itineraries, or explain the difference between two neighborhoods.</p>
+          <p class="beat">That’s useful.</p>
+          <p>But some AI systems can go further.</p>
+          <p>With the right connections and permissions, they may be able to look at information in other apps, search for available options, prepare a booking, or complete certain actions on your behalf.</p>
+          <p>That’s where you start hearing the phrase AI agent.</p>
+          <p>It sounds more complicated than it needs to.</p>
+          <p>An AI agent is, broadly speaking, a system that can take steps toward a goal using tools, rather than simply producing an answer.</p>
+          <p>A chatbot might explain what needs doing. An agent may be able to help carry out the steps.</p>
+          <p>Not every AI app can do this. Not every connection is available to everyone. Some actions require confirmation, and important decisions should remain under your control.</p>
+          <p class="beat">But the direction is fascinating.</p>
+          <p>We’re moving from technology that helps us find information toward technology that can sometimes help us act on it.</p>
+      </div>
+    </div>
+    <div class="moment" data-r="rise">
+      <p class="moment-big">KNOWING WHAT TO DO IS ONE THING.</p>
+      <p class="moment-sub voice">Helping you get it done is another.</p>
+    </div>
+    <aside class="feature" data-r="fade">
+      <h3 class="display feature-h">WHAT DOES “CONNECT AN APP” ACTUALLY MEAN?</h3>
+      <div class="ed">
+          <p>Imagine asking an AI to find an appointment confirmation buried in your email.</p>
+          <p>Without access to your email, it can’t simply know what’s in your inbox.</p>
+          <p>You’d have to copy the message into the conversation yourself.</p>
+          <p>But if the AI app supports a secure email connection, and you choose to authorize it, it may be able to search for the confirmation directly.</p>
+          <p>The same idea can apply to calendars, files, and other supported services.</p>
+          <p>The connection is what gives the AI a way to work with information outside the chat.</p>
+          <p>It doesn’t mean you should connect everything.</p>
+          <p>Only grant access when you understand what the connection does, what information it can reach, and whether you actually need it.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -656,74 +870,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- MEET THE THREE -->
-<section class="section three" id="three" aria-labelledby="three-title">
+<section class="section chapter" id="reality" aria-labelledby="reality-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">The Three</span><span class="label mute">Tap a name</span></div>
-    <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">Meet the big three</h2>
-    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. Each has moments where it feels like the natural choice. There is no single winner, and the one you already have is a fine place to start.</p>
-    <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
-    <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
-    <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
-  </div>
-</section>
-
-<!-- RULES -->
-<section class="section rules" id="rules" aria-labelledby="rules-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The Rules</span><span class="label mute">Before you begin</span></div>
-    <div class="grid">
-      <div class="rules-head"><h2 id="rules-title" class="voice" data-r="rise">Curiosity and good judgment belong together.</h2></div>
-      <figure class="rules-img" data-r="wipe">
-        <div class="ph" data-drift><img src="assets/yellow-hand.jpg" alt="A yellow gloved hand with jewelled nails and a single eye set into the palm." width="428" height="660" decoding="async"></div>
-        <figcaption>Look closely at what an app can see.</figcaption>
-      </figure>
-      <ol class="rules-list" data-r="stagger">
-        <li><span class="k">I</span><div><h3>Keep private details private</h3><p>Never share passwords, bank account numbers, passports or ID numbers with any AI tool, however official it looks. Crop them out of photos first.</p></div></li>
-        <li><span class="k">II</span><div><h3>Check what matters</h3><p>AI can sound sure and still be wrong. Check important facts, numbers and dates yourself before you send, sign or pay.</p></div></li>
-        <li><span class="k">III</span><div><h3>Ignore the pressure</h3><p>You do not need every new app or update. Keep what serves your peace of mind and leave the rest.</p></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="section portfolio" id="portfolio" aria-labelledby="pf-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The Portfolio</span><span class="label mute">Curated workflows</span></div>
-    <div class="grid">
-      <div class="pf-intro">
-        <h2 id="pf-title" class="display" data-r="rise">23 ways to hand it off</h2>
-        <p class="lead" data-r="fade">Each one starts with a moment you’ll probably recognize, then gives you the words to type into ChatGPT, Gemini or Claude. Three are open, so you can try one today.</p>
+    <div class="section-head"><span class="label">LOOK BEYOND THE HEADLINES</span><span class="label mute">Chapter 05</span></div>
+    <h2 id="reality-title" class="display ch-title" data-r="rise">THE MAGIC. AND THE REALITY.</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>If you’ve spent any time watching AI videos online, you’ve probably seen something astonishing.</p>
+          <p>A beautiful image appearing in seconds.</p>
+          <p>A video that looks like a film production.</p>
+          <p>Someone claiming they’ve built an entire business while they slept.</p>
+          <p>And, inevitably, someone offering to sell you the secret.</p>
+          <p>Some of the technology really is extraordinary.</p>
+          <p>Some demonstrations are carefully selected.</p>
+          <p>And some promises deserve a much closer look.</p>
+          <p>What you don’t always see is what happened before the impressive result appeared.</p>
+          <p class="beat">The failed attempts.</p>
+          <p class="beat">The corrections.</p>
+          <p class="beat">The hours spent refining an idea.</p>
+          <p>The human decisions that shaped the outcome.</p>
+          <p>AI can make extraordinary things possible. That doesn’t mean extraordinary results happen automatically.</p>
+          <p>I find the possibilities exciting enough without pretending there’s a magic button for everything.</p>
       </div>
-      <figure class="pf-side" data-r="wipe">
-        <div class="ph" data-drift><img src="assets/jewel-lash.jpg" alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." width="428" height="642" decoding="async"></div>
-        <figcaption>Detail is everything.</figcaption>
-      </figure>
     </div>
-    <div class="legend" aria-hidden="true"><span><i class="dot"></i>Free preview, open it</span><span><i class="dot lock"></i>In the paid edition</span></div>
-    <div class="filters" role="group" aria-label="Filter workflows" id="filters"></div>
-    <ul class="index" id="index"></ul>
-  </div>
-</section>
-
-<!-- VOICE SPREAD -->
-<section class="section spread" id="voice" aria-labelledby="voice-title">
-  <div class="wrap">
-    <div class="grid" style="padding-block:8px">
-      <figure class="spread-img" data-r="wipe">
-        <div class="ph" data-drift><img src="assets/red-lips.jpg" alt="Close-up of lips covered in red crystals with a gold detail." width="428" height="528" decoding="async"></div>
-      </figure>
-      <div class="spread-text">
-        <span class="label">The Art of Conversation</span>
-        <h2 id="voice-title" class="display" style="font-size:clamp(48px,7vw,104px)" data-r="rise">Hate typing? Talk.</h2>
-        <p class="voice" data-r="fade">Talk to your AI out loud, like a phone call. It answers in a natural voice.</p>
-        <div class="apps3" data-r="stagger">
-          <div><b>ChatGPT</b><p>Tap the Voice icon in the message bar and start speaking. Free plans include limited voice time.</p></div>
-          <div><b>Gemini</b><p>Tap the Live icon to start a conversation. You can also show it what your camera sees.</p></div>
-          <div><b>Claude</b><p>Tap the sound wave icon next to the microphone, choose a voice, and speak. Included on the Free plan.</p></div>
-        </div>
-      </div>
+    <div class="moment" data-r="rise">
+      <p class="moment-big">A SIX-SECOND VIDEO CAN TAKE HOURS TO GET RIGHT.</p>
     </div>
   </div>
 </section>
@@ -731,7 +902,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- STUDIO -->
 <section class="section studio" id="studio" aria-labelledby="studio-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">The Creative Studio</span><span class="label mute">Workflows 22 and 23</span></div>
+    <div class="section-head"><span class="label">The Creative Studio</span><span class="label mute">Chapter 05</span></div>
     <div class="grid">
       <h2 id="studio-title" class="display studio-title" data-r="rise">There is no magic button</h2>
       <figure class="reel" data-r="wipe">
@@ -766,15 +937,124 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
+<section class="section chapter" id="wrong" aria-labelledby="wrong-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">LOOK BEYOND THE HEADLINES</span><span class="label mute">Chapter 05</span></div>
+    <aside class="feature" data-r="fade">
+      <h3 id="wrong-title" class="display feature-h">AND YES, AI GETS THINGS WRONG.</h3>
+      <div class="ed">
+          <p>Sometimes AI gives a beautifully written answer that’s simply incorrect.</p>
+          <p>It can misunderstand a photograph, overlook something in a document, or sound certain about a fact it hasn’t established.</p>
+          <p>That’s why I treat it as something powerful to work with, not something to believe automatically.</p>
+          <p>For ideas, explanations, drafts, and creative exploration, it can be remarkable.</p>
+          <p>For medical decisions, legal matters, financial commitments, or anything else with serious consequences, verification matters.</p>
+          <p>The goal isn’t to stop thinking. It’s to have better tools while you think.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- RULES -->
+<section class="section rules" id="rules" aria-labelledby="rules-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">The Rules</span><span class="label mute">Before you begin</span></div>
+    <div class="grid">
+      <div class="rules-head"><h2 id="rules-title" class="voice" data-r="rise">Curiosity and good judgment belong together.</h2></div>
+      <figure class="rules-img" data-r="wipe">
+        <div class="ph" data-drift><img src="assets/yellow-hand.jpg" alt="A yellow gloved hand with jewelled nails and a single eye set into the palm." width="428" height="660" decoding="async"></div>
+        <figcaption>Look closely at what an app can see.</figcaption>
+      </figure>
+      <ol class="rules-list" data-r="stagger">
+        <li><span class="k">I</span><div><h3>Keep private details private</h3><p>Never share passwords, bank account numbers, passports or ID numbers with any AI tool, however official it looks. Crop them out of photos first.</p></div></li>
+        <li><span class="k">II</span><div><h3>Check what matters</h3><p>AI can sound sure and still be wrong. Check important facts, numbers and dates yourself before you send, sign or pay.</p></div></li>
+        <li><span class="k">III</span><div><h3>Ignore the pressure</h3><p>You do not need every new app or update. Keep what serves your peace of mind and leave the rest.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR LIFE -->
+<section class="section chapter" id="yourlife" aria-labelledby="yourlife-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">MAKE IT PERSONAL</span><span class="label mute">Chapter 06</span></div>
+    <div class="grid">
+      <h2 id="yourlife-title" class="display ch-title yl-title" data-r="rise">A LITTLE OF THIS, IN YOUR OWN LIFE</h2>
+      <div class="yl-text ed" data-r="fade">
+          <p>By now, you may be wondering what any of this looks like in an ordinary day.</p>
+          <p class="beat">Not in a technology demonstration.</p>
+          <p>Not in a video promising you’ll become a millionaire.</p>
+          <p class="beat">In your actual life.</p>
+          <p>Perhaps it’s understanding a letter that arrived in the post.</p>
+          <p>Making sense of a confusing error message.</p>
+          <p>Finding a new way to use what’s already in your fridge.</p>
+          <p>Or discovering that an idea you’ve carried around in your imagination can become a picture.</p>
+          <p class="beat">You don’t have to try everything.</p>
+          <p>Sometimes one small discovery is enough to change how you think about what’s possible.</p>
+      </div>
+      <figure class="pf-side" data-r="wipe">
+        <div class="ph" data-drift><img src="assets/jewel-lash.jpg" alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." width="428" height="642" decoding="async"></div>
+        <figcaption>Detail is everything.</figcaption>
+      </figure>
+    </div>
+    <div class="fcards" id="fcards"></div>
+  </div>
+</section>
+
+<!-- MEET THE THREE -->
+<section class="section three" id="three" aria-labelledby="three-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">The Three</span><span class="label mute">Tap a name</span></div>
+    <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">Meet the big three</h2>
+    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. Each has moments where it feels like the natural choice. There is no single winner, and the one you already have is a fine place to start.</p>
+    <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
+    <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
+    <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
+  </div>
+</section>
+
+<!-- FULL COLLECTION -->
+<section class="section explorer" id="portfolio" aria-labelledby="portfolio-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">THE FULL COLLECTION</span><span class="label mute">Chapter 06</span></div>
+    <div class="grid">
+      <h2 id="portfolio-title" class="display ch-title ex-title" data-r="rise">CURIOUS WHAT ELSE IS POSSIBLE?</h2>
+      <div class="ex-text">
+        <div class="ed" data-r="fade">
+          <p>I’ve collected 23 everyday situations where AI might be useful, interesting, or unexpectedly creative.</p>
+          <p>Explore whichever catches your attention.</p>
+          <p>You don’t need to work through them in order.</p>
+        </div>
+        <button class="btn red explore-btn" id="exploreBtn" type="button" aria-expanded="false" aria-controls="collection">EXPLORE ALL 23 IDEAS <span class="plus" aria-hidden="true">+</span></button>
+      </div>
+    </div>
+    <div class="collection" id="collection" hidden>
+    <div class="legend" aria-hidden="true"><span><i class="dot"></i>Free preview, open it</span><span><i class="dot lock"></i>In the paid edition</span></div>
+    <div class="filters" role="group" aria-label="Filter workflows" id="filters"></div>
+    <ul class="index" id="index"></ul>
+    </div>
+  </div>
+</section>
+
 <!-- CHECKLIST -->
 <section class="section check" id="checklist" aria-labelledby="check-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">Your Companion Checklist</span><span class="label mute">Tap to tick</span></div>
+    <div class="section-head"><span class="label">YOUR FIRST STEP</span><span class="label mute">Chapter 07</span></div>
     <div class="grid">
       <div class="ch-head">
-        <h2 id="check-title" class="display" data-r="rise">Start small</h2>
-        <p data-r="fade">You can start today without setting anything up. Each step takes a few minutes, and every one after the first is up to you.</p>
+        <h2 id="check-title" class="display" data-r="rise">START SMALL</h2>
+        <div class="ed" data-r="fade">
+          <p>You don’t need a new hobby, a technical education, or another complicated project.</p>
+          <p>You can simply start with something you’re already curious about.</p>
+          <p>Open an AI app and ask a real question.</p>
+          <p class="beat">Show it a photograph.</p>
+          <p class="beat">Try speaking instead of typing.</p>
+          <p>Or ask it to explain something you’ve never quite understood.</p>
+          <p>You don’t have to master AI to begin discovering what it can do.</p>
+        </div>
       </div>
+      <div class="ck-side">
+        <p class="label mute ck-opt">Optional</p>
+        <p class="ck-lead">You can start today without setting anything up. Each step takes a few minutes, and every one after the first is up to you.</p>
       <ol id="checklist-list" data-r="stagger">
         <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask one real question</b><p>Open the AI app you already have and give it something from your actual day: a confusing letter, a dinner idea, a trip. Nothing needs connecting.</p></span></button></li>
         <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Tell it how you like answers</b><p>Each app has a place to describe yourself and how you like things explained. ChatGPT calls it Personalization. Claude calls it Instructions for Claude. Gemini keeps saved details in Personal context.</p></span></button></li>
@@ -782,38 +1062,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Talk naturally</b><p>Use voice, or write the way you speak. No special commands.</p></span></button></li>
         <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Connect a tool <span class="opt">Optional</span></b><p>Only if it helps. Linking your email or calendar means it can find a booking or sum up a long thread without you copying and pasting. Each app connects differently, some connections depend on your plan or country, and you can skip this step entirely.</p></span></button></li>
       </ol>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BUY -->
+<!-- CONCLUSION -->
+<section class="section conclusion" id="conclusion" aria-labelledby="conclusion-title">
+  <div class="wrap">
+    <div class="section-head"><span class="label">A NOTE FROM ME</span><span class="label mute">Chapter 08</span></div>
+    <h2 id="conclusion-title" class="display ch-title concl-title" data-r="rise">AND THIS IS ONLY THE BEGINNING.</h2>
+    <div class="ch-body">
+      <div class="ed" data-r="fade">
+          <p>Four years ago, I couldn’t have imagined how much this world would change.</p>
+          <p>And I certainly don’t pretend to know everything that’s coming next.</p>
+          <p class="beat">Nobody does.</p>
+          <p>But I’ve learned something from spending so much time exploring it.</p>
+          <p>The most interesting part of AI isn’t the endless stream of new apps or the people promising to reveal the next big secret.</p>
+          <p>It’s what happens when someone discovers a possibility they didn’t know existed.</p>
+          <p>When something complicated suddenly makes sense.</p>
+          <p>When a little curiosity opens a door.</p>
+          <p>And when technology that once felt distant starts to feel accessible.</p>
+          <p>That’s what I want IN THE LOOP to be.</p>
+          <p>A place where I can share what I’m discovering, separate the genuinely interesting from the noise, and make this changing world a little easier to understand.</p>
+          <p>Not because everyone needs to become an expert.</p>
+          <p>But because everyone deserves to know what’s happening around them—and have the chance to be part of it.</p>
+          <p class="beat">I’ll keep exploring.</p>
+          <p class="beat">And I’ll keep sharing what I find.</p>
+          <p class="ed-sign concl-sign voice">See you in the loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIGITAL EDITION -->
 <section class="section buy" id="buy" aria-labelledby="buy-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">The Issue</span><span class="label mute">Digital edition, coming soon</span></div>
+    <div class="section-head"><span class="label">THE DIGITAL EDITION</span><span class="label mute">Volume I</span></div>
     <div class="grid">
       <figure class="buy-img" data-r="wipe">
         <div class="ph" data-drift><img src="assets/pearl-lips.jpg" alt="Sculpted lips trimmed in gold, set with crystals and pearls." width="428" height="535" decoding="async"></div>
       </figure>
       <div class="buy-main">
-        <span class="status js-status"><i class="pulse" aria-hidden="true"></i><span class="js-status-text">Coming soon</span></span>
-        <h2 id="buy-title" class="display" data-r="rise">Own Volume I</h2>
-        <dl class="spec" data-r="stagger">
-          <div><dt>Format</dt><dd>Digital edition, PDF</dd></div>
-          <div><dt>Workflows</dt><dd>23, in three chapters</dd></div>
-          <div><dt>Apps</dt><dd>ChatGPT, Gemini, Claude</dd></div>
-          <div><dt>Includes</dt><dd>Setup notes and checklist</dd></div>
-        </dl>
-        <div class="buy-row">
-          <span class="price js-price"></span>
-          <a class="btn red js-buy" href="#buy" rel="noopener">Buy the issue <span class="arrow" aria-hidden="true">→</span></a>
+        <h2 id="buy-title" class="display" data-r="rise">MORE TO EXPLORE.</h2>
+        <div class="ed" data-r="fade">
+          <p>If you’ve enjoyed discovering what’s possible, I’m putting together a digital edition you can keep.</p>
+          <p>It will bring the practical examples, app-specific guidance, and useful reference material together in one place.</p>
         </div>
-        <p class="label mute">How it will work at launch</p>
-        <ol class="steps" aria-label="How delivery will work at launch">
-          <li><span class="n">01</span><b>Pay through Gumroad</b><p>Checkout will run on Gumroad, a platform for digital products.</p></li>
-          <li><span class="n">02</span><b>Get your PDF</b><p>Gumroad will deliver the digital edition once your payment goes through.</p></li>
-          <li><span class="n">03</span><b>Save a copy</b><p>Keep the PDF on your phone or computer so it is always with you.</p></li>
-        </ol>
-        <p class="fineprint js-fine"></p>
+        <span class="status"><i class="pulse" aria-hidden="true"></i><span>VOLUME I — COMING SOON</span></span>
+        <p class="fineprint">The digital edition isn’t available to purchase yet.</p>
       </div>
     </div>
   </div>
@@ -825,33 +1122,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <h2 id="faq-title" class="display" style="font-size:clamp(40px,5vw,72px)" data-r="rise">Questions</h2>
       <div class="qa">
-        <details><summary>Do I need to know anything technical?</summary><p>No. Every step is written in plain language, one tap at a time. If you can send a text message, you can do this.</p></details>
-        <details><summary>Do I need a paid AI plan?</summary><p>You can start on free plans. Some features, like longer voice time, connected apps or advanced image tools, have limits or need a paid plan, depending on the app and your country.</p></details>
-        <details><summary>Which apps does it cover?</summary><p>ChatGPT, Gemini and Claude. Every workflow has a prompt for each one, so you can use the app you already have.</p></details>
-        <details><summary>How will I get the file?</summary><p>When the edition launches, checkout will run on Gumroad, which delivers the PDF after payment. Save a copy to your device once it arrives.</p></details>
-        <details><summary>Is my private information safe?</summary><p>Start with The Rules above: never share passwords or ID numbers, and crop sensitive details out of photos before you upload them. Each app also has its own privacy and memory settings worth a look.</p></details>
+        <details><summary>Do i need to know anything technical?</summary><p>Not at all. IN THE LOOP is written for curious people, not computer experts. You can enjoy the discoveries without setting anything up or learning to code.</p></details>
+        <details><summary>Do i need a paid AI plan?</summary><p>No. You can explore many AI features with free plans, although availability and limits vary by app, country, and subscription. Some advanced tools require payment.</p></details>
+        <details><summary>Is this an AI course?</summary><p>No. It’s an editorial introduction to what’s happening in AI, what it can do, and why it matters. The practical examples are there if you feel like trying something yourself.</p></details>
+        <details><summary>Which AI apps does it cover?</summary><p>The practical examples focus on ChatGPT, Gemini, and Claude. The magazine also introduces other kinds of AI tools, including specialist creative applications.</p></details>
+        <details><summary>How will i get the digital edition?</summary><p>The digital edition is still being prepared and isn’t on sale yet. Purchase and delivery details will be confirmed when it’s ready.</p></details>
+        <details><summary>Is my private information safe?</summary><p>Be thoughtful about what you share with any AI service. Avoid uploading passwords, identity numbers, or sensitive information you don’t need to share. Check each app’s privacy settings and permissions, particularly before connecting other services.</p></details>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLOSING -->
-<section class="section closing" aria-labelledby="close-title">
-  <div class="wrap">
-    <div class="grid">
-      <h2 id="close-title" class="display" data-r="rise">You have<br>the key</h2>
-      <div class="prose" data-r="fade">
-        <p>You don’t need to become technical to enjoy any of this. Start with one small thing: a letter, a dinner, a trip.</p>
-        <p>The AI is already on your phone. I hope this issue makes you curious enough to try one thing today.</p>
-      </div>
-      <div class="end">
-        <span class="price js-price"></span>
-        <a class="btn red js-buy" href="#buy" rel="noopener">Buy the issue <span class="arrow" aria-hidden="true">→</span></a>
-        <p class="fineprint js-contact" hidden></p>
-      </div>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer>
@@ -902,33 +1183,7 @@ $$(".js-buy").forEach(a=>{
     a.addEventListener("click",e=>{e.preventDefault();toast("The digital edition is not on sale yet.");});
   }
 });
-$(".js-status-text").textContent = LIVE ? "Available now" : "Coming soon";
-$(".js-fine").textContent = LIVE ? "Your file is delivered by Gumroad through a private link." : "Not on sale yet. Checkout opens when the digital edition is ready.";
-if (CONFIG.contact){ const c=$(".js-contact"); c.textContent=CONFIG.contact; c.hidden=false; }
-
-/* ---- Discoveries ---- */
-const DISC = [
-  ["Can it read a photo?","Yes. Photograph a menu, a bill, a leaflet or an error message and ask what it means. <b>ChatGPT, Gemini and Claude</b> can all look at images you share."],
-  ["Can I talk instead of type?","Yes. All three phone apps have a voice mode. You speak, it answers out loud. Free plans include voice, with limits that vary by app."],
-  ["Will it remember me next time?","It can, if you allow it, though it won’t keep every detail. <b>ChatGPT and Claude</b> have memory you can view, edit or switch off in settings. <b>Gemini</b> keeps information you ask it to save. Each app handles this a little differently."],
-  ["Can it read my email?","Only if you connect it and say yes. <b>Gemini and Claude</b> can link to Gmail with your permission, and ChatGPT offers plugins for other apps. Claude can draft a Gmail reply, but you press send."],
-  ["Can it make a picture?","<b>ChatGPT and Gemini</b> can create images right in the chat. <b>Claude</b> does not make photos, but it can write a detailed image brief or work with a connected creative tool."],
-  ["Is it always right?","No. It can sound sure and still be wrong. Use it to understand and draft, then check names, numbers and dates that matter before you act."]
-];
-$("#cards").innerHTML = DISC.map((d,i)=>`<div class="card" style="--i:${i}">
-  <button class="card-q" type="button" aria-expanded="false" aria-controls="ans-${i}" id="q-${i}">
-    <span class="card-n">${pad(i+1)}</span><span class="card-t">${esc(d[0])}</span>
-    <span class="card-hint"><span class="hint-tx">Tap to find out</span><span class="plus" aria-hidden="true">+</span></span>
-  </button>
-  <div class="reveal" id="ans-${i}" role="region" aria-labelledby="q-${i}" inert><div><p class="ans">${d[1]}</p></div></div>
-</div>`).join("");
-$("#cards").addEventListener("click",e=>{
-  const b=e.target.closest(".card-q"); if(!b) return;
-  const card=b.parentElement, r=card.querySelector(".reveal"), open=b.getAttribute("aria-expanded")!=="true";
-  b.setAttribute("aria-expanded",open); card.classList.toggle("open",open); r.classList.toggle("open",open);
-  if(open) r.removeAttribute("inert"); else r.setAttribute("inert","");
-  b.querySelector(".hint-tx").textContent = open ? "Close" : "Tap to find out";
-});
+if (CONFIG.contact && $(".js-contact")){ const c=$(".js-contact"); c.textContent=CONFIG.contact; c.hidden=false; }
 
 /* ---- Meet the three ---- */
 const THREE = [
@@ -1041,26 +1296,27 @@ function renderIndex(animate){
   }).join("");
   if (animate&&MOTION){ index.classList.remove("swap"); void index.offsetWidth; index.classList.add("swap"); }
 }
-function detailHTML(n){
+function detailHTML(n,px=""){
   if (!FREE[n]) return `<div class="locked"><div><p>Inside the paid edition: when to use it, how to set it up step by step, and a ready prompt for each app.</p><div class="apps">${APPS.map(a=>`<span>${a[1]}</span>`).join("")}</div></div><a class="btn ghost" href="#buy">About the issue</a></div>`;
-  const tabs=APPS.map((a,i)=>`<button class="tab" type="button" role="tab" id="t-${n}-${a[0]}" aria-selected="${i===0}" aria-controls="p-${n}" data-app="${a[0]}" tabindex="${i===0?0:-1}">${a[1]}</button>`).join("");
-  return `<div class="tabs" role="tablist" aria-label="Choose your app">${tabs}</div><div class="panel" role="tabpanel" id="p-${n}" aria-labelledby="t-${n}-chatgpt">${panelHTML(n,"chatgpt")}</div>`;
+  const tabs=APPS.map((a,i)=>`<button class="tab" type="button" role="tab" id="${px}t-${n}-${a[0]}" aria-selected="${i===0}" aria-controls="${px}p-${n}" data-app="${a[0]}" tabindex="${i===0?0:-1}">${a[1]}</button>`).join("");
+  return `<div class="tabs" role="tablist" aria-label="Choose your app">${tabs}</div><div class="panel" role="tabpanel" id="${px}p-${n}" aria-labelledby="${px}t-${n}-chatgpt">${panelHTML(n,"chatgpt")}</div>`;
 }
 function panelHTML(n,app){
   const d=FREE[n][app], note=FREE[n].note;
   return `<div class="how"><div><b>How</b>${esc(d.how)}</div>${note?`<p class="note">${esc(note)}</p>`:""}</div><div class="prompt"><span class="ptext">${esc(d.p)}</span><button class="btn copy" type="button">Copy prompt</button></div>`;
 }
-function toggleRow(row,force){
-  const n=+row.dataset.n, d=$("#d-"+n), b=$("#r-"+n);
-  const open = force!==undefined ? force : b.getAttribute("aria-expanded")!=="true";
+function toggleAcc(btn,force){
+  const box=btn.closest("[data-n]"), n=+box.dataset.n, px=box.dataset.px||"", d=document.getElementById(btn.getAttribute("aria-controls"));
+  const open = force!==undefined ? force : btn.getAttribute("aria-expanded")!=="true";
   const inner=d.querySelector(".inner");
-  if (open && !inner.innerHTML) inner.innerHTML=detailHTML(n);
-  b.setAttribute("aria-expanded",open); row.classList.toggle("open",open); d.classList.toggle("open",open);
+  if (open && !inner.innerHTML) inner.innerHTML=detailHTML(n,px);
+  btn.setAttribute("aria-expanded",open); box.classList.toggle("open",open); d.classList.toggle("open",open);
   if (open) d.removeAttribute("inert"); else d.setAttribute("inert","");
 }
+function toggleRow(row,force){ toggleAcc(row.querySelector(".row-btn"),force); }
 function openRow(n){ const row=index.querySelector(`.row[data-n="${n}"]`); if(row) toggleRow(row,true); }
 function selectTab(tab,focus){
-  const list=tab.parentElement, n=+list.closest(".row").dataset.n, panel=$("#p-"+n);
+  const list=tab.parentElement, n=+tab.closest("[data-n]").dataset.n, panel=list.nextElementSibling;
   list.querySelectorAll(".tab").forEach(t=>{const on=t===tab;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;});
   if (focus) tab.focus();
   panel.setAttribute("aria-labelledby",tab.id); panel.innerHTML=panelHTML(n,tab.dataset.app);
@@ -1077,16 +1333,40 @@ filters.addEventListener("click",e=>{
   filter=b.dataset.f; renderFilters(); renderIndex(true);
   if (filter==="free") openRow(2);
 });
-index.addEventListener("click",e=>{
-  const cp=e.target.closest(".copy"); if(cp){copyText(cp);return;}
-  const tab=e.target.closest(".tab"); if(tab){selectTab(tab);return;}
-  const rb=e.target.closest(".row-btn"); if(rb){toggleRow(rb.closest(".row"));}
-});
-index.addEventListener("keydown",e=>{
-  const tab=e.target.closest(".tab"); if(!tab) return;
-  if (e.key!=="ArrowRight"&&e.key!=="ArrowLeft") return;
-  const tabs=[...tab.parentElement.children]; let i=tabs.indexOf(tab);
-  i=(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length; selectTab(tabs[i],true); e.preventDefault();
+function accClicks(root,btnSel){
+  root.addEventListener("click",e=>{
+    const cp=e.target.closest(".copy"); if(cp){copyText(cp);return;}
+    const tab=e.target.closest(".tab"); if(tab){selectTab(tab);return;}
+    const b=e.target.closest(btnSel); if(b){toggleAcc(b);}
+  });
+  root.addEventListener("keydown",e=>{
+    const tab=e.target.closest(".tab"); if(!tab) return;
+    if (e.key!=="ArrowRight"&&e.key!=="ArrowLeft") return;
+    const tabs=[...tab.parentElement.children]; let i=tabs.indexOf(tab);
+    i=(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length; selectTab(tabs[i],true); e.preventDefault();
+  });
+}
+accClicks(index,".row-btn");
+
+/* ---- Featured discoveries (Chapter 6): reuse workflows 04, 14, 02, 22 ---- */
+const FEAT=[4,14,2,22];
+const fcards=$("#fcards");
+fcards.innerHTML=FEAT.map(n=>{const w=W[n-1], free=!!FREE[n];
+  return `<div class="fcard" data-n="${n}" data-px="f">
+    <button class="fcard-q" type="button" aria-expanded="false" aria-controls="fd-${n}" id="fr-${n}">
+      <span class="fcard-n">${pad(n)}</span><span class="fcard-t">${esc(w[0])}</span><span class="fcard-p">${esc(w[2])}</span>
+      <span class="fcard-hint"><span class="${free?"free":"lock"}">${free?"Free preview":"Paid edition"}</span><span class="plus" aria-hidden="true">+</span></span>
+    </button>
+    <div class="reveal" id="fd-${n}" role="region" aria-labelledby="fr-${n}" inert><div><div class="inner"></div></div></div>
+  </div>`;}).join("");
+accClicks(fcards,".fcard-q");
+
+/* ---- Full collection toggle ---- */
+const exploreBtn=$("#exploreBtn"), collection=$("#collection");
+exploreBtn.addEventListener("click",()=>{
+  const open=exploreBtn.getAttribute("aria-expanded")!=="true";
+  exploreBtn.setAttribute("aria-expanded",open); collection.hidden=!open;
+  if(open && MOTION){ index.classList.remove("swap"); void index.offsetWidth; index.classList.add("swap"); }
 });
 renderFilters(); renderIndex(false); openRow(2);
 
