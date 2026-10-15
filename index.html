@@ -247,6 +247,7 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .story-h{margin:1.6em 0 .2em;padding-top:18px;border-top:1px solid var(--ink);font-size:var(--s-label);letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--red);font-variation-settings:"wdth" 110}
 .story-close{color:var(--ink);font-size:clamp(22px,2.3vw,30px);line-height:1.2;text-wrap:pretty}
 .story-close + .story-close{margin-top:-.2em}
+.story-close:last-child{color:var(--red)}
 .essay-body{grid-column:3/11;display:grid;gap:36px}
 .essay-body .prose{max-width:none;columns:2 300px;column-gap:var(--gutter);display:block}
 .essay-body .prose p{margin-bottom:1.1em;break-inside:avoid-column}
@@ -281,6 +282,7 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .know{margin-top:20px;background:var(--tint);padding:18px 20px;font-size:15px;color:var(--ink-2)}
 .know b{display:block;font-size:var(--s-label);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
 .three-foot{margin-top:28px;font-size:14px;color:var(--mute);max-width:70ch}
+.three-lede{font-size:var(--s-lead);line-height:1.35;max-width:40ch;margin:0 0 clamp(28px,4vw,48px);color:var(--ink-2)}
 @media (max-width:800px){.three-panel{grid-template-columns:1fr}}
 @media (max-width:520px){.three-tab .by{display:none}}
 
@@ -546,11 +548,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <figcaption>More eyes than you expected.</figcaption>
       </figure>
       <div class="fw-text">
-        <h2 id="fw-title" class="lead voice" data-r="rise">What if the AI already on your phone could read the small print for you?</h2>
+        <h2 id="fw-title" class="lead voice" data-r="rise">Asking a question is one thing. Handing over a piece of your day is another.</h2>
         <div class="prose" data-r="fade">
-          <p class="dropcap">It can. It can also look at a photo of your fridge and suggest the week’s dinners. It can turn a lab report into plain words, so you walk into your appointment with better questions. It can draft the polite, firm letter you have been putting off.</p>
-          <p>Many people have asked an AI a question or two. Far fewer have handed it a real task from a real day and watched what happens.</p>
-          <p>This issue is my collection of those moments. The situation, the exact words to type, and the app you already have. No coding. No technical background. Just curiosity.</p>
+          <p class="dropcap">Most people meet AI the same way. They type a question, get a tidy answer, and move on. Useful, and a little forgettable.</p>
+          <p>The surprise comes when you give it something real. The notes you scribbled on the back of an envelope. The holiday ideas scattered across a dozen screenshots. The letter from your bank that you have read twice and still don’t understand.</p>
+          <p>That is where I kept discovering things I didn’t know it could do. This issue collects those moments, with the exact words to type into the app already on your phone.</p>
+          <p>No coding. No technical background. Just curiosity.</p>
         </div>
       </div>
     </div>
@@ -590,29 +593,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <p>But the name wasn’t what made Carson special.</p>
           <p class="story-turn">It was everything else he knew about my life.</p>
           <p>My schedule. My appointments. My travel plans. My family, my preferences, and the little details that make up an ordinary day.</p>
-          <p>And there was something even more valuable.</p>
-          <p>Carson was designed to help me keep track of unfinished things. If I was waiting for someone to get back to me, or something needed following up, I wanted an assistant that could help make sure it didn’t disappear from my attention.</p>
+          <p>And I’m building him to keep track of unfinished things. The reply I’m still waiting for. The booking that needs confirming. The promise I made and might otherwise forget.</p>
           <p class="story-turn">That’s what I mean by closing the loops.</p>
           <p>My friend was intrigued.</p>
           <blockquote class="say"><p>“So yours doesn’t just answer questions. It actually helps you run your day?”</p></blockquote>
-          <p>Exactly.</p>
-          <p>And that’s when our conversation became much more interesting.</p>
+          <p>Exactly. And that’s the part most people haven’t discovered yet.</p>
 
           <h3 class="story-h">Here’s what most people don’t realize</h3>
           <p>You don’t need to build your own AI assistant to make the AI you already use much more useful.</p>
-          <p>You can tell ChatGPT, Claude, or Gemini how you prefer things explained. You can ask for help planning a trip, organizing a complicated week, comparing choices, drafting messages, or turning a jumble of thoughts into a clear plan.</p>
-          <p>Depending on the app and its settings, it may also remember useful preferences, work with information you provide, or connect to tools such as your calendar, email, and files.</p>
-          <p>Imagine not having to explain your travel preferences every time you plan a holiday. Or being able to turn a long, confusing email into three clear points and a suggested reply.</p>
+          <p>Tell ChatGPT, Gemini or Claude how you like things explained, and it adjusts. Hand it a trip to plan, a complicated week to untangle, a choice to weigh up, or a jumble of thoughts to turn into a clear plan.</p>
+          <p>Depending on the app, your plan and your settings, it may also remember useful preferences between chats, or connect to your calendar, email and files with your permission.</p>
+          <p>Imagine planning a holiday without explaining, yet again, that you hate early flights. Or turning a long, confusing email into three clear points and a draft reply.</p>
           <p class="story-turn">That’s when AI starts feeling less like a search box and more like something that understands how you live.</p>
 
           <h3 class="story-h">And what about Carson?</h3>
-          <p>Carson goes a step further because I’m building him specifically around my life.</p>
-          <p>He’s designed not only to help me think and plan, but also to keep track of responsibilities, notice what still needs attention, and help me follow up.</p>
-          <p>That kind of ongoing coordination requires additional tools and connections. It’s a glimpse of how much further a personal AI assistant can go.</p>
-          <p>But you don’t have to start there.</p>
-          <p>Start with the AI you already have. Discover what it can do. Make it more personal. Let it help with the small things, then gradually discover the bigger possibilities.</p>
+          <p>Carson goes further because I’m building him around my own life.</p>
+          <p>Beyond helping me think and plan, he’s designed to keep track of responsibilities, notice what still needs attention, and help me follow up. That takes extra tools and connections that an everyday AI app doesn’t come with.</p>
+          <p>Think of him as a glimpse of where personal AI is heading.</p>
+          <p>You don’t have to start there. Start with the AI you already have. Make it a little more yours, let it help with the small things, and see what you find.</p>
           <p class="story-close voice">Because the real surprise isn’t that Carson calls me my beautiful lady.</p>
-          <p class="story-close voice">It’s that this little conversation over coffee was only the beginning of what AI could make possible in everyday life.</p>
+          <p class="story-close voice">It’s that a conversation over coffee was only the beginning.</p>
+          <p class="story-close voice">So what could you teach yours to do?</p>
         </div>
       </div>
     </div>
@@ -624,9 +625,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><span class="label">The Three</span><span class="label mute">Tap a name</span></div>
     <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">Meet the big three</h2>
+    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. Each has moments where it feels like the natural choice. There is no single winner, and the one you already have is a fine place to start.</p>
     <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
     <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
-    <p class="three-foot">There is no winner here. All three can chat, read photos and files, and talk out loud. Pick the one you already have, or the one that fits how you live.</p>
+    <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
   </div>
 </section>
 
@@ -656,11 +658,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <div class="pf-intro">
         <h2 id="pf-title" class="display" data-r="rise">23 ways to hand it off</h2>
-        <p class="lead" data-r="fade">Each workflow starts with a real situation, then gives you the words to type into ChatGPT, Gemini or Claude. Three are open for you to try today.</p>
+        <p class="lead" data-r="fade">Each one starts with a moment you’ll probably recognize, then gives you the words to type into ChatGPT, Gemini or Claude. Three are open, so you can try one today.</p>
       </div>
       <figure class="pf-side" data-r="wipe">
         <div class="ph" data-drift><img src="assets/jewel-lash.jpg" alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." width="428" height="642" decoding="async"></div>
-        <figcaption>Detail is the whole job.</figcaption>
+        <figcaption>Detail is everything.</figcaption>
       </figure>
     </div>
     <div class="legend" aria-hidden="true"><span><i class="dot"></i>Free preview, open it</span><span><i class="dot lock"></i>In the paid edition</span></div>
@@ -710,18 +712,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </figure>
       <div class="studio-head">
         <div class="prose" data-r="fade">
-          <p>Friends always ask which app made my videos. They imagine you type one sentence and a beautiful clip pops out.</p>
-          <p>A good six second video takes me about four hours. Ideas, styling, testing prompts, moving between tools, choosing frame by frame.</p>
-          <p>AI does not replace your taste or your effort. You are still the director.</p>
+          <p>People often ask which app made my videos, as if there were one button that does it all.</p>
+          <p>There isn’t. A good six-second clip can take me about four hours.</p>
+          <p>I choose the idea. I decide on the look: the light, the styling, the mood. I write the prompt, try it in different tools, throw most of it away, and adjust. Then I pick the few frames that feel right.</p>
+          <p>The AI does the rendering. The taste, the direction and the final call are still mine.</p>
         </div>
       </div>
       <div class="studio-note" data-r="rise">
         <div class="big">4h</div>
-        <p>for six seconds of film. The issue shows you how to direct both images and video.</p>
+        <p>for six seconds of film. The issue shows you how to direct images and video yourself.</p>
       </div>
       <div class="studio-tool" data-r="fade">
         <span class="label">AI plus specialist</span>
-        <p>I connect Higgsfield, a creative tool for images and video, to both ChatGPT and Claude. I describe the scene in the chat, and the AI works with Higgsfield to make it. ChatGPT and Gemini can also create images on their own. Claude does not make photos, but with a connected tool it can take part in the work. The choices are still mine.</p>
+        <p>Some apps make pictures themselves: ChatGPT and Gemini can create images right in the chat. Others work through a connected specialist tool. I connect Higgsfield, a creative tool for images and video, to both ChatGPT and Claude. I describe the scene in the chat, and the AI works with Higgsfield to make it. Claude doesn’t create photos on its own, but with a connected tool it can take part. What’s available depends on the app and your plan.</p>
       </div>
     </div>
   </div>
@@ -734,14 +737,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <div class="ch-head">
         <h2 id="check-title" class="display" data-r="rise">Start small</h2>
-        <p data-r="fade">You can begin today without setting anything up. The rest makes your AI feel more like yours.</p>
+        <p data-r="fade">You can start today without setting anything up. Each step takes a few minutes, and every one after the first is up to you.</p>
       </div>
       <ol id="checklist-list" data-r="stagger">
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask one real question</b><p>Open the app you already have and give it something from your actual day. Nothing needs connecting.</p></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Introduce yourself</b><p>Tell it how you like answers in its personalization settings. Each app puts this in a different place, and the issue shows you where.</p></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Share your context</b><p>Mention your projects, trips and plans. With memory on, it can carry useful details into the next chat. You can view or delete what it keeps.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask one real question</b><p>Open the AI app you already have and give it something from your actual day: a confusing letter, a dinner idea, a trip. Nothing needs connecting.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Tell it how you like answers</b><p>Each app has a place to describe yourself and how you like things explained. ChatGPT calls it Personalization. Claude calls it Instructions for Claude. Gemini keeps saved details in Personal context.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Share a little context</b><p>Mention your plans, trips and preferences as you chat. Where memory is available and switched on, it can bring useful details into later chats. It won’t remember everything, and each app has its own controls for what it keeps.</p></span></button></li>
         <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Talk naturally</b><p>Use voice, or write the way you speak. No special commands.</p></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Connect a tool <span class="opt">Optional</span></b><p>Linking Gmail, Drive or a creative tool lets your AI work with your own information. Each app connects differently, and some connections depend on your plan or country.</p></span></button></li>
+        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Connect a tool <span class="opt">Optional</span></b><p>Only if it helps. Linking your email or calendar means it can find a booking or sum up a long thread without you copying and pasting. Each app connects differently, some connections depend on your plan or country, and you can skip this step entirely.</p></span></button></li>
       </ol>
     </div>
   </div>
@@ -750,7 +753,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <!-- BUY -->
 <section class="section buy" id="buy" aria-labelledby="buy-title">
   <div class="wrap">
-    <div class="section-head"><span class="label">The Issue</span><span class="label mute">Digital edition</span></div>
+    <div class="section-head"><span class="label">The Issue</span><span class="label mute">Digital edition, coming soon</span></div>
     <div class="grid">
       <figure class="buy-img" data-r="wipe">
         <div class="ph" data-drift><img src="assets/pearl-lips.jpg" alt="Sculpted lips trimmed in gold, set with crystals and pearls." width="428" height="535" decoding="async"></div>
@@ -768,9 +771,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <span class="price js-price"></span>
           <a class="btn red js-buy" href="#buy" rel="noopener">Buy the issue <span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        <ol class="steps" aria-label="How delivery works">
-          <li><span class="n">01</span><b>Pay through Gumroad</b><p>Checkout runs on Gumroad, a platform for digital products.</p></li>
-          <li><span class="n">02</span><b>Get your PDF</b><p>Gumroad delivers the digital edition once your payment goes through.</p></li>
+        <p class="label mute">How it will work at launch</p>
+        <ol class="steps" aria-label="How delivery will work at launch">
+          <li><span class="n">01</span><b>Pay through Gumroad</b><p>Checkout will run on Gumroad, a platform for digital products.</p></li>
+          <li><span class="n">02</span><b>Get your PDF</b><p>Gumroad will deliver the digital edition once your payment goes through.</p></li>
           <li><span class="n">03</span><b>Save a copy</b><p>Keep the PDF on your phone or computer so it is always with you.</p></li>
         </ol>
         <p class="fineprint js-fine"></p>
@@ -788,8 +792,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <details><summary>Do I need to know anything technical?</summary><p>No. Every step is written in plain language, one tap at a time. If you can send a text message, you can do this.</p></details>
         <details><summary>Do I need a paid AI plan?</summary><p>You can start on free plans. Some features, like longer voice time, connected apps or advanced image tools, have limits or need a paid plan, depending on the app and your country.</p></details>
         <details><summary>Which apps does it cover?</summary><p>ChatGPT, Gemini and Claude. Every workflow has a prompt for each one, so you can use the app you already have.</p></details>
-        <details><summary>How do I get the file?</summary><p>Checkout runs on Gumroad, which delivers the PDF after payment. Save a copy to your device once it arrives.</p></details>
-        <details><summary>Is my private information safe?</summary><p>The issue shows you what never to share, how to crop sensitive details out of photos, and where to view or switch off memory in each app.</p></details>
+        <details><summary>How will I get the file?</summary><p>When the edition launches, checkout will run on Gumroad, which delivers the PDF after payment. Save a copy to your device once it arrives.</p></details>
+        <details><summary>Is my private information safe?</summary><p>Start with The Rules above: never share passwords or ID numbers, and crop sensitive details out of photos before you upload them. Each app also has its own privacy and memory settings worth a look.</p></details>
       </div>
     </div>
   </div>
@@ -801,8 +805,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid">
       <h2 id="close-title" class="display" data-r="rise">You have<br>the key</h2>
       <div class="prose" data-r="fade">
-        <p>AI is not here to replace your human touch or turn you into an engineer. Used well, it takes care of the small chores and gives you back time for what matters.</p>
-        <p>The tools are already in your hands. I hope this issue makes you want to try one thing today.</p>
+        <p>You don’t need to become technical to enjoy any of this. Start with one small thing: a letter, a dinner, a trip.</p>
+        <p>The AI is already on your phone. I hope this issue makes you curious enough to try one thing today.</p>
       </div>
       <div class="end">
         <span class="price js-price"></span>
@@ -870,7 +874,7 @@ if (CONFIG.contact){ const c=$(".js-contact"); c.textContent=CONFIG.contact; c.h
 const DISC = [
   ["Can it read a photo?","Yes. Photograph a menu, a bill, a leaflet or an error message and ask what it means. <b>ChatGPT, Gemini and Claude</b> can all look at images you share."],
   ["Can I talk instead of type?","Yes. All three phone apps have a voice mode. You speak, it answers out loud. Free plans include voice, with limits that vary by app."],
-  ["Will it remember me next time?","It can, if you allow it. <b>ChatGPT and Claude</b> have memory you can view, edit or switch off in settings. <b>Gemini</b> keeps information you ask it to save. You decide what stays."],
+  ["Will it remember me next time?","It can, if you allow it, though it won’t keep every detail. <b>ChatGPT and Claude</b> have memory you can view, edit or switch off in settings. <b>Gemini</b> keeps information you ask it to save. Each app handles this a little differently."],
   ["Can it read my email?","Only if you connect it and say yes. <b>Gemini and Claude</b> can link to Gmail with your permission, and ChatGPT offers plugins for other apps. Claude can draft a Gmail reply, but you press send."],
   ["Can it make a picture?","<b>ChatGPT and Gemini</b> can create images right in the chat. <b>Claude</b> does not make photos, but it can write a detailed image brief or work with a connected creative tool."],
   ["Is it always right?","No. It can sound sure and still be wrong. Use it to understand and draft, then check names, numbers and dates that matter before you act."]
@@ -892,15 +896,15 @@ $("#cards").addEventListener("click",e=>{
 
 /* ---- Meet the three ---- */
 const THREE = [
-  {id:"chatgpt",name:"ChatGPT",by:"By OpenAI",intro:"The one most people have heard of, and a good all-rounder.",
-   tries:["Describe a picture and it creates it in the chat, or upload a photo and ask for changes.","Talk to it with voice on your phone, on the web or in the desktop app.","Set how warm or chatty it sounds under Personalization, then Characteristics.","Add plugins from the Plugins page to work with other apps. What you can add depends on your plan and region."],
-   know:"With memory on, it can carry useful details between chats. You can review or delete them under Settings, Personalization, Memory."},
-  {id:"gemini",name:"Gemini",by:"By Google",intro:"Made by Google, and at home with Google’s own apps.",
-   tries:["Type @ in the message box and pick a connected app, such as Gmail, before you ask.","Ask about places. It can use public information from Google Maps.","Start Gemini Live and point your camera at something to talk about it.","Create and edit images from the Images page."],
-   know:"Things you ask it to remember live in Personal context. Some features depend on your age, country and plan."},
-  {id:"claude",name:"Claude",by:"By Anthropic",intro:"A thoughtful reading and writing partner.",
-   tries:["Upload a long document or a photo and ask for the three points that matter.","Start a Project to keep files and instructions for one topic together. The Free plan includes up to five.","Tap the sound wave icon to use voice mode, included on the Free plan.","Connect tools like Gmail, Google Drive or Canva from the Connectors directory. Claude asks before it acts."],
-   know:"Claude does not create photos. It can draft, organize and analyze, and work with connected creative tools. Memory is on by default and you can view or edit it in Settings."}
+  {id:"chatgpt",name:"ChatGPT",by:"By OpenAI",intro:"Open it when you want to make something: a picture, a plan, a letter, or a long conversation out loud.",
+   tries:["Describe the birthday card you have in mind and it creates the image right in the chat.","Talk things through with voice while you cook or walk. Free plans include limited voice time.","Tell it how warm or chatty to be under Personalization, then Characteristics.","Add plugins for other apps from the Plugins page. What you can add depends on your plan and region."],
+   know:"With memory on, it can carry useful details between chats, though not every detail. You can review or delete what it keeps under Settings, then Personalization."},
+  {id:"gemini",name:"Gemini",by:"By Google",intro:"Open it when your life already runs through Google, from Gmail to Maps.",
+   tries:["Type @, pick Gmail once it’s connected, and ask it to find your hotel confirmation.","Ask which café near your hotel opens earliest. It can use public Google Maps information.","Start Gemini Live, point your camera at a plant or a label, and ask about it.","Create or edit an image from the Images page."],
+   know:"Things you ask it to remember are kept in Personal context. Some features depend on your age, country and plan."},
+  {id:"claude",name:"Claude",by:"By Anthropic",intro:"Open it when you have something long or tricky to read, write or think through.",
+   tries:["Upload a long document or a photo of a letter and ask for the three points that matter.","Start a Project for one topic, like a house move, and keep the files and notes together. Free plans include up to five.","Tap the sound wave icon to use voice mode. It’s included on the Free plan.","Connect tools like Gmail, Google Drive or Canva from the Connectors directory. It asks before it acts."],
+   know:"Claude doesn’t create photos itself. It can write, organize and analyze, and work with connected creative tools. Memory is on by default, and you can view or edit it in Settings."}
 ];
 let threeSel = "chatgpt";
 function renderThreeTabs(){
@@ -930,29 +934,29 @@ const CHAPTERS = [
   {id:"studio",name:"The Creative Studio"}
 ];
 const W = [
- ["The Inbox Curated","admin","Drowning in unread emails and spending hours drafting polite replies."],
- ["The Contract Decoded","admin","Staring at dense legal clauses, hidden fees or complex agreements without knowing what they mean."],
- ["The Digital Clean Slate","admin","A cluttered desktop or messy folders causing constant mental friction."],
- ["The Technical Lifeline","admin","Staring at a confusing error message on your TV, laptop or phone."],
- ["The Location Scout","admin","Comparing neighborhoods, walkability or destinations without local bias."],
- ["The Medical Insights Translator","admin","Decoding lab reports and doctor summaries without feeling overwhelmed."],
- ["The Billing & Insurance Auditor","admin","Unpacking confusing medical bills, facility fees or disputed insurance statements."],
- ["The Consumer Dispute Advocate","admin","Stuck in customer service loops while a company refuses a valid refund."],
- ["The Travel Disruption Claim","admin","Flight delays, cancellations or lost luggage while the airline drags its feet."],
- ["The Repair & Contractor Estimate Decoder","admin","Reviewing vague quotes and markups without knowing market rates."],
- ["The Travel Deal Scout","admin","Navigating inflated seasonal fares to find real savings."],
- ["The Subscription Auditor","admin","Silent monthly charges and forgotten subscriptions draining your account."],
- ["The Warranty & Replacement Specialist","admin","Getting manufacturers to honor a warranty after the return window closes."],
- ["The Executive Culinary Plan","life","Turning random fridge and pantry ingredients into a real weekly menu."],
- ["The Event Design Atelier","life","Invitations and event concepts that do not sound generic."],
- ["The Bespoke Itinerary","life","Travel planned around comfort, pace and good food, not tourist traps."],
- ["The Wardrobe & Style Curator","life","Building outfits from pieces you already own for a specific event."],
- ["The Interior Styling Studio","life","Refreshing a room without buying new furniture."],
- ["The Curated Gift Finder","life","Finding a thoughtful, personal gift within a set budget."],
- ["The Archive Preservationist","life","Turning fragile handwritten recipes and letters into clean digital text."],
- ["The Cultural & Intellectual Companion","life","Making dense history, architecture or literature feel like a conversation."],
- ["The Visual Direction Studio","studio","Turning a mood or aesthetic into precise prompts for high-end images."],
- ["The Cinematic Director","studio","Writing video concepts and prompts for tools like Kling, Runway and Flow."]
+ ["Tame the inbox","admin","Too many unread emails, and every reply takes longer than it should."],
+ ["Read the small print before you sign","admin","A contract, lease or agreement full of fees and deadlines you can’t quite decode."],
+ ["Clear the cluttered desktop","admin","Files everywhere, and no idea what to keep, rename or throw away."],
+ ["What does this error mean?","admin","A strange message on your TV, laptop or phone, and no idea what to try first."],
+ ["Which neighborhood would suit you?","admin","Comparing places to stay or live: how quiet, how walkable, how close to a good market."],
+ ["Make sense of your lab results","admin","A report full of terms and numbers before an appointment. Walk in with better questions."],
+ ["Is this bill right?","admin","A medical bill or insurance letter with charges that don’t add up."],
+ ["Ask for the refund you’re owed","admin","Going round in circles with customer service over money you should have had back."],
+ ["Your flight was canceled. Now what?","admin","Delays, cancellations or lost luggage, and an airline that’s slow to respond."],
+ ["Is this quote fair?","admin","A builder’s or plumber’s quote that’s vague, high, or both."],
+ ["Hunt for a better fare","admin","Prices that jump every time you look, and too many sites to compare."],
+ ["What am I still paying for?","admin","Small monthly charges you forgot about, quietly adding up."],
+ ["It broke. Is it still covered?","admin","Something stopped working after the return window, and the maker isn’t helping."],
+ ["What’s for dinner? Ask your fridge.","life","Half a pepper, some eggs and leftover rice. Turn what you have into a week of dinners."],
+ ["Invitations that sound like you","life","A dinner, a birthday or a gathering, and wording that doesn’t sound like a template."],
+ ["A trip at your own pace","life","Travel planned around comfort, good food and quiet mornings, not tourist traps."],
+ ["What do I wear with this?","life","One favorite piece, an event coming up, and outfits built from what you already own."],
+ ["Refresh a room without new furniture","life","A space that feels tired or cluttered, and a few changes that make it feel new."],
+ ["A thoughtful gift, on budget","life","Someone special, a set budget, and no idea what to get them."],
+ ["Give old family letters a second life","life","Handwritten recipes and letters, turned into clean text you can print and share."],
+ ["Art and history, explained over coffee","life","Dense books, buildings and paintings, made easy to talk about."],
+ ["Turn a mood into a picture","studio","A feeling or an idea you want to see, turned into a detailed image brief."],
+ ["Direct a six-second film","studio","A scene in your head, turned into a video prompt for tools like Kling, Runway or Flow."]
 ];
 /* Free previews. Prompts are verbatim from the issue. */
 const FREE = {
