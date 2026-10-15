@@ -171,6 +171,10 @@ figcaption{font-size:var(--s-label);color:var(--mute);margin-top:10px;letter-spa
 @media (max-width:900px){
   .cover-text,.cover-img{grid-column:1/-1}
   .cover-img{max-width:520px}
+  .cover .grid{row-gap:clamp(24px,5vw,36px)}
+  .cover-text{display:contents}
+  .cover-text > *{grid-column:1/-1}
+  .cover h1{order:1}.cover-img{order:2}.cover .deck{order:3}.cover-lines{order:4}.cover-buy{order:5}
 }
 @media (max-width:520px){.cover-lines{grid-template-columns:1fr}.mast .hide-s{display:none}.cover-img .ph{aspect-ratio:4/5}}
 
@@ -307,6 +311,10 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .try li::before{content:"+";color:var(--red);font-weight:700;font-size:20px;line-height:1.1}
 .know{margin-top:20px;background:var(--tint);padding:18px 20px;font-size:15px;color:var(--ink-2)}
 .know b{display:block;font-size:var(--s-label);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.three-body p{font-size:clamp(17px,1.4vw,19px);line-height:1.5;color:var(--ink-2)}.three-body p+p{margin-top:.8em}
+.three-lede p+p{margin-top:.7em}
+.three-note{margin-top:clamp(28px,4vw,40px);font-size:16px;line-height:1.5;color:var(--ink-2);max-width:70ch}
+.three .know{max-width:70ch}.know p+p{margin-top:.6em}
 .three-foot{margin-top:28px;font-size:14px;color:var(--mute);max-width:70ch}
 .three-lede{font-size:var(--s-lead);line-height:1.35;max-width:40ch;margin:0 0 clamp(28px,4vw,48px);color:var(--ink-2)}
 @media (max-width:800px){.three-panel{grid-template-columns:1fr}}
@@ -346,6 +354,8 @@ html.motion [data-r="quote"].in::before{transition:transform .9s .15s var(--ease
 .index.swap .row{animation:fadeUp .4s var(--ease) both;animation-delay:calc(var(--i,0) * 25ms)}
 .row{border-bottom:1px solid var(--rule);transition:background .3s}
 .row.open{background:linear-gradient(var(--tint),var(--tint)) no-repeat 0 0/100% 100%}
+.row.static .row-btn,.fcard.static .fcard-q{cursor:default}
+.fcard-hint:has(> .plus:only-child){justify-content:flex-end}
 .row-btn{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:64px minmax(0,5fr) minmax(0,6fr) 132px;gap:var(--gutter);align-items:baseline;padding:20px 12px 20px 0;cursor:pointer;transition:transform .15s}
 .row-btn:active{transform:translateX(4px)}
 .row-btn:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
@@ -580,7 +590,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a href="#yourlife">In your own life <span>Chapter 06</span></a>
     <a href="#checklist">Start small <span>Chapter 07</span></a>
     <a href="#conclusion">Only the beginning <span>Chapter 08</span></a>
-    <a href="#buy">The digital edition <span>Coming soon</span></a>
+    <a href="#buy">The digital edition</a>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
@@ -660,8 +670,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <p>The more I explored, the more I realized how much there was to discover beyond what we usually hear about AI.</p>
           <p>And I thought it might be interesting to share some of it.</p>
           <p>The things that surprised me. The things I found useful. The possibilities I never even knew existed.</p>
-          <p>Not because I have all the answers. I’m still discovering new things myself.</p>
-          <p class="beat">But because something this interesting shouldn’t feel out of reach.</p>
+          <p>I don’t pretend to know everything about AI. Far from it.</p>
+          <p>I’m still learning, still experimenting, and still discovering new things. And I’d love for you to discover them along with me.</p>
+          <p class="beat">Because the most exciting part isn’t knowing everything. It’s finding out what’s possible.</p>
           <p>No computer science degree. No coding skills. No need to become a software developer, database engineer, or anything else with a complicated job title.</p>
           <p>No expensive courses. No impossible promises.</p>
           <p>Just fascinating discoveries, useful ideas, and the occasional moment that makes you stop and think:</p>
@@ -873,8 +884,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <blockquote class="say"><p>"So yours doesn't just answer questions. It actually helps you run your day?"</p></blockquote>
           <p>Exactly. And most people haven't discovered that part yet.</p>
 
-          <h3 class="story-h">What most people don't realize</h3>
-          <p>You don't need to build your own AI assistant to make the AI you already use much more useful.</p>
+          <h3 class="story-h">THE POSSIBILITIES GO FAR BEYOND A CHATBOX.</h3>
+          <p>AI isn’t just about asking questions and getting answers.</p>
+          <p>It can help you explore ideas, understand information, create images, work through problems, and, with the right tools and permissions, even help carry out certain tasks.</p>
+          <p>And what’s especially interesting is how many of these possibilities are already becoming available through tools people can use today.</p>
+          <p>You don’t need to understand how AI is built to start discovering what it can do.</p>
           <p>Tell ChatGPT, Gemini or Claude how you like things explained, and it adjusts. Hand it a trip to plan, a complicated week to untangle, a choice to weigh up, or a jumble of thoughts to turn into a clear plan.</p>
           <p>Depending on the app, your plan and your settings, it may also remember useful preferences between chats, or connect to your calendar, email and files with your permission.</p>
           <p>Imagine planning a holiday without explaining, yet again, that you hate early flights. Or turning a long, confusing email into three clear points and a draft reply.</p>
@@ -1021,10 +1035,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="section three" id="three" aria-labelledby="three-title">
   <div class="wrap">
     <div class="section-head"><span class="label">The three</span><span class="label mute">Tap a name</span></div>
-    <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">Meet the big three</h2>
-    <p class="three-lede" data-r="fade">Which one should you open today? It depends on what you want to do. Each one has moments where it's the obvious choice. There's no single winner, and the one you already have is a fine place to start.</p>
+    <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">THREE NAMES YOU’LL HEAR A LOT</h2>
+    <div class="three-lede" data-r="fade">
+      <p>ChatGPT, Gemini, and Claude. You may already be using one of them.</p>
+      <p>Perhaps you ask questions, look things up, or get help writing something.</p>
+      <p>But that’s only scratching the surface.</p>
+      <p>These are powerful AI tools that can do far more than have a conversation. They can help you create things you never imagined making yourself, explore fascinating new experiences, and, through connections with other apps and services, do things you might not have known were possible.</p>
+      <p>And the more you discover about what they can do, the more useful — and interesting — they become.</p>
+      <p>Here are just a few possibilities you might like to know about.</p>
+    </div>
     <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
     <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
+    <p class="three-note">And remember: these are examples, not limits. All three have many overlapping capabilities, and their features continue to evolve. Some experiences require additional apps, connections, or subscriptions.</p>
+    <div class="know"><b>GOOD TO KNOW</b><p>ChatGPT, Gemini, and Claude can all remember useful details about you, depending on their settings and available features.</p><p>That means you may not have to explain your preferences, interests, or plans from the beginning every time you start a conversation.</p><p>They don’t remember everything, and you have controls over what information they keep or use. Those controls differ between apps.</p></div>
     <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
   </div>
 </section>
@@ -1045,7 +1068,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
     <div class="collection" id="collection" hidden>
-    <div class="legend" aria-hidden="true"><span><i class="dot"></i>Free preview, open it</span><span><i class="dot lock"></i>In the paid edition</span></div>
     <div class="filters" role="group" aria-label="Filter workflows" id="filters"></div>
     <ul class="index" id="index"></ul>
     </div>
@@ -1113,11 +1135,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="buy-main">
         <h2 id="buy-title" class="display" data-r="rise">More to explore.</h2>
         <div class="ed" data-r="fade">
-          <p>If you've enjoyed this, I'm putting together a digital edition you can keep.</p>
-          <p>It will have the practical examples, step-by-step help for each app and reference pages, all in one place.</p>
+          <p class="ed-q voice">THIS IS JUST THE BEGINNING.</p>
+          <p>There’s so much more to discover, and I’m still learning right alongside you.</p>
+          <p>I’ll keep exploring, experimenting, and sharing the discoveries I think are worth knowing about.</p>
+          <p>Stay curious. Stay in the loop.</p>
         </div>
-        <span class="status"><i class="pulse" aria-hidden="true"></i><span>Volume I · Coming soon</span></span>
-        <p class="fineprint">You can't buy the digital edition yet.</p>
       </div>
     </div>
   </div>
@@ -1133,7 +1155,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <details><summary>Do I need a paid AI plan?</summary><p>No. Many AI features work on free plans. What you get depends on the app, your country and your plan. Some advanced tools cost money.</p></details>
         <details><summary>Is this an AI course?</summary><p>No. It's a magazine about what's happening in AI, what it can do and why it matters. The practical examples are there if you feel like trying something yourself.</p></details>
         <details><summary>Which AI apps does it cover?</summary><p>The practical examples use ChatGPT, Gemini and Claude. The magazine also shows other kinds of AI tools, including specialist creative tools.</p></details>
-        <details><summary>How will I get the digital edition?</summary><p>I'm still making it, and it isn't on sale yet. I'll share how to buy it and how you'll receive it when it's ready.</p></details>
         <details><summary>Is my private information safe?</summary><p>Be careful what you share with any AI app. Don't upload passwords, ID numbers or private details it doesn't need. Check each app's privacy settings, especially before you connect other services.</p></details>
       </div>
     </div>
@@ -1194,15 +1215,45 @@ if (CONFIG.contact && $(".js-contact")){ const c=$(".js-contact"); c.textContent
 
 /* ---- Meet the three ---- */
 const THREE = [
-  {id:"chatgpt",name:"ChatGPT",by:"By OpenAI",intro:"Open it when you want to make something: a picture, a plan, a letter, or a long conversation out loud.",
-   tries:["Describe the birthday card you have in mind and it creates the image right in the chat.","Talk things through with voice while you cook or walk. Free plans include limited voice time.","Tell it how warm or chatty to be under Personalization, then Characteristics.","Add plugins for other apps from the Plugins page. What you can add depends on your plan and region."],
-   know:"With memory on, it can carry useful details between chats, though not every detail. You can review or delete what it keeps under Settings, then Personalization."},
-  {id:"gemini",name:"Gemini",by:"By Google",intro:"Open it when your life already runs through Google, from Gmail to Maps.",
-   tries:["Type @, pick Gmail once it's connected, and ask it to find your hotel confirmation.","Ask which café near your hotel opens earliest. It can use public Google Maps information.","Start Gemini Live, point your camera at a plant or a label, and ask about it.","Create or edit an image from the Images page."],
-   know:"Things you ask it to remember are kept in Personal context. Some features depend on your age, country and plan."},
-  {id:"claude",name:"Claude",by:"By Anthropic",intro:"Open it when you have something long or tricky to read, write or think through.",
-   tries:["Upload a long document or a photo of a letter and ask for the three points that matter.","Start a Project for one topic, like a house move, and keep the files and notes together. Free plans include up to five.","Tap the sound wave icon to use voice mode. It's included on the Free plan.","Connect tools like Gmail, Google Drive or Canva from the Connectors directory. It asks before it acts."],
-   know:"Claude doesn't create photos itself. It can write, organize and analyze, and work with connected creative tools. Memory is on by default, and you can view or edit it in Settings."}
+ {
+  "id": "chatgpt",
+  "name": "ChatGPT",
+  "by": "By OpenAI",
+  "title": "CHATGPT — A WHOLE WORLD TO EXPLORE",
+  "paras": [
+   "What if you could have your tarot cards read, discover music that matches your mood, or explore unusual treasures from around the world?",
+   "ChatGPT can connect with specialized apps and services that open up experiences beyond ordinary conversation.",
+   "From playful tarot readings for entertainment to music discovery and shopping, there’s a lot more to explore than asking questions.",
+   "And that’s just a glimpse."
+  ]
+ },
+ {
+  "id": "gemini",
+  "name": "Gemini",
+  "by": "By Google",
+  "title": "GEMINI — BRING YOUR MEMORIES TO LIFE",
+  "paras": [
+   "What if you could turn decades of family photographs into a beautiful story?",
+   "Imagine bringing together old photographs, names, places, and the little memories you remember.",
+   "Gemini can help organize them into a family timeline, complete with captions and stories you can share with the people you love.",
+   "And here’s another possibility:",
+   "What if you could explore a destination before ever visiting it, bringing together maps, places, travel information, and your own interests to discover things you might otherwise miss?",
+   "With supported Google services, Gemini can help connect different pieces of information to make the experience more personal."
+  ]
+ },
+ {
+  "id": "claude",
+  "name": "Claude",
+  "by": "By Anthropic",
+  "title": "CLAUDE — MAKE SOMETHING YOU THOUGHT YOU COULDN’T",
+  "paras": [
+   "What if your family’s treasured recipes could become a beautiful, interactive cookbook?",
+   "Not just a collection of recipes, but something you can open, explore, and share.",
+   "Or imagine describing a little app you’ve always wished existed — perhaps something to organize your wardrobe, your garden, or your favorite places.",
+   "Claude can help create interactive tools from an ordinary description, without you having to know how to write computer code.",
+   "Something that began as an idea can become something you actually use."
+  ]
+ }
 ];
 let threeSel = "chatgpt";
 function renderThreeTabs(){
@@ -1211,7 +1262,7 @@ function renderThreeTabs(){
 function renderThreePanel(animate){
   const t=THREE.find(x=>x.id===threeSel), p=$("#threePanel");
   p.setAttribute("aria-labelledby","tt-"+t.id);
-  p.innerHTML = `<p class="three-intro">${esc(t.intro)}</p><div><span class="label">Try this</span><ul class="try" style="margin-top:12px">${t.tries.map(x=>`<li><span>${esc(x)}</span></li>`).join("")}</ul><div class="know"><b>Good to know</b>${esc(t.know)}</div></div>`;
+  p.innerHTML = `<h3 class="three-intro">${esc(t.title)}</h3><div class="three-body">${t.paras.map(x=>`<p>${esc(x)}</p>`).join("")}</div>`;
   if (animate && MOTION){ p.classList.remove("swap"); void p.offsetWidth; p.classList.add("swap"); }
 }
 function selectThree(id,focus){
@@ -1227,7 +1278,7 @@ $("#threeTabs").addEventListener("keydown",e=>{
 
 /* ---- Portfolio ---- */
 const CHAPTERS = [
-  {id:"admin", name:"The Workhorse & Admin"},
+  {id:"admin", name:"EVERYDAY LIFE & PRACTICAL HELP"},
   {id:"life",  name:"The Lifestyle Concierge"},
   {id:"studio",name:"The Creative Studio"}
 ];
@@ -1282,21 +1333,27 @@ const APPS = [["chatgpt","ChatGPT"],["gemini","Gemini"],["claude","Claude"]];
 let filter="all";
 const filters=$("#filters"), index=$("#index");
 function renderFilters(){
-  const opts=[{id:"all",name:"All",n:W.length},{id:"free",name:"Free to try",n:Object.keys(FREE).length},...CHAPTERS.map(c=>({...c,n:W.filter(w=>w[1]===c.id).length}))];
+  const opts=[{id:"all",name:"All",n:W.length},...CHAPTERS.map(c=>({...c,n:W.filter(w=>w[1]===c.id).length}))];
   filters.innerHTML=opts.map(o=>`<button class="chip" type="button" id="f-${o.id}" data-f="${o.id}" aria-pressed="${o.id===filter}">${esc(o.name)}<span class="c">${o.n}</span></button>`).join("");
 }
 function renderIndex(animate){
   let k=0;
   index.innerHTML=W.map((w,i)=>{
     const n=i+1, free=!!FREE[n];
-    if (filter==="free"&&!free) return "";
-    if (filter!=="all"&&filter!=="free"&&w[1]!==filter) return "";
+    if (filter!=="all"&&w[1]!==filter) return "";
+    if (!free) return `<li class="row static" data-n="${n}" style="--i:${k++}">
+      <div class="row-btn" id="r-${n}">
+        <span class="row-n">${pad(n)}</span>
+        <span class="row-t">${esc(w[0])}</span>
+        <span class="row-p">${esc(w[2])}</span>
+      </div>
+    </li>`;
     return `<li class="row" data-n="${n}" style="--i:${k++}">
       <button class="row-btn" type="button" aria-expanded="false" aria-controls="d-${n}" id="r-${n}">
         <span class="row-n">${pad(n)}</span>
         <span class="row-t">${esc(w[0])}</span>
         <span class="row-p">${esc(w[2])}</span>
-        <span class="row-tag ${free?"free":"lock"}"><span class="tx">${free?"Free preview":"Paid edition"}</span><i class="dot${free?"":" lock"}" aria-hidden="true"></i><span class="chev" aria-hidden="true">⌄</span></span>
+        <span class="row-tag"><span class="chev" aria-hidden="true">⌄</span></span>
       </button>
       <div class="row-detail reveal" id="d-${n}" role="region" aria-labelledby="r-${n}" inert><div><div class="inner"></div></div></div>
     </li>`;
@@ -1304,7 +1361,6 @@ function renderIndex(animate){
   if (animate&&MOTION){ index.classList.remove("swap"); void index.offsetWidth; index.classList.add("swap"); }
 }
 function detailHTML(n,px=""){
-  if (!FREE[n]) return `<div class="locked"><div><p>Inside the paid edition: when to use it, how to set it up step by step, and a ready prompt for each app.</p><div class="apps">${APPS.map(a=>`<span>${a[1]}</span>`).join("")}</div></div><a class="btn ghost" href="#buy">About the issue</a></div>`;
   const tabs=APPS.map((a,i)=>`<button class="tab" type="button" role="tab" id="${px}t-${n}-${a[0]}" aria-selected="${i===0}" aria-controls="${px}p-${n}" data-app="${a[0]}" tabindex="${i===0?0:-1}">${a[1]}</button>`).join("");
   return `<div class="tabs" role="tablist" aria-label="Choose your app">${tabs}</div><div class="panel" role="tabpanel" id="${px}p-${n}" aria-labelledby="${px}t-${n}-chatgpt">${panelHTML(n,"chatgpt")}</div>`;
 }
@@ -1338,7 +1394,6 @@ function copyText(btn){
 filters.addEventListener("click",e=>{
   const b=e.target.closest(".chip"); if(!b) return;
   filter=b.dataset.f; renderFilters(); renderIndex(true);
-  if (filter==="free") openRow(2);
 });
 function accClicks(root,btnSel){
   root.addEventListener("click",e=>{
@@ -1359,10 +1414,15 @@ accClicks(index,".row-btn");
 const FEAT=[4,14,2,22];
 const fcards=$("#fcards");
 fcards.innerHTML=FEAT.map(n=>{const w=W[n-1], free=!!FREE[n];
+  if (!free) return `<div class="fcard static" data-n="${n}">
+    <div class="fcard-q" id="fr-${n}">
+      <span class="fcard-n">${pad(n)}</span><span class="fcard-t">${esc(w[0])}</span><span class="fcard-p">${esc(w[2])}</span>
+    </div>
+  </div>`;
   return `<div class="fcard" data-n="${n}" data-px="f">
     <button class="fcard-q" type="button" aria-expanded="false" aria-controls="fd-${n}" id="fr-${n}">
       <span class="fcard-n">${pad(n)}</span><span class="fcard-t">${esc(w[0])}</span><span class="fcard-p">${esc(w[2])}</span>
-      <span class="fcard-hint"><span class="${free?"free":"lock"}">${free?"Free preview":"Paid edition"}</span><span class="plus" aria-hidden="true">+</span></span>
+      <span class="fcard-hint"><span class="plus" aria-hidden="true">+</span></span>
     </button>
     <div class="reveal" id="fd-${n}" role="region" aria-labelledby="fr-${n}" inert><div><div class="inner"></div></div></div>
   </div>`;}).join("");
