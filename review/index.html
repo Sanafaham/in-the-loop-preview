@@ -645,6 +645,14 @@ body{margin:0}
 .spread .try-chatgpt .try-prompt{color:var(--ink)}
 .spread .try-chatgpt .try-copy{color:var(--paper);border-color:var(--night-2)}
 .spread .try-chatgpt .try-copy:hover,.spread .try-chatgpt .try-copy:focus-visible{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+</style><style id="approved-second-brain-edition">
+.deck.cover-discovery p.cover-kicker{font-family:var(--f-body);font-size:12px;letter-spacing:.16em;color:var(--red);font-weight:700;margin:0 0 14px;max-width:none}
+.cover-discovery .cover-discovery-title{font-size:clamp(32px,4vw,58px);line-height:1.04;max-width:22ch;margin-bottom:24px}
+.cover-discovery .cover-source{display:block;font-family:var(--f-body);font-size:12px;line-height:1.55;color:var(--mute);max-width:60ch;margin-top:22px}
+.second-brain-discovery{margin-top:0}
+.second-brain-discovery + #essay::before{display:none}
+.second-brain-discovery + #essay{padding-top:clamp(40px,7vw,88px)}
+.story .carson-second-brain{color:var(--red);font-size:clamp(28px,3.4vw,44px);line-height:1.15;margin-block:.35em}
 </style></head>
 <body>
 <header class="topbar">
@@ -688,11 +696,17 @@ body{margin:0}
 <div class="grid">
 <div class="cover-text">
 <h1 class="display" id="cover-title"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
-<div class="deck">
-<p class="deck-lead">AI IS GETTING INTERESTING.</p>
-<p>Not just for what it knows, but for what it can help you do.</p>
-<p>Some possibilities are surprisingly practical. Others might make you look at something familiar in a completely different way.</p>
-<p>And some might make you wonder why nobody told you about them sooner.</p>
+<div class="deck cover-discovery">
+<p class="label cover-kicker">DID YOU KNOW?</p>
+<h2 class="display cover-discovery-title">YOUR PHONE CAN TELL YOUR COMPUTER WHAT TO DO.</h2>
+<p>You could be sitting in a café, miles away from your laptop, and still have AI working on it.</p>
+<p>With the right setup, you can use your phone to give instructions to an AI assistant that carries out tasks on a connected computer.</p>
+<p>Start a task. Check its progress. Review the results. Approve what happens next.</p>
+<p>Your computer does the work. You stay in control.</p>
+<p>And that’s something many people still don’t realize AI can help them do.</p>
+<p>So what else have you been missing?</p>
+<p>Welcome to IN THE LOOP.</p>
+<small class="cover-source">Verified example: <a href="https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork" target="_blank" rel="noopener noreferrer">Claude Dispatch</a>, currently limited to existing eligible Pro and Max users. Requires compatible apps, granted access, internet and an awake computer running Claude Desktop. You assign tasks to AI, rather than operating a remote desktop yourself.</small>
 </div>
 <div class="cover-lines">
 <a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Discover what’s possible</span></a>
@@ -786,7 +800,7 @@ body{margin:0}
 <p class="label disc-n">Discovery 01</p>
 <h3 class="display disc-h" data-r="rise">A SMALL CHANGE CAN HIDE IN A LONG DOCUMENT.</h3>
 <div class="ed" data-r="fade">
-<p>Imagine receiving a long document with a dozen pages of conditions, dates and exceptions.</p><p>Instead of asking for a summary, you can ask an AI app to compare two versions and flag what changed, what disappeared and which details deserve a second look.</p><p>It can point you to relevant passages so you can check them yourself. A missing exception or a changed deadline can matter more than a summary.</p></div>
+<p>A long document arrives with pages of conditions, dates and exceptions. Somewhere in those pages, one small change could make a big difference.</p><p>Instead of asking for a summary, you can ask an AI app to compare two versions and flag what changed, what disappeared and which details deserve a second look.</p><p>It can point you to relevant passages so you can check them yourself. A missing exception or a changed deadline can matter more than a summary.</p></div>
 </article>
 </div>
 </div>
@@ -799,7 +813,7 @@ body{margin:0}
 <article class="disc-block">
 <p class="label disc-n">Discovery 02</p>
 <h3 class="display disc-h" data-r="rise">REHEARSE THE CONVERSATION BEFORE IT HAPPENS.</h3>
-<div class="ed" data-r="fade"><p>A difficult conversation. An important interview. A question you’ve been nervous about asking.</p><p>Imagine being able to rehearse it first, with someone who never gets impatient.</p><p>AI can play the other side of a conversation, respond to what you say and help you explore different ways of expressing yourself.</p><p>It won’t predict how a real person will react. But sometimes, finding the right words before the moment arrives can make all the difference.</p></div>
+<div class="ed" data-r="fade"><p>A difficult conversation. An important interview. A question you’ve been nervous about asking.</p><p>You can rehearse that conversation first, with an AI that can play the other side without getting impatient.</p><p>AI can play the other side of a conversation, respond to what you say and help you explore different ways of expressing yourself.</p><p>It won’t predict how a real person will react. But sometimes, finding the right words before the moment arrives can make all the difference.</p></div>
 </article>
 <article class="disc-block ends-with-inline-fact">
 <p class="label disc-n">Discovery 03</p>
@@ -848,7 +862,7 @@ body{margin:0}
 <p class="moment-big">Knowing what to do is one thing.</p>
 <p class="moment-sub voice">Helping you get it done is another.</p>
 </div>
-<aside class="feature" data-r="fade"><h3 class="display feature-h">THAT EMAIL YOU FORGOT ABOUT? AI MIGHT FIND IT.</h3><div class="ed"><p>Imagine asking AI to find an appointment confirmation buried somewhere in your emails.</p><p>With your permission, some AI apps can now search connected email, calendars, and files to find information for you.</p><p>Think about how much time we spend looking for things we know are somewhere, but can’t remember where.</p><p>And that’s just one possibility.</p></div></aside>
+<aside class="feature" data-r="fade"><h3 class="display feature-h">THAT EMAIL YOU FORGOT ABOUT? AI MIGHT FIND IT.</h3><div class="ed"><p>That appointment confirmation buried somewhere in your inbox? With your permission, an AI app connected to your email may be able to find it.</p><p>Depending on the app and the access you allow, that search can extend to connected calendars and files.</p><p>Think about how much time we spend looking for things we know are somewhere, but can’t remember where.</p><p>And that’s just one possibility.</p></div></aside>
 </div>
 </section>
 <!-- ESSAY -->
@@ -863,18 +877,29 @@ body{margin:0}
 <div class="know"><b>Good to know</b><p>Depending on settings and available features, these apps may remember useful details about you. They don’t remember everything, and you control what they keep.</p></div>
 <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
 </div>
-</section><section aria-labelledby="essay-title" class="section essay" id="essay">
+</section><aside class="inline-discovery second-brain-discovery" aria-labelledby="second-brain-title" role="note">
+<p class="inline-kicker">DID YOU KNOW?</p>
+<h3 id="second-brain-title">AI CAN BECOME YOUR SECOND BRAIN.</h3>
+<div class="ed"><p>Ideas, plans, preferences, important details, things you meant to remember.</p>
+<p>With the right tools, AI can help you organize information, retrieve it when you need it and connect the pieces.</p>
+<p>Not a literal brain. A personal memory system that works alongside you.</p>
+<p>And someone can take that idea even further.</p></div>
+</aside>
+<section aria-labelledby="essay-title" class="section essay" id="essay">
 <div class="wrap">
 <div class="section-head"><span class="label">The essay</span><span class="label mute">By Sana Faham</span></div>
 <div class="grid">
 <h2 class="display essay-title" data-r="rise" id="essay-title">I WANTED MORE THAN ANSWERS.</h2>
 <div class="essay-body">
 <div class="story" data-r="fade">
-<p class="story-deck voice">I had spent so much time exploring what AI could do. Eventually, I became curious about something much more personal.</p>
-<p>Could I create an assistant that understood my world? One that knew my preferences, remembered what mattered and helped me manage the things that filled my day?</p>
-<p>I decided to find out.</p>
+<p class="story-deck voice">I had spent so much time exploring what AI could do. Eventually, I wanted something more personal.</p>
+<p>An assistant that could understand my world, remember what mattered and help me manage the things that filled my day.</p>
 <p>That’s how Carson began.</p>
-<p>I asked my AI assistant, "What's your name?"</p>
+<p>And as I developed him, I gave him something else.</p>
+<p class="voice carson-second-brain">A second brain of his own.</p>
+<p>A way to work with the information, preferences and details that make my world mine.</p>
+<p>Then something rather lovely happened.</p>
+<p>I asked my AI assistant, ‘What’s your name?’</p>
 <blockquote class="say carson"><p>"My name is Carson, <bdi dir="rtl" lang="ar">سيدتي الجميلة</bdi>."</p></blockquote>
 <p class="gloss"><em>My beautiful lady.</em></p>
 <p>My friend laughed, picked up his phone, and asked his ChatGPT exactly the same question.</p>
@@ -891,7 +916,7 @@ body{margin:0}
 <p>My friend was intrigued.</p>
 <blockquote class="say"><p>"So yours doesn't just answer questions. It actually helps you run your day?"</p></blockquote>
 <p>Exactly. And most people haven't discovered that part yet.</p>
-<h3 class="story-h">WHAT MAKES CARSON PERSONAL.</h3><p>What makes these tools interesting is how personal they can become. Depending on the app and your settings, AI may remember your preferences and adapt how it explains things. Imagine planning a holiday without explaining again that you hate early flights.</p>
+<h3 class="story-h">WHAT MAKES CARSON PERSONAL.</h3><p>What makes these tools interesting is how personal they can become. Depending on the app and your settings, AI may remember your preferences and adapt how it explains things. Even something as simple as remembering that you dislike early flights can make planning feel more personal.</p>
 <h3 class="story-h">And what about Carson?</h3>
 <p>Carson goes further because I'm building him around my own life.</p>
 <p>As well as helping me think and plan, I'm building him to keep track of what I'm responsible for, notice what still needs attention and help me follow up. That takes extra tools and connections that everyday AI apps don't come with.</p>
@@ -935,7 +960,7 @@ body{margin:0}
 <div aria-label="2 hours to 1 day" class="big" role="img"><span class="nw">2h <svg aria-hidden="true" class="arr" viewbox="0 0 60 40"><path d="M2 20h50M36 5l17 15-17 15"></path></svg></span> <span class="nw">1 DAY</span></div>
 <p>Sometimes less. Sometimes more. All for a few seconds of film.</p>
 </div>
-<div class="studio-tool" data-r="fade"><h3 class="label">IMAGINE WHAT YOU COULD CREATE.</h3><p>A photograph of a place that doesn’t exist. A scene from a dream. A short film of something that happened only in your imagination.</p><p>AI can now help turn those ideas into images and moving scenes.</p><p>And what fascinates me is that something which once required an entire production team can now begin with a single idea.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
+<div class="studio-tool" data-r="fade"><h3 class="label">FROM AN IDEA TO SOMETHING YOU CAN SEE.</h3><p>A photograph of a place that doesn’t exist. A scene from a dream. A short film of something that happened only in your imagination.</p><p>AI can now help turn those ideas into images and moving scenes.</p><p>And what fascinates me is that something which once required an entire production team can now begin with a single idea.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
     <p class="try-eyebrow">YOUR TURN · TRY IT IN CHATGPT</p>
     <h3>Give a familiar photo a new life</h3>
     <p class="try-intro">Choose a personal photo you are comfortable sharing, and explore how it could look in another era.</p>
@@ -993,7 +1018,7 @@ body{margin:0}
 <h2 class="display" data-r="rise" id="voice-title" style="font-size:clamp(42px,6vw,88px)">AN ANSWER YOU CAN ACTUALLY PLAY WITH.</h2>
 <p class="voice" data-r="fade">A question doesn't always have to end with a paragraph of text. Some AI experiences can give you something interactive to explore and change.</p>
 <div class="apps3" data-r="stagger">
-<div><b>See the difference</b><p>Wondering how to take a better photograph at night? Imagine changing the camera settings on a visual example and seeing what happens.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
+<div><b>See the difference</b><p>Wondering how to take a better photograph at night? Change the camera settings on a visual example and watch how the photograph responds.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
     <p class="try-eyebrow">YOUR TURN · TRY IT IN CHATGPT</p>
     <h3>See what changes after dark</h3>
     <p class="try-intro">Ask for an interactive way to explore night photography, then change the settings and see what happens.</p>
