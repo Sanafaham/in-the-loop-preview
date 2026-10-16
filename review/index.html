@@ -575,6 +575,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .discovery-count{color:var(--mute);font-size:10px}
 @media(max-width:760px){.discovery-hook{min-height:142px}}
 @media(prefers-reduced-motion:reduce){.discovery-hook .discovery-fact{transition:none}}
+
+/* Optional reader invitations, aligned with the editorial layout */
+.try-chatgpt{border-top:1px solid var(--ink);margin-top:22px;padding:19px 0 4px;max-width:100%;min-width:0}
+.try-chatgpt .try-eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:750;color:var(--red);margin:0 0 9px}
+.try-chatgpt h3{font-size:clamp(20px,2.1vw,27px);line-height:1.12;margin:0 0 9px;letter-spacing:-.025em}
+.try-chatgpt .try-intro{font-size:clamp(14px,1.1vw,17px);line-height:1.5;margin:0 0 12px}
+.try-chatgpt .try-prompt{font-size:14px;line-height:1.5;background:var(--tint);padding:12px 13px;margin:0 0 12px;border-left:3px solid var(--red);overflow-wrap:anywhere}
+.try-chatgpt .try-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.try-chatgpt .try-open,.try-chatgpt .try-copy{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:10px 15px;border:1px solid var(--ink);font-family:inherit;font-weight:700;font-size:12px;line-height:1.3;letter-spacing:.035em;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.try-chatgpt .try-open{background:var(--ink);color:#fff}
+.try-chatgpt .try-open:hover,.try-chatgpt .try-open:focus-visible{background:var(--red);border-color:var(--red);color:#fff}
+.try-chatgpt .try-copy{background:transparent;color:var(--ink)}
+.try-chatgpt .try-copy:hover,.try-chatgpt .try-copy:focus-visible{background:var(--ink);color:#fff}
+.try-chatgpt .try-note{font-size:11px;line-height:1.45;color:var(--mute);margin:10px 0 0}
+@media(max-width:650px){.try-chatgpt{margin-top:17px;padding-top:16px}.try-chatgpt .try-actions{align-items:stretch}.try-chatgpt .try-open,.try-chatgpt .try-copy{flex:1 1 auto;min-width:130px}.try-chatgpt .try-prompt{font-size:13px}}
 </style>
 <style>
  .inline-discovery{border-top:3px solid #c93b2e;border-bottom:1px solid #161616;padding:clamp(24px,5vw,44px) 0;margin:clamp(32px,6vw,76px) 0;max-width:900px}
@@ -626,7 +641,11 @@ body{margin:0}
 .ends-with-inline-fact + .disc-block{border-top:0}
 
 .inline-discovery{width:100%}
-</style><meta content="2026-10-16-final-mobile-1" name="edition-version"/></head>
+</style><meta content="2026-10-16-final-mobile-1" name="edition-version"/><style id="try-invitation-contrast-repair">
+.spread .try-chatgpt .try-prompt{color:var(--ink)}
+.spread .try-chatgpt .try-copy{color:var(--paper);border-color:var(--night-2)}
+.spread .try-chatgpt .try-copy:hover,.spread .try-chatgpt .try-copy:focus-visible{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+</style></head>
 <body>
 <header class="topbar">
 <div class="wrap">
@@ -670,11 +689,10 @@ body{margin:0}
 <div class="cover-text">
 <h1 class="display" id="cover-title"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
 <div class="deck">
-<p>You’ve heard about it. Everyone’s talking about it.</p>
-<p>But between the headlines, the technical jargon, and all the conflicting things we hear about AI, it’s easy to feel that it’s a world we don’t quite understand.</p>
-<p>What if you’ve been missing the most interesting part?</p>
-<p>Beyond all that noise is a world of possibilities that might surprise you. Things you can create, explore, discover, and do, without needing to be a technology expert.</p>
-<p>No complicated explanations. No lessons. Just fascinating discoveries that might make you say, “Wait. AI can do that?”</p>
+<p>What if the most interesting thing about AI isn’t what it can tell you, but what it could help you do?</p>
+<p>Not in some distant future. In the middle of an ordinary day.</p>
+<p>Some possibilities are surprisingly practical. Others might make you look at something familiar in a completely different way.</p>
+<p>That’s what IN THE LOOP is about. No lessons. Just ideas worth discovering, and perhaps trying for yourself.</p>
 </div>
 <div class="cover-lines">
 <a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Discover what’s possible</span></a>
@@ -917,7 +935,14 @@ body{margin:0}
 <div aria-label="2 hours to 1 day" class="big" role="img"><span class="nw">2h <svg aria-hidden="true" class="arr" viewbox="0 0 60 40"><path d="M2 20h50M36 5l17 15-17 15"></path></svg></span> <span class="nw">1 DAY</span></div>
 <p>Sometimes less. Sometimes more. All for a few seconds of film.</p>
 </div>
-<div class="studio-tool" data-r="fade"><h3 class="label">IMAGINE WHAT YOU COULD CREATE.</h3><p>A photograph of a place that doesn’t exist. A scene from a dream. A short film of something that happened only in your imagination.</p><p>AI can now help turn those ideas into images and moving scenes.</p><p>And what fascinates me is that something which once required an entire production team can now begin with a single idea.</p></div>
+<div class="studio-tool" data-r="fade"><h3 class="label">IMAGINE WHAT YOU COULD CREATE.</h3><p>A photograph of a place that doesn’t exist. A scene from a dream. A short film of something that happened only in your imagination.</p><p>AI can now help turn those ideas into images and moving scenes.</p><p>And what fascinates me is that something which once required an entire production team can now begin with a single idea.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
+    <p class="try-eyebrow">YOUR TURN · TRY IT IN CHATGPT</p>
+    <h3>Give a familiar photo a new life</h3>
+    <p class="try-intro">Choose a personal photo you are comfortable sharing, and explore how it could look in another era.</p>
+    <p class="try-prompt">I want to upload a photograph and reimagine it as a warm 1970s film portrait. Keep the people recognizable and show me a few creative directions first.</p>
+    <div class="try-actions"><a class="try-open" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="Open ChatGPT to try Give a familiar photo a new life">Open ChatGPT ↗</a><button class="try-copy" type="button" data-copy-prompt="I want to upload a photograph and reimagine it as a warm 1970s film portrait. Keep the people recognizable and show me a few creative directions first." aria-label="Copy the suggested idea">Copy the idea</button></div>
+    <p class="try-note">Upload your photo inside ChatGPT. Avoid sensitive or private images; image tools and access may vary.</p>
+   </div></div>
 </div>
 </div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI LEARNED TO RECOGNIZE THE WORLD FROM MILLIONS OF PHOTOS.</h3><p>The ImageNet project helped accelerate a major shift in computer vision and modern deep learning.</p></aside>
 </section>
@@ -964,15 +989,28 @@ body{margin:0}
 <div class="ph" data-drift=""><img alt="Close-up of lips covered in red crystals with a gold detail." decoding="async" height="528" src="../assets/red-lips.jpg" width="428"/></div>
 </figure>
 <div class="spread-text">
-<span class="label">The art of conversation</span>
-<h2 class="display" data-r="rise" id="voice-title" style="font-size:clamp(48px,7vw,104px)">WHEN A CONVERSATION CAN SEE, TOO.</h2>
-<p class="voice" data-r="fade">Voice and camera features differ between apps. Some allow live visual conversations; others support voice or shared images separately.</p>
+<span class="label">A new kind of answer</span>
+<h2 class="display" data-r="rise" id="voice-title" style="font-size:clamp(42px,6vw,88px)">WHAT IF AN ANSWER WAS SOMETHING YOU COULD PLAY WITH?</h2>
+<p class="voice" data-r="fade">A question doesn't always have to end with a paragraph of text. Some AI experiences can give you something interactive to explore and change.</p>
 <div class="apps3" data-r="stagger">
-<div><b>ChatGPT</b><p>ChatGPT offers spoken conversations; some versions also let you share live video or images.</p></div>
-<div><b>Gemini</b><p>Gemini Live can combine spoken conversation with a camera view on supported devices.</p></div>
-<div><b>Claude</b><p>Claude offers voice conversation on supported apps, while visual features differ.</p></div>
+<div><b>See the difference</b><p>Wondering how to take a better photograph at night? Imagine changing the camera settings on a visual example and seeing what happens.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
+    <p class="try-eyebrow">YOUR TURN · TRY IT IN CHATGPT</p>
+    <h3>See what changes after dark</h3>
+    <p class="try-intro">Ask for an interactive way to explore night photography, then change the settings and see what happens.</p>
+    <p class="try-prompt">Show me an interactive night-photography example where I can change exposure, ISO and shutter speed and see how each setting affects the result.</p>
+    <div class="try-actions"><a class="try-open" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="Open ChatGPT to try See what changes after dark">Open ChatGPT ↗</a><button class="try-copy" type="button" data-copy-prompt="Show me an interactive night-photography example where I can change exposure, ISO and shutter speed and see how each setting affects the result." aria-label="Copy the suggested idea">Copy the idea</button></div>
+    <p class="try-note">The experience may look different depending on your ChatGPT access. No camera or photo upload needed to start.</p>
+   </div></div>
+<div><b>Make it yours</b><p>Splitting dinner with friends? An interactive bill can let you assign dishes, adjust the tip and see everyone's share.</p><div class="try-chatgpt" aria-label="Try this in ChatGPT">
+    <p class="try-eyebrow">YOUR TURN · TRY IT IN CHATGPT</p>
+    <h3>Who owes what?</h3>
+    <p class="try-intro">Try turning a dinner bill into something you can adjust instead of calculating it yourself.</p>
+    <p class="try-prompt">Create an interactive bill splitter for four friends. Let me enter each dish, choose who shared it, add tax and tip, and show what each person owes.</p>
+    <div class="try-actions"><a class="try-open" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" aria-label="Open ChatGPT to try Who owes what?">Open ChatGPT ↗</a><button class="try-copy" type="button" data-copy-prompt="Create an interactive bill splitter for four friends. Let me enter each dish, choose who shared it, add tax and tip, and show what each person owes." aria-label="Copy the suggested idea">Copy the idea</button></div>
+    <p class="try-note">Use made-up amounts to explore. Check the final numbers before paying.</p>
+   </div></div>
 </div>
-<p class="apps3-note">Features and limits vary by app, device, plan and country.</p>
+<p class="apps3-note">These are examples shown in OpenAI's GPT-6 announcement. Interactive features and availability vary by app, device and plan.</p>
 </div>
 </div>
 </div>
@@ -1380,6 +1418,24 @@ function onScroll(){
   });
 }
 addEventListener("scroll",onScroll,{passive:true}); addEventListener("resize",onScroll); onScroll();
+</script>
+<script>
+// Copy the exact editorial idea without collecting reader information.
+document.addEventListener('click', async function(event){
+ const button=event.target.closest('[data-copy-prompt]');
+ if(!button)return;
+ const idea=button.getAttribute('data-copy-prompt');
+ const original=button.textContent;
+ try {
+   if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(idea)}
+   else {
+     const field=document.createElement('textarea');field.value=idea;field.style.position='fixed';field.style.opacity='0';document.body.appendChild(field);field.select();
+     const ok=document.execCommand('copy');field.remove();if(!ok)throw new Error('Copy unavailable');
+   }
+   button.textContent='Copied ✓';
+ } catch(e) {button.textContent='Select the idea above';}
+ window.setTimeout(()=>{button.textContent=original},2500);
+});
 </script>
 </body>
 </html>
