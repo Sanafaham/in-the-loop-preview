@@ -1,27 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
 <title>Living In The Loop</title>
-<meta name="description" content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IN THE LOOP | The Editorial Issue">
-<meta property="og:description" content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required.">
-<meta property="og:url" content="https://sanafaham.github.io/in-the-loop-preview/review/">
-<meta property="og:image" content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg">
-<meta property="og:image:secure_url" content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1000">
-<meta property="og:image:height" content="1981">
-<meta property="og:image:alt" content="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IN THE LOOP | The Editorial Issue">
-<meta name="twitter:description" content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required.">
-<meta name="twitter:image" content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg">
-<meta name="twitter:image:alt" content="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke.">
-<link rel="preload" href="../assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<meta content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="IN THE LOOP | The Editorial Issue" property="og:title"/>
+<meta content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required." property="og:description"/>
+<meta content="https://sanafaham.github.io/in-the-loop-preview/review/" property="og:url"/>
+<meta content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg" property="og:image"/>
+<meta content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg" property="og:image:secure_url"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1000" property="og:image:width"/>
+<meta content="1981" property="og:image:height"/>
+<meta content="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke." property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="IN THE LOOP | The Editorial Issue" name="twitter:title"/>
+<meta content="Curious about AI but not sure where to begin? Discover surprising possibilities, everyday uses, and a whole new world to explore. No technical knowledge required." name="twitter:description"/>
+<meta content="https://sanafaham.github.io/in-the-loop-preview/assets/cover.jpg" name="twitter:image"/>
+<meta content="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke." name="twitter:image:alt"/>
+<link as="font" crossorigin="" href="../assets/fonts/archivo-var.woff2" rel="preload" type="font/woff2"/>
 <script>try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("motion")}catch(e){}</script>
 <style>
 @font-face{font-family:"Archivo";src:url("../assets/fonts/archivo-var.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
@@ -526,6 +527,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 #yourlife .pf-side{grid-column:9/13;align-self:end}
 #yourlife .pf-side .ph{aspect-ratio:428/642;max-width:300px;margin-left:auto}
 @media (max-width:900px){.yl-text,#yourlife .pf-side{grid-column:1/-1}#yourlife .pf-side .ph{margin-left:0;max-width:240px}}
+.ideas-shortcut{margin-top:clamp(24px,4vw,44px);display:flex;justify-content:center}
 .fcards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:clamp(48px,7vw,88px);border-top:2px solid var(--ink);border-left:1px solid var(--rule)}
 .fcard{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0;transition:background .3s}
 .fcard.open{background:var(--tint);grid-column:1/-1}
@@ -564,675 +566,584 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
   .ph img,.ph:hover img{scale:1}
 }
+
+/* Cover discovery: understated editorial rotation */
+.discovery-hook{position:relative;border-left:3px solid var(--red);padding:5px 0 7px 17px;margin:0 0 23px;min-height:122px}
+.discovery-label,.discovery-count{font-family:var(--f-display);font-weight:750;font-size:11px;letter-spacing:.16em;color:var(--red)}
+.discovery-hook .discovery-fact{margin:10px 0 9px!important;line-height:1.22;transition:opacity .3s ease;max-width:34ch}
+.discovery-hook .discovery-fact.is-changing{opacity:0}
+.discovery-count{color:var(--mute);font-size:10px}
+@media(max-width:760px){.discovery-hook{min-height:142px}}
+@media(prefers-reduced-motion:reduce){.discovery-hook .discovery-fact{transition:none}}
 </style>
-</head>
+<style>
+ .inline-discovery{border-top:3px solid #c93b2e;border-bottom:1px solid #161616;padding:clamp(24px,5vw,44px) 0;margin:clamp(32px,6vw,76px) 0;max-width:900px}
+ .inline-discovery .inline-kicker{font-family:var(--f-body);font-size:clamp(12px,1.4vw,15px);letter-spacing:.17em;font-weight:800;color:#c93b2e;margin:0 0 14px}
+ .inline-discovery h3{font-family:var(--f-body);font-size:clamp(24px,4.4vw,42px);line-height:1.12;font-weight:850;text-transform:uppercase;letter-spacing:-.035em;margin:0 0 16px}
+ .inline-discovery p:last-child{font-size:clamp(16px,2vw,21px);line-height:1.55;margin:0}
+ </style></head>
 <body>
-
-
 <header class="topbar">
-  <div class="wrap">
-    <a href="#top" class="label brand">The Editorial Issue</a>
-    <nav class="label" aria-label="Sections" id="nav">
-      <a href="#possibilities">Possibilities</a>
-      <a href="#doing">Beyond the chatbox</a>
-      <a href="#essay">The essay</a>
-      <a href="#reality">The reality</a>
-      <a href="#yourlife">Your life</a>
-    </nav>
-    <div class="top-actions">
-      <button class="btn ghost small menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Contents</button>
-      <a class="btn small" href="#buy" id="topBuy">The Issue</a>
-    </div>
-  </div>
-  <div class="menu" id="menu" hidden>
-    <a href="#changing">The world is changing <span>Chapter 01</span></a>
-    <a href="#possibilities">Wait. It can do that? <span>Chapter 02</span></a>
-    <a href="#doing">From answering to doing <span>Chapter 03</span></a>
-    <a href="#essay">The essay <span>Chapter 04</span></a>
-    <a href="#reality">The magic. And the reality. <span>Chapter 05</span></a>
-    <a href="#yourlife">In your own life <span>Chapter 06</span></a>
-    <a href="#checklist">Start small <span>Chapter 07</span></a>
-    <a href="#conclusion">Only the beginning <span>Chapter 08</span></a>
-    <a href="#buy">Closing Note</a>
-  </div>
-  <div class="progress" id="progress" aria-hidden="true"></div>
+<div class="wrap">
+<a class="label brand" href="#top">The Editorial Issue</a>
+<nav aria-label="Sections" class="label" id="nav">
+<a href="#possibilities">Possibilities</a>
+<a href="#doing">Beyond the chatbox</a>
+<a href="#essay">The essay</a>
+<a href="#reality">The reality</a>
+<a href="#yourlife">Your life</a>
+</nav>
+<div class="top-actions">
+<button aria-controls="menu" aria-expanded="false" class="btn ghost small menu-btn" id="menuBtn" type="button">Contents</button>
+<a class="btn small" href="#buy" id="topBuy">The Issue</a>
+</div>
+</div>
+<div class="menu" hidden="" id="menu">
+<a href="#changing">The world is changing <span>Chapter 01</span></a>
+<a href="#possibilities">Wait. It can do that? <span>Chapter 02</span></a>
+<a href="#doing">From answering to doing <span>Chapter 03</span></a>
+<a href="#essay">The essay <span>Chapter 04</span></a>
+<a href="#reality">The magic. And the reality. <span>Chapter 05</span></a>
+<a href="#yourlife">In your own life <span>Chapter 06</span></a>
+<a data-open-ideas="true" href="#portfolio">Explore all 23 ideas <span>Full collection</span></a>
+<a href="#checklist">Start small <span>Chapter 07</span></a>
+<a href="#conclusion">Only the beginning <span>Chapter 08</span></a>
+<a href="#buy">Closing Note</a>
+</div>
+<div aria-hidden="true" class="progress" id="progress"></div>
 </header>
-
 <main id="top">
-
 <!-- COVER -->
-<section class="cover" aria-labelledby="cover-title">
-  <div class="wrap">
-    <div class="mast">
-      <span class="name">THE EDITORIAL ISSUE</span>
-      <span class="label mute">Volume I</span>
-      <span class="label mute hide-s">DISCOVERIES · POSSIBILITIES · EVERYDAY LIFE</span>
-    </div>
-    <div class="grid">
-      <div class="cover-text">
-        <h1 id="cover-title" class="display"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
-        <div class="deck">
-          <p class="deck-lead">What if AI is nowhere near as complicated as you’ve been led to believe?</p>
-          <p>You’ve heard about it. Everyone’s talking about it.</p>
-          <p>But between the headlines, the technical jargon, and all the conflicting things we hear about AI, it’s easy to feel that it’s a world we don’t quite understand.</p>
-          <p>What if you’ve been missing the most interesting part?</p>
-          <p>Beyond all that noise is a world of possibilities that might surprise you. Things you can create, explore, discover, and do, without needing to be a technology expert.</p>
-          <p>I’ve spent almost four years exploring this world, and I’m still discovering things I never imagined were possible.</p>
-          <p>So I thought, why not share the interesting bits?</p>
-          <p>No complicated explanations. No lessons. Just fascinating discoveries that might make you say, “Wait. AI can do that?”</p>
-        </div>
-        <div class="cover-lines">
-          <a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
-          <a href="#doing"><span class="cl-n">Beyond the chatbox</span><span class="cl-t">From answering to doing</span></a>
-          <a href="#essay"><span class="cl-n">The essay</span><span class="cl-t">Why my AI knows my name and my life</span></a>
-          <a href="#reality"><span class="cl-n">Look beyond the headlines</span><span class="cl-t">The magic. And the reality.</span></a>
-        </div>
-        <div class="cover-buy">
-          <a class="btn red" href="#already">Start reading <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn ghost" href="#buy">About the issue</a>
-        </div>
-      </div>
-      <figure class="cover-img">
-        <div class="ph"><img src="../assets/cover.jpg" alt="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke." width="1000" height="1981" fetchpriority="high"></div>
-        <figcaption>Cover. Portrait with brushstroke.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+<section aria-labelledby="cover-title" class="cover">
+<div class="wrap">
+<div class="mast">
+<span class="name">THE EDITORIAL ISSUE</span>
+<span class="label mute">Volume I</span>
+<span class="label mute hide-s">DISCOVERIES · POSSIBILITIES · EVERYDAY LIFE</span>
+</div>
+<div class="grid">
+<div class="cover-text">
+<h1 class="display" id="cover-title"><span class="ln"><span>Living</span></span><span class="ln"><span>in the</span></span><span class="ln"><span class="red">Loop</span></span></h1>
+<div class="deck">
+<div aria-label="Surprising discoveries about artificial intelligence" class="discovery-hook">
+<span class="discovery-label">DID YOU KNOW?</span>
+<p aria-live="off" class="deck-lead discovery-fact" id="discoveryFact">AI helped researchers read a 2,000-year-old scroll without opening it.</p>
 
+</div>
+<p>You’ve heard about it. Everyone’s talking about it.</p>
+<p>But between the headlines, the technical jargon, and all the conflicting things we hear about AI, it’s easy to feel that it’s a world we don’t quite understand.</p>
+<p>What if you’ve been missing the most interesting part?</p>
+<p>Beyond all that noise is a world of possibilities that might surprise you. Things you can create, explore, discover, and do, without needing to be a technology expert.</p>
+<p>No complicated explanations. No lessons. Just fascinating discoveries that might make you say, “Wait. AI can do that?”</p>
+</div>
+<div class="cover-lines">
+<a href="#possibilities"><span class="cl-n">The new possibilities</span><span class="cl-t">Wait. It can do that?</span></a>
+<a href="#doing"><span class="cl-n">Beyond the chatbox</span><span class="cl-t">From answering to doing</span></a>
+<a href="#essay"><span class="cl-n">The essay</span><span class="cl-t">Why my AI knows my name and my life</span></a>
+<a href="#reality"><span class="cl-n">Look beyond the headlines</span><span class="cl-t">The magic. And the reality.</span></a>
+</div>
+<div class="cover-buy">
+<a class="btn red" href="#already">Start reading <span aria-hidden="true" class="arrow">→</span></a>
+<a class="btn ghost" href="#buy">About the issue</a>
+</div>
+</div>
+<figure class="cover-img">
+<div class="ph"><img alt="Black and white portrait of a woman in a black turtleneck, her eyes covered by a single black brushstroke." fetchpriority="high" height="1981" src="../assets/cover.jpg" width="1000"/></div>
+<figcaption>Cover. Portrait with brushstroke.</figcaption>
+</figure>
+</div>
+</div>
+</section>
 <!-- FOREWORD -->
-<section class="section foreword" id="foreword" aria-labelledby="fw-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Editor’s Letter</span><span class="label mute">By Sana Faham</span></div>
-    <div class="grid">
-      <figure class="fw-img" data-r="wipe">
-        <div class="ph" data-drift><img src="../assets/crystal-eye.jpg" alt="A model wearing a crystal headpiece set with three oversized jewelled eyes." width="428" height="535" decoding="async"></div>
-        <figcaption>More eyes than you expected.</figcaption>
-      </figure>
-      <div class="fw-text">
-        <p class="ed-kicker label">IN THE LOOP</p>
-        <h2 id="fw-title" class="lead voice" data-r="rise">The world is changing. You deserve to be part of it.</h2>
-        <div class="ed" data-r="fade">
-          <p class="ed-open">Something extraordinary is happening around us.</p>
-          <p>Artificial intelligence is changing the way people work, create, communicate, learn, and live. Things that sounded like science fiction only a few years ago are becoming part of everyday life.</p>
-          <p class="beat">And it’s happening fast.</p>
-          <p>You hear about AI everywhere. Another breakthrough. Another new app. Another headline about how everything is about to change.</p>
-          <p class="beat">Then you open Instagram.</p>
-          <p>Someone claims they’ve made a million dollars in a month using AI. Someone else promises to reveal the secret to mastering it. And another person makes it sound as though you need a degree in computer engineering just to understand what they’re talking about.</p>
-          <p>Somewhere between the hype, the jargon, and the endless promises, a very simple question gets lost:</p>
-          <p class="ed-q voice">What does any of this actually mean for you?</p>
-          <p>Do you need to understand the technology? Learn a new language? Spend hours keeping up with every development?</p>
-          <p class="beat">Not at all.</p>
-          <p>For the past four years, I’ve immersed myself in this world. I’ve read the articles, followed the breakthroughs, explored the tools, watched the demonstrations, and spent countless hours experimenting to see what actually works.</p>
-          <p>I’ve seen the extraordinary possibilities. I’ve also seen the exaggerated promises, the unnecessary complications, and the endless stream of people trying to sell you the next big secret.</p>
-          <p>And somewhere along the way, I realized something.</p>
-          <p class="ed-q voice">I’ve spent four years figuring this out. Why should everyone else have to?</p>
-          <p>That’s why I created IN THE LOOP.</p>
-          <p class="ed-mission">Because I believe nobody should feel left behind by the AI revolution.</p>
-          <p>It’s easy to feel that AI is something complicated, something meant for people who understand technology.</p>
-          <p>The more I explored, the more I realized how much there was to discover beyond what we usually hear about AI.</p>
-          <p>And I thought it might be interesting to share some of it.</p>
-          <p>The things that surprised me. The things I found useful. The possibilities I never even knew existed.</p>
-          <p>I don’t pretend to know everything about AI. Far from it.</p>
-          <p>I’m still learning, still experimenting, and still discovering new things. And I’d love for you to discover them along with me.</p>
-          <p class="beat">Because the most exciting part isn’t knowing everything. It’s finding out what’s possible.</p>
-          <p>No computer science degree. No coding skills. No need to become a software developer, database engineer, or anything else with a complicated job title.</p>
-          <p>No expensive courses. No impossible promises.</p>
-          <p>Just fascinating discoveries, useful ideas, and the occasional moment that makes you stop and think:</p>
-          <p class="ed-wow voice">Wait. AI can do that?</p>
-          <p>Some things might make your day easier. Others might inspire you to try something entirely new. And some might simply change the way you see the world that’s unfolding around us.</p>
-          <p>But here’s what I’ve come to realize.</p>
-          <p>You don’t need to understand everything that’s happening in AI to enjoy what it can bring into your life.</p>
-          <p>You can be curious. You can explore at your own pace. You can decide what feels useful and what doesn’t.</p>
-          <p>And you can keep your own judgment about what to trust and what to leave to technology.</p>
-          <p>The possibilities are exciting. But you’re still the one who decides what belongs in your life.</p>
-          <p class="beat">I’ve done the exploring. You get to enjoy the discoveries.</p>
-          <p>And I’m still learning, right here with you.</p>
-          <p class="ed-sign voice">Welcome to IN THE LOOP.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="fw-title" class="section foreword" id="foreword">
+<div class="wrap">
+<div class="section-head"><span class="label">Editor’s Letter</span><span class="label mute">By Sana Faham</span></div>
+<div class="grid">
+<figure class="fw-img" data-r="wipe">
+<div class="ph" data-drift=""><img alt="A model wearing a crystal headpiece set with three oversized jewelled eyes." decoding="async" height="535" src="../assets/crystal-eye.jpg" width="428"/></div>
+<figcaption>More eyes than you expected.</figcaption>
+</figure>
+<div class="fw-text">
+<p class="ed-kicker label">IN THE LOOP</p>
+<h2 class="lead voice" data-r="rise" id="fw-title">The world is changing. You deserve to be part of it.</h2>
+<div class="ed" data-r="fade">
+<p class="ed-open">Something extraordinary is happening around us.</p>
+<p>Artificial intelligence is changing the world around us in ways we’re only beginning to understand. From breakthroughs in medicine and education to extraordinary scientific discoveries and the smallest moments of everyday life, its possibilities go far beyond what most of us imagine. And this is only the beginning.</p>
+<p class="beat">And it’s happening fast.</p>
+<p>You hear about AI everywhere. Another breakthrough. Another new app. Another headline about how everything is about to change.</p>
+<p class="beat">Then you open Instagram.</p>
+<p>Someone claims they’ve made a million dollars in a month using AI. Someone else promises to reveal the secret to mastering it. And another person makes it sound as though you need a degree in computer engineering just to understand what they’re talking about.</p>
+<p>Somewhere between the hype, the jargon, and the endless promises, a very simple question gets lost:</p>
+<p class="ed-q voice">What does any of this actually mean for you?</p>
+<p>Do you need to understand the technology? Learn a new language? Spend hours keeping up with every development?</p>
+<p class="beat">Not at all.</p>
+<p>For the past four years, I’ve immersed myself in the world of artificial intelligence. I’ve followed its developments, read countless articles, researched the breakthroughs, explored the tools, and spent hours experimenting to see what actually works.</p>
+<p>And I’m still learning.</p>
+<p>I’ve seen the extraordinary possibilities. I’ve also seen the exaggerated promises and the unnecessary complications.</p>
+<p>Somewhere along the way, I realized something.</p>
+<p>There’s so much more to AI than what we usually hear about. So many fascinating discoveries, useful ideas, and possibilities I never even knew existed.</p>
+<p class="beat">That’s why I created IN THE LOOP.</p>
+<p class="ed-mission">Because I believe nobody should feel left behind by the AI revolution.</p>
+<p>It’s easy to feel that AI is something complicated, something meant for people who understand technology. But it doesn’t have to be.</p>
+<p>You don’t need a computer science degree, coding skills, or expensive courses.</p>
+<p>I don’t know everything about AI. Far from it. And I don’t think anyone does. There’s still so much to discover.</p>
+<p class="beat">I believe the most exciting part isn’t knowing everything. It’s finding out what’s possible.</p>
+<p>Just fascinating discoveries, useful ideas, and the occasional moment that makes you stop and think:</p>
+<p class="ed-wow voice">Wait. AI can do that?</p>
+<p>Some things might make your day easier. Others might inspire you to try something entirely new. And some might simply change the way you see the world that’s unfolding around us.</p>
+<p>But here’s what I’ve come to realize.</p>
+<p>You don’t need to understand everything that’s happening in AI to enjoy what it can bring into your life.</p>
+<p>You can be curious. You can explore at your own pace. You can decide what feels useful and what doesn’t.</p>
+<p>And you can keep your own judgment about what to trust and what to leave to technology.</p>
+<p>The possibilities are exciting. But you’re still the one who decides what belongs in your life.</p>
+<p>I see AI as a key. Not because it has all the answers, but because of the possibilities it can open up.</p>
+<p class="ed-sign voice">Welcome to IN THE LOOP.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<section class="section chapter" id="already" aria-labelledby="already-title">
-  <div class="wrap">
-    <h2 id="already-title" class="display ch-title" data-r="rise">AI WAS ALREADY IN YOUR LIFE. YOU JUST DIDN’T KNOW IT.</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>What if I told you that you’ve probably been using AI for years, long before you ever opened ChatGPT?</p>
-          <p>Remember when banks started reading handwritten checks automatically? Or when the post office began sorting letters by recognizing handwritten addresses?</p>
-          <p class="beat">That was AI at work.</p>
-          <p>And it didn’t stop there.</p>
-          <p class="beat">When YouTube recommends a video you might enjoy.</p>
-          <p class="beat">When Google Maps helps you avoid traffic.</p>
-          <p class="beat">When your phone quietly improves a photograph before you even see it.</p>
-          <p class="beat">When your email suggests a reply, or your phone corrects a misspelled word.</p>
-          <p>AI has been woven into everyday life for a surprisingly long time.</p>
-          <p class="ed-q voice">So what changed?</p>
-          <p>For years, most of us experienced AI working quietly in the background.</p>
-          <p>Then something remarkable happened.</p>
-          <p>AI became capable of understanding our questions and responding in ordinary language, with a flexibility that earlier systems didn’t have.</p>
-          <p class="beat">And that’s when a whole new world of possibilities began to open up.</p>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="already-title" class="section chapter" id="already">
+<div class="wrap">
+<h2 class="display ch-title" data-r="rise" id="already-title">AI WAS ALREADY IN YOUR LIFE. YOU JUST DIDN’T KNOW IT.</h2>
+<div class="ch-body">
+<div class="ed" data-r="fade">
+<p>What if I told you that you’ve probably been using AI for years, long before you ever opened ChatGPT?</p>
+<p>Remember when banks started reading handwritten checks automatically? Or when the post office began sorting letters by recognizing handwritten addresses?</p>
+<p class="beat">That was AI at work.</p>
+<p>And it didn’t stop there.</p>
+<p class="beat">When YouTube recommends a video you might enjoy.</p>
+<p class="beat">When Google Maps helps you avoid traffic.</p>
+<p class="beat">When your phone quietly improves a photograph before you even see it.</p>
+<p class="beat">When your email suggests a reply, or your phone corrects a misspelled word.</p>
+<p>AI has been woven into everyday life for a surprisingly long time.</p>
+<p class="ed-q voice">So what changed?</p>
+<p>For years, most of us experienced AI working quietly in the background.</p>
+<p>Then something remarkable happened.</p>
+<p>AI became capable of understanding our questions and responding in ordinary language, with a flexibility that earlier systems didn’t have.</p>
+<p class="beat">And that’s when a whole new world of possibilities began to open up.</p>
+</div>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI WAS READING HANDWRITING LONG BEFORE CHATGPT.</h3><p>Postal systems used machine learning and handwriting recognition to help sort mail decades before conversational AI became familiar.</p></aside>
 </section>
-
-<section class="section chapter" id="changing" aria-labelledby="changing-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The world is changing</span><span class="label mute">Chapter 01</span></div>
-    <h2 id="changing-title" class="display ch-title" data-r="rise">WHAT IF YOU DIDN'T HAVE TO LEARN THE BUTTONS?</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>Think about every piece of technology you've had to learn.</p>
-          <p>The remote with forty buttons. The phone setting buried three menus deep. The software that only worked if you clicked things in the right order.</p>
-          <p>For years, we've been learning how to use computers. Which button to press. Which menu to open. Which instructions to follow.</p>
-          <p class="beat">AI flips that around.</p>
-          <p>Some of the most powerful technology ever built doesn't ask you to learn anything new. You just say what you want, in your own words.</p>
-          <p>And the skill that gets the best results is one you've used your whole life: explaining clearly what you need.</p>
-          <p>That doesn't mean AI understands everything, knows everything or always gets it right.</p>
-          <p class="beat">Far from it.</p>
-          <p>But it does mean the door is open to anyone who can hold a conversation.</p>
-      </div>
-    </div>
-    <div class="moment" data-r="rise">
-      <p class="moment-big">You don't have to learn the machine's language.</p>
-      <p class="moment-sub voice">More and more, it can work with yours.</p>
-    </div>
-  </div>
+<section aria-labelledby="changing-title" class="section chapter" id="changing">
+<div class="wrap">
+<div class="section-head"><span class="label">The world is changing</span><span class="label mute">Chapter 01</span></div>
+<h2 class="display ch-title" data-r="rise" id="changing-title">WHAT IF YOU DIDN'T HAVE TO LEARN THE BUTTONS?</h2>
+<div class="ch-body">
+<div class="ed" data-r="fade">
+<p>Think about every piece of technology you've had to learn.</p>
+<p>The remote with forty buttons. The phone setting buried three menus deep. The software that only worked if you clicked things in the right order.</p>
+<p>For years, we've been learning how to use computers. Which button to press. Which menu to open. Which instructions to follow.</p>
+<p class="beat">AI flips that around.</p>
+<p>Some of the most powerful technology ever built doesn't ask you to learn anything new. You just say what you want, in your own words.</p>
+<p>And the skill that gets the best results is one you've used your whole life: explaining clearly what you need.</p>
+<p>That doesn't mean AI understands everything, knows everything or always gets it right.</p>
+<p class="beat">It certainly doesn’t.</p>
+<p>But it does mean the door is open to anyone who can hold a conversation.</p>
+</div>
+</div>
+<div class="moment" data-r="rise">
+<p class="moment-big">You don't have to learn the machine's language.</p>
+<p class="moment-sub voice">More and more, it can work with yours.</p>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI HAS HELPED MAP MILLIONS OF PROTEIN STRUCTURES.</h3><p>Systems such as AlphaFold have predicted structures that researchers can use to investigate biology and disease.</p></aside>
 </section>
+<section aria-labelledby="possibilities-title" class="section chapter" id="possibilities">
+<div class="wrap">
+<div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
+<h2 class="display ch-title" data-r="rise" id="possibilities-title">WAIT. IT CAN DO THAT?</h2>
+<div class="ch-body">
+<div class="ed" data-r="fade">
+<p>Most people know they can type a question into an AI app and get an answer.</p>
+<p class="beat">That's only the beginning.</p>
+<p>Writing was the part I expected.</p>
+<p>What surprised me was how many different kinds of things it could work with.</p>
+</div>
+</div>
+<div class="discs">
+<article class="disc-block">
+<p class="label disc-n">Discovery 01</p>
+<h3 class="display disc-h" data-r="rise">CAN AI FIND THE DETAIL THAT CHANGES EVERYTHING?</h3>
+<div class="ed" data-r="fade">
 
-<section class="section chapter" id="possibilities" aria-labelledby="possibilities-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
-    <h2 id="possibilities-title" class="display ch-title" data-r="rise">WAIT. IT CAN DO THAT?</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>Most people know they can type a question into an AI app and get an answer.</p>
-          <p class="beat">That's only the beginning.</p>
-          <p>Writing was the part I expected.</p>
-          <p>What surprised me was how many different kinds of things it could work with.</p>
-      </div>
-    </div>
-    <div class="discs">
-      <article class="disc-block">
-        <p class="label disc-n">Discovery 01</p>
-        <h3 class="display disc-h" data-r="rise">WHAT IF AI COULD HELP YOU SEE MORE IN A PHOTOGRAPH?</h3>
-        <div class="ed" data-r="fade">
-          <p>Imagine finding an old handwritten letter in a drawer.</p>
-          <p>You take a picture and share it with an AI app that can analyze images.</p>
-          <p>Suddenly, you can ask it to help you read difficult handwriting, translate unfamiliar words, or explain what the letter might be about.</p>
-          <p>The photograph is simply how you show it what you’re looking at.</p>
-          <p>The interesting part is what AI can help you discover.</p>
-        </div>
-      </article>
-      <article class="disc-block">
-        <p class="label disc-n">Discovery 02</p>
-        <h3 class="display disc-h" data-r="rise">You can actually talk to it.</h3>
-        <div class="ed" data-r="fade">
-          <p>I don't mean dictating a message and waiting for it to turn into text.</p>
-          <p class="beat">I mean a real spoken conversation.</p>
-          <p>Ask a question, hear the answer, interrupt, ask what it meant or change your mind halfway through.</p>
-          <p>You can do it while you cook or go for a walk.</p>
-          <p>The keyboard is no longer the only way in.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+
+
+
+
+</div>
+<p>Imagine receiving a long document with a dozen pages of conditions, dates and exceptions.</p><p>Instead of asking for a summary, you can ask an AI app to compare two versions and flag what changed, what disappeared and which details deserve a second look.</p><p>It can point you to the relevant passages so you can check them yourself. That is much more interesting than simply having a document read aloud.</p></article>
+
+</div>
+</div>
 </section>
-
 <!-- VOICE SPREAD -->
-<section class="section spread" id="voice" aria-labelledby="voice-title">
-  <div class="wrap">
-    <div class="grid" style="padding-block:8px">
-      <figure class="spread-img" data-r="wipe">
-        <div class="ph" data-drift><img src="../assets/red-lips.jpg" alt="Close-up of lips covered in red crystals with a gold detail." width="428" height="528" decoding="async"></div>
-      </figure>
-      <div class="spread-text">
-        <span class="label">The art of conversation</span>
-        <h2 id="voice-title" class="display" style="font-size:clamp(48px,7vw,104px)" data-r="rise">Hate typing? Talk.</h2>
-        <p class="voice" data-r="fade">Try it in the app you already have.</p>
-        <div class="apps3" data-r="stagger">
-          <div><b>ChatGPT</b><p>Tap the Voice icon in the message bar and start talking. Free plans get limited voice use, and the limits can change.</p></div>
-          <div><b>Gemini</b><p>In the Gemini mobile app, tap the Live icon at the bottom of the screen. During the chat, tap the camera button to ask about what it sees.</p></div>
-          <div><b>Claude</b><p>Tap the sound wave icon next to the microphone and start talking. It's included on the Free plan and counts toward your usual limits.</p></div>
-        </div>
-        <p class="apps3-note">Features and limits vary by app, device, plan and country.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section chapter" id="possibilities-more" aria-label="THE NEW POSSIBILITIES, continued">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
-    <div class="discs">
-      <article class="disc-block">
-        <p class="label disc-n">Discovery 03</p>
-        <h3 class="display disc-h" data-r="rise">A DOCUMENT CAN BECOME A CONVERSATION.</h3>
-        <div class="ed" data-r="fade">
-          <p>Think about the last time someone sent you a document you didn't understand.</p>
-          <p>A contract. An insurance letter. A medical report. A confusing instruction manual.</p>
-          <p>Until now, you had two choices: read every line yourself or find someone to explain it.</p>
-          <p>Now, many AI apps let you upload a document and ask questions about what's inside.</p>
-          <p>You can ask it to explain things in plain words, find a certain clause, compare sections or help you prepare questions for a professional.</p>
-          <p>Instead of searching through twenty pages, you can ask about the part that matters to you.</p>
-          <p>AI can still miss details or misread important wording. It doesn't replace a doctor, a lawyer or any other professional.</p>
-          <p>But it can help you walk into that conversation better prepared.</p>
-        </div>
-      </article>
-      <article class="disc-block">
-        <p class="label disc-n">Discovery 04</p>
-        <h3 class="display disc-h" data-r="rise">An idea in your head can become something you can see.</h3>
-        <div class="ed" data-r="fade">
-          <p>A room you've thought about redecorating.</p>
-          <p class="beat">An outfit you can't quite picture.</p>
-          <p class="beat">A scene from a story.</p>
-          <p>A photo of something that could never exist in real life.</p>
-          <p>Describe it to an AI image tool and you'll see a picture of it.</p>
-          <p>Change the lighting. Change the colors. Try another style.</p>
-          <p>And with specialist video tools, an image or a description can sometimes become a short video.</p>
-          <p>It won't always be perfect. Getting something really good takes patience, a lot of tries and your own eye.</p>
-          <p class="beat">But this is the best part:</p>
-          <p>You don't need to know how to draw to start playing with a visual idea.</p>
-          <p>The idea starts with you.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+<section aria-label="THE NEW POSSIBILITIES, continued" class="section chapter" id="possibilities-more">
+<div class="wrap">
+<div class="section-head"><span class="label">The new possibilities</span><span class="label mute">Chapter 02</span></div>
+<div class="discs">
+<article class="disc-block">
+<p class="label disc-n">Discovery 03</p>
+<h3 class="display disc-h" data-r="rise">A DOCUMENT CAN BECOME A CONVERSATION.</h3>
+<div class="ed" data-r="fade">
+<p>Think about the last time someone sent you a document you didn't understand.</p>
+<p>A contract. An insurance letter. A medical report. A confusing instruction manual.</p>
+<p>Until now, you had two choices: read every line yourself or find someone to explain it.</p>
+<p>Now, many AI apps let you upload a document and ask questions about what's inside.</p>
+<p>You can ask it to explain things in plain words, find a certain clause, compare sections or help you prepare questions for a professional.</p>
+<p>Instead of searching through twenty pages, you can ask about the part that matters to you.</p>
+<p>AI can still miss details or misread important wording. It doesn't replace a doctor, a lawyer or any other professional.</p>
+<p>But it can help you walk into that conversation better prepared.</p>
+</div>
+</article>
+<article class="disc-block">
+<p class="label disc-n">Discovery 04</p>
+<h3 class="display disc-h" data-r="rise">An idea in your head can become something you can see.</h3>
+<div class="ed" data-r="fade">
+<p>A room you've thought about redecorating.</p>
+<p class="beat">An outfit you can't quite picture.</p>
+<p class="beat">A scene from a story.</p>
+<p>A photo of something that could never exist in real life.</p>
+<p>Describe it to an AI image tool and you'll see a picture of it.</p>
+<p>Change the lighting. Change the colors. Try another style.</p>
+<p>And with specialist video tools, an image or a description can sometimes become a short video.</p>
+<p>It won't always be perfect. Getting something really good takes patience, a lot of tries and your own eye.</p>
+<p class="beat">But this is the best part:</p>
+<p>You don't need to know how to draw to start playing with a visual idea.</p>
+<p>The idea starts with you.</p>
+<p class="label" style="margin-top:1.5rem">DID YOU KNOW?</p>
+<p>Ask AI to generate a picture of a doctor, and it may show you a man. Why? Because AI can learn our human biases along with everything else.</p>
+</div>
+</article>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>A 2,000-YEAR-OLD SCROLL, READ WITHOUT UNROLLING IT.</h3><p>Researchers have used AI to help decipher writing inside ancient scrolls too fragile to open.</p></aside>
 </section>
+<section aria-labelledby="doing-title" class="section chapter" id="doing">
+<div class="wrap">
+<div class="section-head"><span class="label">Beyond the chatbox</span><span class="label mute">Chapter 03</span></div>
+<h2 class="display ch-title" data-r="rise" id="doing-title">YOUR AI CAN DO MORE THAN ANSWER QUESTIONS.</h2>
+<div class="ch-body">
+<div class="ed" data-r="fade">
 
-<section class="section chapter" id="doing" aria-labelledby="doing-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Beyond the chatbox</span><span class="label mute">Chapter 03</span></div>
-    <h2 id="doing-title" class="display ch-title" data-r="rise">From answering to doing</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>This is something I wish more people explained.</p>
-          <p>There's a difference between AI that tells you how to do something and AI that can help you do it.</p>
-          <p class="beat">Say you're planning a trip.</p>
-          <p>You can ask AI to suggest places to go, compare plans or explain the difference between two neighborhoods.</p>
-          <p class="beat">That's useful.</p>
-          <p>But some AI apps can go further.</p>
-          <p>With the right connections and permissions, they can sometimes look at information in your other apps, search for options, prepare a booking or do certain things for you.</p>
-          <p>That's where you hear the words AI agent.</p>
-          <p>It sounds more complicated than it is.</p>
-          <p>An AI agent is AI that can take steps toward a goal using tools, instead of only giving you an answer.</p>
-          <p>A chatbot can tell you what needs doing. An agent can sometimes help you do the steps.</p>
-          <p>Not every AI app can do this. Not every connection is available to everyone. Some actions ask you to confirm first, and the important decisions should always stay with you.</p>
-          <p class="beat">But where this is going is really interesting.</p>
-          <p>Technology used to help us find information. Now it can sometimes help us act on it.</p>
-      </div>
-    </div>
-    <div class="moment" data-r="rise">
-      <p class="moment-big">Knowing what to do is one thing.</p>
-      <p class="moment-sub voice">Helping you get it done is another.</p>
-    </div>
-    <aside class="feature" data-r="fade">
-      <h3 class="display feature-h">What does "connect an app" actually mean?</h3>
-      <div class="ed">
-          <p>Say you ask AI to find an appointment confirmation buried in your email.</p>
-          <p>If it can't see your email, it has no way of knowing what's in your inbox.</p>
-          <p>You'd have to copy the message into the chat yourself.</p>
-          <p>But if the app can connect securely to your email, and you allow it, it can search for the confirmation itself.</p>
-          <p>The same goes for your calendar, your files and other services it supports.</p>
-          <p>The connection lets the AI work with information outside the chat.</p>
-          <p>It doesn't mean you should connect everything.</p>
-          <p>Only allow access when you understand what the connection does, what it can see and whether you really need it.</p>
-      </div>
-    </aside>
-  </div>
+<p>There's a difference between AI that tells you how to do something and AI that can help you do it.</p>
+<p class="beat">Say you're planning a trip.</p>
+<p>You can ask AI to suggest places to go, compare plans or explain the difference between two neighborhoods.</p>
+
+<p>But some AI apps can go further.</p>
+<p>With the right connections and permissions, they can sometimes look at information in your other apps, search for options, prepare a booking or do certain things for you.</p>
+<p>That's where you hear the words AI agent.</p>
+
+<p>An AI agent is AI that can take steps toward a goal using tools, instead of only giving you an answer.</p>
+<p>A chatbot can tell you what needs doing. An agent can sometimes help you do the steps.</p>
+<p>Not every AI app can do this. Not every connection is available to everyone. Some actions ask you to confirm first, and the important decisions should always stay with you.</p>
+
+<p>Technology used to help us find information. Now it can sometimes help us act on it.</p>
+</div>
+</div>
+<div class="moment" data-r="rise">
+<p class="moment-big">Knowing what to do is one thing.</p>
+<p class="moment-sub voice">Helping you get it done is another.</p>
+</div>
+<aside class="feature" data-r="fade">
+<h3 class="display feature-h">WHAT HAPPENS WHEN APPS CONNECT?</h3>
+<div class="ed">
+<p>Say you ask AI to find an appointment confirmation buried in your email.</p>
+<p>If it can't see your email, it has no way of knowing what's in your inbox.</p>
+<p>You'd have to copy the message into the chat yourself.</p>
+<p>But if the app can connect securely to your email, and you allow it, it can search for the confirmation itself.</p>
+<p>The same goes for your calendar, your files and other services it supports.</p>
+<p>The connection lets the AI work with information outside the chat.</p>
+<p>It doesn't mean you should connect everything.</p>
+<p>Only allow access when you understand what the connection does, what it can see and whether you really need it.</p>
+</div>
+<p>Imagine asking AI to find an appointment confirmation buried somewhere in your emails.</p><p>When an AI app is securely connected to your email, with your permission, it may be able to find that information without you copying messages into a conversation.</p><p>The same idea applies to calendars, documents and other supported services. AI is no longer limited to what you type into a chat. What it can access and do depends on the connection and the permissions you choose.</p></aside>
+</div>
 </section>
-
 <!-- ESSAY -->
-<section class="section essay" id="essay" aria-labelledby="essay-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The essay</span><span class="label mute">By Sana Faham</span></div>
-    <div class="grid">
-      <h2 id="essay-title" class="display essay-title" data-r="rise">Why my AI knows my name and my life</h2>
-      <div class="essay-body">
-        <div class="story" data-r="fade">
-          <p class="story-deck voice">It started with a simple question over coffee.</p>
-          <p>I asked my AI assistant, "What's your name?"</p>
-          <blockquote class="say carson"><p>"My name is Carson, <bdi lang="ar" dir="rtl">سيدتي الجميلة</bdi>."</p></blockquote>
-          <p class="gloss"><em>My beautiful lady.</em></p>
-          <p>My friend laughed, picked up his phone, and asked his ChatGPT exactly the same question.</p>
-          <p>His ChatGPT answered,</p>
-          <blockquote class="say plain"><p>"I am ChatGPT."</p></blockquote>
-          <p>He looked at his phone, then at mine.</p>
-          <blockquote class="say"><p>"Wait. Yours has a name? And it calls you my beautiful lady? How did you do that?"</p></blockquote>
-          <p>I explained that I'd given my assistant a name and taught it how I liked to be addressed.</p>
-          <p>But the name wasn't what made Carson special.</p>
-          <p class="story-turn">It was everything else he knew about my life.</p>
-          <p>My schedule. My appointments. My travel plans. My family, my preferences, and the little details that make up an ordinary day.</p>
-          <p>And I'm building him to keep track of unfinished things. The reply I'm still waiting for. The booking that needs confirming. The promise I made and might otherwise forget.</p>
-          <p class="story-turn">That's what I mean by closing the loops.</p>
-          <p>My friend was intrigued.</p>
-          <blockquote class="say"><p>"So yours doesn't just answer questions. It actually helps you run your day?"</p></blockquote>
-          <p>Exactly. And most people haven't discovered that part yet.</p>
+<section aria-labelledby="three-title" class="section three" id="three">
+<div class="wrap">
+<div class="section-head"><span class="label">The three</span><span class="label mute">Tap a name</span></div>
+<h2 class="display" data-r="rise" id="three-title" style="margin-bottom:clamp(32px,5vw,64px)">THREE FAMILIAR NAMES. A LOT MORE TO DISCOVER.</h2>
+<div class="three-lede" data-r="fade">
+<p>ChatGPT, Gemini, and Claude. You may already be using one of them.</p>
 
-          <h3 class="story-h">THE POSSIBILITIES GO FAR BEYOND A CHATBOX.</h3>
-          <p>AI isn’t just about asking questions and getting answers.</p>
-          <p>It can help you explore ideas, understand information, create images, work through problems, and, with the right tools and permissions, even help carry out certain tasks.</p>
-          <p>And what’s especially interesting is how many of these possibilities are already becoming available through tools people can use today.</p>
-          <p>You don’t need to understand how AI is built to start discovering what it can do.</p>
-          <p>Tell ChatGPT, Gemini or Claude how you like things explained, and it adjusts. Hand it a trip to plan, a complicated week to untangle, a choice to weigh up, or a jumble of thoughts to turn into a clear plan.</p>
-          <p>Depending on the app, your plan and your settings, it may also remember useful preferences between chats, or connect to your calendar, email and files with your permission.</p>
-          <p>Imagine planning a holiday without explaining, yet again, that you hate early flights. Or turning a long, confusing email into three clear points and a draft reply.</p>
-          <p class="story-turn">That's when AI starts feeling less like a search box and more like something that understands how you live.</p>
 
-          <h3 class="story-h">And what about Carson?</h3>
-          <p>Carson goes further because I'm building him around my own life.</p>
-          <p>As well as helping me think and plan, I'm building him to keep track of what I'm responsible for, notice what still needs attention and help me follow up. That takes extra tools and connections that everyday AI apps don't come with.</p>
-          <p>Think of him as a glimpse of where personal AI is heading.</p>
-          <p>You don't have to start there. Start with the AI you already have. Make it a little more yours, let it help with the small things, and see what you find.</p>
-          <p class="story-close voice">Carson calling me my beautiful lady got the laugh.</p>
-          <p class="story-close voice">But that conversation over coffee was only the beginning.</p>
-          <p class="story-close voice">So what could you teach yours to do?</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<p>Each has its own strengths, and their capabilities keep changing. Tap a name to explore a few possibilities beyond the familiar chat.</p>
 
-<section class="section chapter" id="reality" aria-labelledby="reality-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Look beyond the headlines</span><span class="label mute">Chapter 05</span></div>
-    <h2 id="reality-title" class="display ch-title" data-r="rise">THE MAGIC. AND THE REALITY.</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>If you've watched AI videos online, you've probably seen something that made you stop.</p>
-          <p>An image that appears in seconds.</p>
-          <p>A video that looks like a real film.</p>
-          <p>Someone saying they built a whole business while they slept.</p>
-          <p>And, of course, someone selling you the secret.</p>
-          <p>Some of it really is impressive.</p>
-          <p>Some demos are carefully picked.</p>
-          <p>And some promises need a much closer look.</p>
-          <p>You see the finished result. You don't see what it took to get there.</p>
-          <p class="beat">I know, because I make these videos myself.</p>
-          <p>What's possible is exciting enough. I don't need to pretend there's a magic button for everything.</p>
-      </div>
-    </div>
-  </div>
+
+</div>
+<div aria-label="Choose an app" class="three-tabs" id="threeTabs" role="tablist"></div>
+<div aria-live="polite" class="three-panel" id="threePanel" role="tabpanel"></div>
+<p class="three-note">And remember: these are examples, not limits. All three have many overlapping capabilities, and their features continue to evolve. Some experiences require additional apps, connections, subscriptions, or depend on which country you’re in.</p>
+<div class="know"><b>GOOD TO KNOW</b><p>ChatGPT, Gemini, and Claude can all remember useful details about you, depending on their settings and available features.</p><p>That means you may not have to explain your preferences, interests, or plans from the beginning every time you start a conversation.</p><p>They don’t remember everything, and you have controls over what information they keep or use. Those controls differ between apps.</p></div>
+<p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
+</div>
+</section><section aria-labelledby="essay-title" class="section essay" id="essay">
+<div class="wrap">
+<div class="section-head"><span class="label">The essay</span><span class="label mute">By Sana Faham</span></div>
+<div class="grid">
+<h2 class="display essay-title" data-r="rise" id="essay-title">MEET CARSON.</h2>
+<div class="essay-body">
+<div class="story" data-r="fade">
+<p class="story-deck voice">I then started wondering what would happen if I could bring some of these possibilities together into something of my own. That’s how Carson began.</p>
+<p>I asked my AI assistant, "What's your name?"</p>
+<blockquote class="say carson"><p>"My name is Carson, <bdi dir="rtl" lang="ar">سيدتي الجميلة</bdi>."</p></blockquote>
+<p class="gloss"><em>My beautiful lady.</em></p>
+<p>My friend laughed, picked up his phone, and asked his ChatGPT exactly the same question.</p>
+<p>His ChatGPT answered,</p>
+<blockquote class="say plain"><p>"I am ChatGPT."</p></blockquote>
+<p>He looked at his phone, then at mine.</p>
+<blockquote class="say"><p>"Wait. Yours has a name? And it calls you my beautiful lady? How did you do that?"</p></blockquote>
+<p>I explained that I'd given my assistant a name and taught it how I liked to be addressed.</p>
+<p>But the name wasn't what made Carson special.</p>
+<p class="story-turn">It was everything else he knew about my life.</p>
+<p>My schedule. My appointments. My travel plans. My family, my preferences, and the little details that make up an ordinary day.</p>
+<p>And I'm building him to keep track of unfinished things. The reply I'm still waiting for. The booking that needs confirming. The promise I made and might otherwise forget.</p>
+<p class="story-turn">That's what I mean by closing the loops.</p>
+<p>My friend was intrigued.</p>
+<blockquote class="say"><p>"So yours doesn't just answer questions. It actually helps you run your day?"</p></blockquote>
+<p>Exactly. And most people haven't discovered that part yet.</p>
+<h3 class="story-h">WHAT MAKES CARSON PERSONAL.</h3><p>What makes these tools interesting is how personal they can become. Depending on the app and your settings, AI may remember your preferences and adapt how it explains things. Imagine planning a holiday without explaining again that you hate early flights.</p>
+
+
+
+
+
+
+
+
+<h3 class="story-h">And what about Carson?</h3>
+<p>Carson goes further because I'm building him around my own life.</p>
+<p>As well as helping me think and plan, I'm building him to keep track of what I'm responsible for, notice what still needs attention and help me follow up. That takes extra tools and connections that everyday AI apps don't come with.</p>
+<p>Think of him as a glimpse of where personal AI is heading.</p>
+<p>You don't have to start there. Start with the AI you already have. Make it a little more yours, let it help with the small things, and see what you find.</p>
+<p class="story-close voice">Carson calling me my beautiful lady got the laugh.</p>
+<p class="story-close voice">But that conversation over coffee was only the beginning.</p>
+<p class="story-close voice">So what could you teach yours to do?</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- STUDIO -->
-<section class="section studio" id="studio" aria-labelledby="studio-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The creative studio</span><span class="label mute">Chapter 05</span></div>
-    <div class="grid">
-      <h2 id="studio-title" class="display studio-title" data-r="rise">There is no magic button</h2>
-      <figure class="reel" data-r="wipe">
-        <div class="reel-frame">
-          <video id="reel" poster="../assets/reel-poster.jpg" muted loop playsinline preload="metadata" width="1280" height="720" aria-label="Comparison reel: the same portrait brief rendered by Midjourney and by Runway, cutting back and forth."><source src="../assets/reel.mp4" type="video/mp4"><source src="../assets/reel.webm" type="video/webm"></video>
-        </div>
-        <div class="reel-bar">
-          <figcaption style="margin:0">Same brief, two tools. Midjourney and Runway, side by side.</figcaption>
-          <div class="reel-ctrls">
-            <button class="btn red small" id="reelSound" type="button" aria-controls="reel" aria-pressed="false">Sound on</button>
-            <button class="btn ghost small" id="reelToggle" type="button" aria-controls="reel">Play</button>
-          </div>
-        </div>
-      </figure>
-      <div class="studio-head">
-        <div class="prose" data-r="fade">
-          <p>People often ask which app made my videos, as though there's one magic button that does it all.</p>
-          <p>There isn't. Sometimes a six-second clip takes me two hours. Sometimes I spend an entire day getting it just right.</p>
-          <p>I choose the idea, the lighting, the styling, the mood. I experiment, discard what doesn't work, and keep refining until I'm happy with the result.</p>
-          <p>AI does the rendering. The creative decisions are still mine.</p>
-        </div>
-      </div>
-      <div class="studio-note" data-r="rise">
-        <div class="big" role="img" aria-label="2 hours to 1 day"><span class="nw">2h <svg class="arr" viewBox="0 0 60 40" aria-hidden="true"><path d="M2 20h50M36 5l17 15-17 15"/></svg></span> <span class="nw">1 DAY</span></div>
-        <p>Sometimes less. Sometimes more. All for a few seconds of film.</p>
-      </div>
-      <div class="studio-tool" data-r="fade">
-        <span class="label">AI plus a specialist tool</span>
-        <p>Some apps make pictures themselves: ChatGPT and Gemini can create images right in the chat. Others work through a connected specialist tool. I connect Higgsfield, a creative tool for images and video, to both ChatGPT and Claude. I describe the scene in the chat, and the AI works with Higgsfield to make it. Claude doesn't create photos on its own, but with a connected tool it can take part. What's available depends on the app and your plan.</p>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="studio-title" class="section studio" id="studio">
+<div class="wrap">
+<div class="section-head"><span class="label">The creative studio</span><span class="label mute">Chapter 05</span></div>
+<div class="grid">
+<h2 class="display studio-title" data-r="rise" id="studio-title">There is no magic button</h2>
+<figure class="reel" data-r="wipe">
+<div class="reel-frame">
+<video aria-label="Comparison reel: the same portrait brief rendered by Midjourney and by Runway, cutting back and forth." height="720" id="reel" loop="" muted="" playsinline="" poster="../assets/reel-poster.jpg" preload="metadata" width="1280"><source src="../assets/reel.mp4" type="video/mp4"/><source src="../assets/reel.webm" type="video/webm"/></video>
+</div>
+<div class="reel-bar">
+<figcaption style="margin:0">Same brief, two tools. Midjourney and Runway, side by side.</figcaption>
+<div class="reel-ctrls">
+<button aria-controls="reel" aria-pressed="false" class="btn red small" id="reelSound" type="button">Sound on</button>
+<button aria-controls="reel" class="btn ghost small" id="reelToggle" type="button">Play</button>
+</div>
+</div>
+</figure>
+<div class="studio-head">
+<div class="prose" data-r="fade">
+<p>People often ask which app made my videos, as though there's one magic button that does it all.</p>
+<p>There isn't. Sometimes a six-second clip takes me two hours. Sometimes I spend an entire day getting it just right.</p>
+<p>I choose the idea, the lighting, the styling, the mood. I experiment, discard what doesn't work, and keep refining until I'm happy with the result.</p>
+<p>AI does the rendering. The creative decisions are still mine.</p>
+</div>
+</div>
+<div class="studio-note" data-r="rise">
+<div aria-label="2 hours to 1 day" class="big" role="img"><span class="nw">2h <svg aria-hidden="true" class="arr" viewbox="0 0 60 40"><path d="M2 20h50M36 5l17 15-17 15"></path></svg></span> <span class="nw">1 DAY</span></div>
+<p>Sometimes less. Sometimes more. All for a few seconds of film.</p>
+</div>
+<div class="studio-tool" data-r="fade">
+<span class="label">AI plus a specialist tool</span>
+<p>Some apps make pictures themselves: ChatGPT and Gemini can create images right in the chat. Others work through a connected specialist tool. I connect Higgsfield, a creative tool for images and video, to both ChatGPT and Claude. I describe the scene in the chat, and the AI works with Higgsfield to make it. Claude doesn't create photos on its own, but with a connected tool it can take part. What's available depends on the app and your plan.</p>
+</div>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI LEARNED TO RECOGNIZE THE WORLD FROM MILLIONS OF PHOTOS.</h3><p>The ImageNet project helped accelerate a major shift in computer vision and modern deep learning.</p></aside>
 </section>
-
-<section class="section chapter" id="wrong" aria-labelledby="wrong-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Look beyond the headlines</span><span class="label mute">Chapter 05</span></div>
-    <aside class="feature" data-r="fade">
-      <h3 id="wrong-title" class="display feature-h">And yes, AI gets things wrong.</h3>
-      <div class="ed">
-          <p>Sometimes AI gives you a well-written answer that's just wrong.</p>
-          <p>It can misread a photo, miss something in a document or sound sure about something it doesn't actually know.</p>
-          <p>So I use it as a powerful tool to work with. I don't believe everything it says.</p>
-          <p>For ideas, explanations, drafts and creative play, it can be brilliant.</p>
-          <p>For medical decisions, legal matters, money or anything else with serious consequences, check it.</p>
-          <p>You still do the thinking. AI just gives you better tools to think with.</p>
-      </div>
-    </aside>
-  </div>
+<section aria-labelledby="wrong-title" class="section chapter" id="wrong">
+<div class="wrap">
+<div class="section-head"><span class="label">Look beyond the headlines</span><span class="label mute">Chapter 05</span></div>
+<aside class="feature" data-r="fade">
+<h3 class="display feature-h" id="wrong-title">And yes, AI gets things wrong.</h3>
+<div class="ed">
+<p>Sometimes AI gives you a well-written answer that's just wrong.</p>
+<p>It can misread a photo, miss something in a document or sound sure about something it doesn't actually know.</p>
+<p>So I use it as a powerful tool to work with. I don't believe everything it says.</p>
+<p>For ideas, explanations, drafts and creative play, it can be brilliant.</p>
+<p>For medical decisions, legal matters, money or anything else with serious consequences, check it.</p>
+<p>You still do the thinking. AI just gives you better tools to think with.</p>
+</div>
+</aside>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>A CHATBOT ONCE TOLD A REPORTER IT LOVED HIM.</h3><p>In 2023, Microsoft’s Bing chatbot produced messages urging a journalist to leave his wife. The words were generated by software, not evidence of feelings.</p></aside>
 </section>
-
 <!-- RULES -->
-<section class="section rules" id="rules" aria-labelledby="rules-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The rules</span><span class="label mute">Before you begin</span></div>
-    <div class="grid">
-      <div class="rules-head"><h2 id="rules-title" class="voice" data-r="rise">Curiosity and good judgment belong together.</h2></div>
-      <figure class="rules-img" data-r="wipe">
-        <div class="ph" data-drift><img src="../assets/yellow-hand.jpg" alt="A yellow gloved hand with jewelled nails and a single eye set into the palm." width="428" height="660" decoding="async"></div>
-        <figcaption>Look closely at what an app can see.</figcaption>
-      </figure>
-      <ol class="rules-list" data-r="stagger">
-        <li><span class="k">I</span><div><h3>Keep private details private</h3><p>Never share passwords, bank account numbers, passports or ID numbers with any AI tool, however official it looks. Crop them out of photos first.</p></div></li>
-        <li><span class="k">II</span><div><h3>Check what matters</h3><p>AI can sound sure and still be wrong. Check important facts, numbers and dates yourself before you send, sign or pay.</p></div></li>
-        <li><span class="k">III</span><div><h3>Ignore the pressure</h3><p>You don't need every new app or update. Keep what serves your peace of mind and leave the rest.</p></div></li>
-      </ol>
-    </div>
-  </div>
+<section aria-labelledby="rules-title" class="section rules" id="rules">
+<div class="wrap">
+<div class="section-head"><span class="label">The rules</span><span class="label mute">Before you begin</span></div>
+<div class="grid">
+<div class="rules-head"><h2 class="voice" data-r="rise" id="rules-title">Curiosity and good judgment belong together.</h2></div>
+<figure class="rules-img" data-r="wipe">
+<div class="ph" data-drift=""><img alt="A yellow gloved hand with jewelled nails and a single eye set into the palm." decoding="async" height="660" src="../assets/yellow-hand.jpg" width="428"/></div>
+<figcaption>Look closely at what an app can see.</figcaption>
+</figure>
+<ol class="rules-list" data-r="stagger">
+<li><span class="k">I</span><div><h3>Keep private details private</h3><p>Never share passwords, bank account numbers, passports or ID numbers with any AI tool, however official it looks. Crop them out of photos first.</p></div></li>
+<li><span class="k">II</span><div><h3>Check what matters</h3><p>AI can sound sure and still be wrong. Check important facts, numbers and dates yourself before you send, sign or pay.</p></div></li>
+<li><span class="k">III</span><div><h3>Ignore the pressure</h3><p>You don't need every new app or update. Keep what serves your peace of mind and leave the rest.</p></div></li>
+</ol>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI CAN INHERIT HUMAN BIAS.</h3><p>Ask an image generator to picture a doctor and it may favor men, reflecting patterns and biases in its training data. Results vary by model and prompt.</p></aside>
 </section>
-
 <!-- YOUR LIFE -->
-<section class="section chapter" id="yourlife" aria-labelledby="yourlife-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Make it personal</span><span class="label mute">Chapter 06</span></div>
-    <div class="grid">
-      <h2 id="yourlife-title" class="display ch-title yl-title" data-r="rise">A little of this, in your own life</h2>
-      <div class="yl-text ed" data-r="fade">
-          <p>By now, you may be wondering what any of this looks like in an ordinary day.</p>
-          <p class="beat">Not in a tech demo.</p>
-          <p>Not in a video promising you'll become a millionaire.</p>
-          <p class="beat">In your actual life.</p>
-          <p>Maybe it's understanding a letter that came in the post.</p>
-          <p>Making sense of a confusing error message.</p>
-          <p>Finding a new way to use what's already in your fridge.</p>
-          <p>Or finding out that an idea you've had in your head for ages can become a picture.</p>
-          <p class="beat">You don't have to try everything.</p>
-          <p>Sometimes one small discovery is enough to change what you think is possible.</p>
-      </div>
-      <figure class="pf-side" data-r="wipe">
-        <div class="ph" data-drift><img src="../assets/jewel-lash.jpg" alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." width="428" height="642" decoding="async"></div>
-        <figcaption>It's in the details.</figcaption>
-      </figure>
-    </div>
-    <div class="fcards" id="fcards"></div>
-  </div>
-</section>
 
 <!-- MEET THE THREE -->
-<section class="section three" id="three" aria-labelledby="three-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The three</span><span class="label mute">Tap a name</span></div>
-    <h2 id="three-title" class="display" data-r="rise" style="margin-bottom:clamp(32px,5vw,64px)">THREE NAMES YOU’LL HEAR A LOT</h2>
-    <div class="three-lede" data-r="fade">
-      <p>ChatGPT, Gemini, and Claude. You may already be using one of them.</p>
-      <p>Perhaps you ask questions, look things up, or get help writing something.</p>
-      <p>But that’s only scratching the surface.</p>
-      <p>These are powerful AI tools that can do far more than have a conversation. They can help you create things you never imagined making yourself, explore fascinating new experiences, and, through connections with other apps and services, do things you might not have known were possible.</p>
-      <p>And the more you discover about what they can do, the more useful and interesting they become.</p>
-      <p>Here are just a few possibilities you might like to know about.</p>
-    </div>
-    <div class="three-tabs" role="tablist" aria-label="Choose an app" id="threeTabs"></div>
-    <div class="three-panel" role="tabpanel" id="threePanel" aria-live="polite"></div>
-    <p class="three-note">And remember: these are examples, not limits. All three have many overlapping capabilities, and their features continue to evolve. Some experiences require additional apps, connections, subscriptions, or depend on which country you’re in.</p>
-    <div class="know"><b>GOOD TO KNOW</b><p>ChatGPT, Gemini, and Claude can all remember useful details about you, depending on their settings and available features.</p><p>That means you may not have to explain your preferences, interests, or plans from the beginning every time you start a conversation.</p><p>They don’t remember everything, and you have controls over what information they keep or use. Those controls differ between apps.</p></div>
-    <p class="three-foot">Based on what each company says its app can do. Features vary by plan, device and country.</p>
-  </div>
-</section>
 
-<section class="section chapter" id="llm" aria-labelledby="llm-title">
-  <div class="wrap">
-    <h2 id="llm-title" class="display ch-title" data-r="rise">A NEW KIND OF INTELLIGENCE.</h2>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>For most of human history, intelligence was something we associated with people and other living things.</p>
-          <p>Now we’re interacting with something entirely different.</p>
-          <p class="beat">Artificial intelligence.</p>
-          <p>ChatGPT, Gemini, and Claude are examples of something called large language models, or LLMs.</p>
-          <p>That’s the name for AI systems trained on enormous amounts of information that can understand and generate language, allowing us to have surprisingly natural conversations with them.</p>
-          <p>And perhaps one of the most surprising things isn’t simply what they can do.</p>
-          <p>It’s how quickly we’ve welcomed them into our everyday lives.</p>
-          <p>We can ask questions, exchange ideas, create things, and explore possibilities that would have seemed extraordinary only a few years ago.</p>
-          <p>And we can do all of this in ordinary language.</p>
-          <p>No special commands. No technical knowledge. Just a conversation.</p>
-          <p>But here’s something I find even more fascinating.</p>
-          <p>Even the researchers building these systems don’t yet fully understand everything happening inside them.</p>
-          <p>They understand how the systems are designed and trained, but exactly how some of their remarkable abilities develop and work is still being studied.</p>
-          <p class="beat">Think about that for a moment.</p>
-          <p>We’ve created technology capable of doing extraordinary things, and we’re still discovering how some of those abilities emerge.</p>
-          <p class="ed-q voice">We’re living through a moment when something once unimaginable is becoming wonderfully ordinary.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section aria-labelledby="llm-title" class="section chapter" id="llm">
+<div class="wrap">
+<h2 class="display ch-title" data-r="rise" id="llm-title">A NEW KIND OF INTELLIGENCE.</h2>
+<div class="ch-body">
+<div class="ed" data-r="fade">
+<p>For most of human history, intelligence was something we associated with people and other living things.</p>
+<p>Now we’re interacting with something entirely different.</p>
+<p class="beat">Artificial intelligence.</p>
+<p>ChatGPT, Gemini, and Claude are examples of something called large language models, or LLMs.</p>
+<p>That’s the name for AI systems trained on enormous amounts of information that can understand and generate language, allowing us to have surprisingly natural conversations with them.</p>
+<p>And perhaps one of the most surprising things isn’t simply what they can do.</p>
+<p>It’s how quickly we’ve welcomed them into our everyday lives.</p>
+<p>We can ask questions, exchange ideas, create things, and explore possibilities that would have seemed extraordinary only a few years ago.</p>
+<p>But here’s something I find even more fascinating.</p>
+<p>Even the researchers building these systems don’t yet fully understand everything happening inside them.</p>
+<p>They understand how the systems are designed and trained, but exactly how some of their remarkable abilities develop and work is still being studied.</p>
+<p class="beat">Think about that for a moment.</p>
+<p>We’ve created technology capable of doing extraordinary things, and we’re still discovering how some of those abilities emerge.</p>
+<p class="ed-q voice">We’re living through a moment when something once unimaginable is becoming wonderfully ordinary.</p>
+</div>
+</div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>EVEN ITS CREATORS CANNOT EXPLAIN EVERY ANSWER.</h3><p>Researchers can inspect AI systems, but why a large model produces a particular answer is not always fully understood.</p></aside>
+</section><article class="disc-block">
+<p class="label disc-n">Discovery 02</p>
+<h3 class="display disc-h" data-r="rise">WHAT IF AI COULD LOOK THROUGH YOUR CAMERA WHILE YOU TALK?</h3>
+<div class="ed" data-r="fade">
 
+
+
+
+
+</div>
+<p>Some AI apps can combine a live camera view with a spoken conversation.</p><p>You can point your phone at something unfamiliar, ask a question, change the angle and follow up without starting again.</p><p>The surprise is not that AI can talk. It is that a conversation can include what is happening right in front of you. Availability varies by app, device and plan.</p></article><section aria-labelledby="voice-title" class="section spread" id="voice">
+<div class="wrap">
+<div class="grid" style="padding-block:8px">
+<figure class="spread-img" data-r="wipe">
+<div class="ph" data-drift=""><img alt="Close-up of lips covered in red crystals with a gold detail." decoding="async" height="528" src="../assets/red-lips.jpg" width="428"/></div>
+</figure>
+<div class="spread-text">
+<span class="label">The art of conversation</span>
+<h2 class="display" data-r="rise" id="voice-title" style="font-size:clamp(48px,7vw,104px)">WHEN A CONVERSATION CAN SEE, TOO.</h2>
+<p class="voice" data-r="fade">Voice and camera features differ between apps. Some allow live visual conversations; others support voice or shared images separately.</p>
+<div class="apps3" data-r="stagger">
+<div><b>ChatGPT</b><p>ChatGPT offers spoken conversations; some versions also let you share live video or images.</p></div>
+<div><b>Gemini</b><p>Gemini Live can combine spoken conversation with a camera view on supported devices.</p></div>
+<div><b>Claude</b><p>Claude offers voice conversation on supported apps, while visual features differ.</p></div>
+</div>
+<p class="apps3-note">Features and limits vary by app, device, plan and country.</p>
+</div>
+</div>
+</div>
+</section>
 <!-- FULL COLLECTION -->
-<section class="section explorer" id="portfolio" aria-labelledby="portfolio-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">The full collection</span><span class="label mute">Chapter 06</span></div>
-    <div class="grid">
-      <h2 id="portfolio-title" class="display ch-title ex-title" data-r="rise">Curious what else is possible?</h2>
-      <div class="ex-text">
-        <div class="ed" data-r="fade">
-          <p>I've collected 23 everyday situations where AI can help, surprise you or get creative.</p>
-          <p>Open whichever one catches your eye.</p>
-          <p>You don't need to work through them in order.</p>
-        </div>
-        <button class="btn red explore-btn" id="exploreBtn" type="button" aria-expanded="false" aria-controls="collection">EXPLORE ALL 23 IDEAS <span class="plus" aria-hidden="true">+</span></button>
-      </div>
-    </div>
-    <div class="collection" id="collection" hidden>
-    <div class="filters" role="group" aria-label="Filter workflows" id="filters"></div>
-    <ul class="index" id="index"></ul>
-    </div>
-  </div>
-</section>
 
 <!-- CHECKLIST -->
-<section class="section check" id="checklist" aria-labelledby="check-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label">Your first step</span><span class="label mute">Chapter 07</span></div>
-    <div class="grid">
-      <div class="ch-head">
-        <h2 id="check-title" class="display" data-r="rise">Start small</h2>
-        <div class="ed" data-r="fade">
-          <p>You don't need a new hobby, a tech course or another complicated project.</p>
-          <p>Start with something you're already curious about.</p>
-          <p class="beat">Ask a real question. Show it a photo. Try talking instead of typing.</p>
-          <p>You don't have to master AI to enjoy finding out what it can do.</p>
-        </div>
-      </div>
-      <div class="ck-side">
-        <p class="label mute ck-opt">Optional</p>
-        <p class="ck-lead">If you'd like a nudge, here are three easy ones. Tick them off, or don't.</p>
-      <ol id="checklist-list" data-r="stagger">
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Ask one real question</b><p>Something from your actual day: a confusing letter, a dinner idea, a trip.</p></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Show it a photo</b><p>A plant, a label, a sign in another language. Ask what it is.</p></span></button></li>
-        <li><button class="tick" type="button" aria-pressed="false"><span class="box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 8.5l4 4 8-9"/></svg></span><span><b>Try a follow-up question</b><p>Don't stop at the first answer. Ask "Can you explain that more simply?" or "What else could I try?"</p></span></button></li>
-      </ol>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CONCLUSION -->
-<section class="section conclusion" id="conclusion" aria-labelledby="conclusion-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label" id="conclusion-title">A note from me</span><span class="label mute">Chapter 08</span></div>
-    <div class="ch-body">
-      <div class="ed" data-r="fade">
-          <p>I don't know what AI will be able to do a year from now.</p>
-          <p class="beat">Nobody does.</p>
-          <p>But I know what I'll be looking for.</p>
-          <p>I'll skip the launch hype and the people selling secrets.</p>
-          <p>I'll be looking for the small moments.</p>
-          <p class="beat">The letter that finally makes sense.</p>
-          <p class="beat">The photo that tells you something new.</p>
-          <p class="beat">The idea in your head that turns into a picture.</p>
-          <p class="ed-q voice">The best discoveries start with a question you almost didn't ask.</p>
-          <p class="ed-sign concl-sign voice">See you in the loop.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section aria-labelledby="yourlife-title" class="section chapter" id="yourlife">
+<div class="wrap">
+<div class="section-head"><span class="label">Make it personal</span><span class="label mute">Chapter 06</span></div>
+<div class="grid">
+<h2 class="display ch-title yl-title" data-r="rise" id="yourlife-title">NOW IT’S YOUR TURN.</h2><p>23 ideas to play with using AI apps you already have. Here are four to get you curious. Open the full collection for all 23 and their prompts.</p>
+<div class="yl-text ed" data-r="fade">
 
-<!-- DIGITAL EDITION -->
-<section class="section buy" id="buy" aria-labelledby="buy-title">
-  <div class="wrap">
-    <div class="section-head"><span class="label mute">Volume I</span></div>
-    <div class="grid">
-      <figure class="buy-img" data-r="wipe">
-        <div class="ph" data-drift><img src="../assets/pearl-lips.jpg" alt="Sculpted lips trimmed in gold, set with crystals and pearls." width="428" height="535" decoding="async"></div>
-      </figure>
-      <div class="buy-main">
-        <h2 id="buy-title" class="display" data-r="rise">More to explore.</h2>
-        <div class="ed" data-r="fade">
-          <p class="ed-q voice">THIS IS JUST THE BEGINNING.</p>
-          <p>There’s so much more to discover, and I’m still learning right alongside you.</p>
-          <p>I’ll keep exploring, experimenting, and sharing the discoveries I think are worth knowing about.</p>
-          <p>Stay curious. Stay in the loop.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+
+
+
+</div>
+<figure class="pf-side" data-r="wipe">
+<div class="ph" data-drift=""><img alt="Macro of a jewelled eyelash beside a crystal-studded stiletto heel." decoding="async" height="642" src="../assets/jewel-lash.jpg" width="428"/></div>
+<figcaption>It's in the details.</figcaption>
+</figure>
+</div>
+<div class="fcards" id="fcards"></div>
+<div class="ideas-shortcut"><a class="btn red" data-open-ideas="true" href="#portfolio">EXPLORE ALL 23 IDEAS <span aria-hidden="true" class="arrow">→</span></a></div>
+</div><aside class="inline-discovery" role="note"><p class="inline-kicker">DID YOU KNOW?</p><h3>AI CAN HELP FIND PLANETS IN TELESCOPE DATA.</h3><p>Researchers have used machine learning to detect faint planetary signals that are easy to overlook in huge datasets.</p></aside>
+</section><section aria-labelledby="portfolio-title" class="section explorer" id="portfolio">
+<div class="wrap">
+<div class="section-head"><span class="label">The full collection</span><span class="label mute">23 ideas</span></div>
+<div class="grid">
+<h2 class="display ch-title ex-title" data-r="rise" id="portfolio-title">ALL 23 IDEAS, WHENEVER YOU FEEL LIKE EXPLORING.</h2>
+<div class="ex-text">
+<div class="ed" data-r="fade">
+<p>I've collected 23 everyday situations where AI can help, surprise you or get creative.</p>
+<p>Open whichever one catches your eye.</p>
+<p>You don't need to work through them in order.</p>
+</div>
+<button aria-controls="collection" aria-expanded="false" class="btn red explore-btn" id="exploreBtn" type="button">EXPLORE ALL 23 IDEAS <span aria-hidden="true" class="plus">+</span></button>
+</div>
+</div>
+<div class="collection" hidden="" id="collection">
+<div aria-label="Filter workflows" class="filters" id="filters" role="group"></div>
+<ul class="index" id="index"></ul>
+</div>
+</div>
 </section>
+<!-- CLOSING NOTE -->
 
 <!-- FAQ -->
-<section class="section faq" id="faq" aria-labelledby="faq-title">
-  <div class="wrap">
-    <div class="grid">
-      <h2 id="faq-title" class="display" style="font-size:clamp(40px,5vw,72px)" data-r="rise">Questions</h2>
-      <div class="qa">
-        <details><summary>Do I need to know anything technical?</summary><p>Not at all. IN THE LOOP is for curious people, not computer experts. You don't need to set anything up or learn to code.</p></details>
-        <details><summary>Do I need a paid AI plan?</summary><p>No. Many AI features work on free plans. What you get depends on the app, your country and your plan. Some advanced tools cost money.</p></details>
-        <details><summary>Is this an AI course?</summary><p>No. It's a magazine about what's happening in AI, what it can do and why it matters. The practical examples are there if you feel like trying something yourself.</p></details>
-        <details><summary>Which AI apps does it cover?</summary><p>The practical examples use ChatGPT, Gemini and Claude. The magazine also shows other kinds of AI tools, including specialist creative tools.</p></details>
-        <details><summary>Is my private information safe?</summary><p>Be careful what you share with any AI app. Don't upload passwords, ID numbers or private details it doesn't need. Check each app's privacy settings, especially before you connect other services.</p></details>
-      </div>
-    </div>
-  </div>
+<section aria-labelledby="faq-title" class="section faq" id="faq">
+<div class="wrap">
+<div class="grid">
+<h2 class="display" data-r="rise" id="faq-title" style="font-size:clamp(40px,5vw,72px)">Questions</h2>
+<div class="qa">
+<details><summary>Do I need to know anything technical?</summary><p>Not at all. IN THE LOOP is for curious people, not computer experts. You don't need to set anything up or learn to code.</p></details>
+<details><summary>Do I need a paid AI plan?</summary><p>No. Many AI features work on free plans. What you get depends on the app, your country and your plan. Some advanced tools cost money.</p></details>
+<details><summary>Is this an AI course?</summary><p>No. It's a magazine about what's happening in AI, what it can do and why it matters. The practical examples are there if you feel like trying something yourself.</p></details>
+<details><summary>Which AI apps does it cover?</summary><p>The practical examples use ChatGPT, Gemini and Claude. The magazine also shows other kinds of AI tools, including specialist creative tools.</p></details>
+<details><summary>Is my private information safe?</summary><p>Be careful what you share with any AI app. Don't upload passwords, ID numbers or private details it doesn't need. Check each app's privacy settings, especially before you connect other services.</p></details>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="buy-title" class="section buy" id="buy">
+<div class="wrap">
+<div class="section-head"><span class="label mute">Volume I</span></div>
+<div class="grid">
+<figure class="buy-img" data-r="wipe">
+<div class="ph" data-drift=""><img alt="Sculpted lips trimmed in gold, set with crystals and pearls." decoding="async" height="535" src="../assets/pearl-lips.jpg" width="428"/></div>
+</figure>
+<div class="buy-main">
+<h2 class="display" data-r="rise" id="buy-title">More to explore.</h2>
+<div class="ed" data-r="fade">
+<p class="ed-q voice">THIS IS JUST THE BEGINNING.</p>
+<p>And one last thought.</p>
+<p>AI may give us extraordinary tools, but it’s the people who use them, with imagination, ethics, and purpose, who will change the world.</p>
+<p class="ed-q voice">The key is in your hands. What will you unlock?</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 </main>
-
 <footer>
-  <div class="wrap label mute">
-    <span>The Editorial Issue · Volume I · Living In The Loop</span>
-    <span>© 2026 Sana Faham</span>
-  </div>
+<div class="wrap label mute">
+<span>The Editorial Issue · Volume I · Living In The Loop</span>
+<span>© 2026 Sana Faham</span>
+</div>
 </footer>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 <script>
-/* ===== Launch settings. Checkout stays inactive until both are filled in. ===== */
-const CONFIG = {
-  gumroadUrl: "",        // your Gumroad product link, e.g. https://yourname.gumroad.com/l/in-the-loop
-  price: "",             // empty until the owner approves a price
-  priceConfirmed: false, // set to true only after the price above is approved
-  contact: ""            // optional line under the closing button
-};
-
 const MOTION = document.documentElement.classList.contains("motion");
 (function(){
   const root=document.documentElement, img=document.querySelector(".cover-img img");
@@ -1250,20 +1161,6 @@ const pad = n=>String(n).padStart(2,"0");
 /* ---- Toast ---- */
 let tt;
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),2400);}
-
-/* ---- Purchase state ---- */
-const LIVE = /^https:\/\/([a-z0-9-]+\.)?gumroad\.com\/l\/\S+$/i.test(CONFIG.gumroadUrl) && CONFIG.priceConfirmed === true && /\d/.test(CONFIG.price);
-$$(".js-price").forEach(el=>{ if(LIVE){el.textContent=CONFIG.price;} else {el.textContent="Launch price to be announced";el.classList.add("soon");} });
-$$(".js-buy").forEach(a=>{
-  if (LIVE){ a.href=CONFIG.gumroadUrl; a.target="_blank"; }
-  else {
-    a.href="#buy"; a.removeAttribute("target");
-    a.setAttribute("aria-disabled","true");
-    a.innerHTML="Coming soon";
-    a.addEventListener("click",e=>{e.preventDefault();toast("The digital edition is not on sale yet.");});
-  }
-});
-if (CONFIG.contact && $(".js-contact")){ const c=$(".js-contact"); c.textContent=CONFIG.contact; c.hidden=false; }
 
 /* ---- Meet the three ---- */
 const THREE = [
@@ -1509,6 +1406,11 @@ exploreBtn.addEventListener("click",()=>{
   exploreBtn.setAttribute("aria-expanded",open); collection.hidden=!open;
   if(open && MOTION){ index.classList.remove("swap"); void index.offsetWidth; index.classList.add("swap"); }
 });
+/* Every collection shortcut opens the full library before navigating. */
+$$('[data-open-ideas="true"]').forEach(link=>link.addEventListener("click",()=>{
+  exploreBtn.setAttribute("aria-expanded","true");
+  collection.hidden=false;
+}));
 renderFilters(); renderIndex(false); openRow(2);
 
 /* ---- Checklist ticks ---- */
