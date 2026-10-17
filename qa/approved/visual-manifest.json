@@ -1,0 +1,13 @@
+{
+  "qa/baselines/bill-invitation.png": "ff02f01f7f2bd6099f17727054071db038137b629ad71150131fbb8f7a1317ce",
+  "qa/baselines/carson-introduction.png": "6e5d55c81797bc76d387d0d1dd746bffbe39326df17e266f8004e381a20743e1",
+  "qa/baselines/carson-name.png": "f3792bacf8bfce515a845993f161a801402895ccaba087191f898495e5db593b",
+  "qa/baselines/closing.png": "6706722fae3d93679870e0a3612ecab1abddce9676778493ebd72fc4b2a6e2b3",
+  "qa/baselines/cover-introduction.png": "5f94acc5c19c10e0ebf6297e0e87ce9cd04db4442c5c1144e2df5ad5d266a89a",
+  "qa/baselines/cover-photo.png": "1f37307f47f33f90e49c2463404283a6171a60bf5829c22eeded5deac3c4100b",
+  "qa/baselines/ideas-first.png": "224fdc8ff008f53f0fd2e60747c454adfe0dad039c6250c6d2d952c57465493c",
+  "qa/baselines/ideas-last.png": "0c578766723514daecb9127a9d94372390f12f3aa45a7de8f058ac0ad2275898",
+  "qa/baselines/night-invitation.png": "94d349bd6b6d5ef2c12090525e92be4b367aba00f19f0ab24d18ca9f5e7e9cb6",
+  "qa/baselines/photo-invitation.png": "8f9f96c464f1f66518f5577f4d38098008cb7b82c61821d5fe8cf13c53bbf907",
+  "qa/baselines/video.png": "3cc386e189f6ee83a0dee5e495c2ec29c7df86768ea51a1b31241577a22e6e67"
+}

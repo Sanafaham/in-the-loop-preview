@@ -1,0 +1,63 @@
+name: Magazine regression protection
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: magazine-qa-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  approval-lock:
+    name: Approved edition lock
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check immutable approval boundary
+        env:
+          QA_BASE_SHA: ${{ github.event.pull_request.base.sha || '24d8c4ec9a8c6e0755daff3df803165d5bab7b5e' }}
+        run: node qa/guard-lock.mjs
+  integrity:
+    name: Content and asset integrity
+    needs: approval-lock
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run test:integrity
+  browser:
+    name: Browser and visual regression
+    needs: integrity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps webkit firefox
+      - run: npm run test:browser
+      - name: Keep approved, candidate, diff and failure evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: magazine-regression-evidence
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
