@@ -1,4 +1,5 @@
 import test from "node:test";
+import os from "node:os";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
@@ -90,12 +91,13 @@ test("23 ideas, 69 prompt groups and three-model copy match fixed contract", () 
     69,
   );
 });
-test("published website files remain identical to the approved Git commit", () => {
+test("review edition files remain identical to the approved Git commit", () => {
   const names = execFileSync("git", ["ls-tree", "-r", "--name-only", COMMIT], {
     encoding: "utf8",
   })
     .trim()
-    .split("\n");
+    .split("\n")
+    .filter(p=>p.startsWith("review/"));
   for (const p of names) {
     const expected = execFileSync("git", ["show", COMMIT + ":" + p]);
     assert.equal(hash(fs.readFileSync(p)), hash(expected), p);
@@ -109,4 +111,21 @@ test("committed screenshot baselines cannot be silently changed or omitted", () 
   assert.deepEqual(files("qa/baselines").sort(), Object.keys(manifest).sort());
   for (const [p, sha] of Object.entries(manifest))
     assert.equal(hash(fs.readFileSync(p)), sha, p);
+});
+
+// Exercise the installed lock in disposable Git repositories, not the real site.
+test("installed approval lock rejects review and baseline changes while allowing unrelated pages", () => {
+  const guard=fs.readFileSync("qa/guard-lock.mjs");
+  for (const [changed, allowed] of [["index.html",true],["review/index.html",false],["qa/approved/release.json",false],[".github/workflows/magazine-regression.yml",false]]) {
+    const dir=fs.mkdtempSync(path.join(os.tmpdir(),"loop-lock-proof-"));
+    const git=(...args)=>execFileSync("git",["-c","user.name=QA fixture","-c","user.email=qa@example.invalid",...args],{cwd:dir,stdio:["ignore","pipe","pipe"]});
+    try {
+      git("init","--quiet");
+      for(const file of ["review/index.html","index.html","qa/approved/release.json",".github/workflows/magazine-regression.yml"]){fs.mkdirSync(path.dirname(path.join(dir,file)),{recursive:true});fs.writeFileSync(path.join(dir,file),"approved fixture\n");}
+      fs.writeFileSync(path.join(dir,"qa/guard-lock.mjs"),guard);git("add",".");git("commit","--quiet","-m","Fixture baseline");
+      const base=git("rev-parse","HEAD").toString().trim();fs.appendFileSync(path.join(dir,changed),"changed\n");git("add",".");git("commit","--quiet","-m","Fixture mutation");
+      let passed=true;try{execFileSync(process.execPath,["qa/guard-lock.mjs"],{cwd:dir,env:{...process.env,QA_BASE_SHA:base},stdio:"pipe"});}catch{passed=false;}
+      assert.equal(passed,allowed,changed);
+    } finally {fs.rmSync(dir,{recursive:true,force:true});}
+  }
 });

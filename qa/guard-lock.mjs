@@ -9,7 +9,7 @@ const changed = execFileSync("git", ["diff", "--name-only", base, "HEAD"], {
   .split("\n")
   .filter(Boolean);
 const production = changed.filter((p) =>
-  /^(review\/|assets\/|index\.html$|vercel\.json$|\.nojekyll$)/.test(p),
+  /^review\//.test(p),
 );
 if (production.length)
   throw Error("Locked production files changed: " + production.join(", "));

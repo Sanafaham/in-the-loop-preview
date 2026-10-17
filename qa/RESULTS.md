@@ -10,7 +10,7 @@
 
 ## Checks established
 
-Eight integrity tests plus 126 browser-project cases: 20 behavior/content tests and one visual case across six profiles. WebKit: 375, 390, 414 and 1440 pixels. Firefox: 390 and 1440 pixels. Visual comparisons run in the four WebKit profiles; the two Firefox visual cases are intentionally skipped.
+Nine integrity tests plus 126 browser-project cases: 20 behavior/content tests and one visual case across six profiles. WebKit: 375, 390, 414 and 1440 pixels. Firefox: 390 and 1440 pixels. Visual comparisons run in the four WebKit profiles; the two Firefox visual cases are intentionally skipped.
 
 All 23 ideas and 69 tool tabs are frozen. Idea 23 contains two additional approved alternatives, making 71 individual prompt texts; the click/copy test checks every variant.
 
@@ -18,7 +18,7 @@ Eleven committed component screenshots cover the cover, introduction, comparison
 
 ## Local execution to date
 
-- Integrity: 8/8 passed.
+- Integrity: 9/9 passed, including four installed-lock fixtures proving review/baseline/workflow mutations fail while unrelated website-page edits remain allowed.
 - Controlled mutations in isolated temporary copies: changed HTML, changed MP4 and changed reference PNG were all rejected with a nonzero test exit. Approved files were untouched.
 - Both MP4 and WebM real play/sound/pause tests passed three consecutive runs at 390px after source-reset setup was corrected. The setup waits for the pause event before changing formats, avoiding an artificial stale button label caused by the test resetting a playing media source.
 - The first complete local matrix finished with 113 passed, 7 failed and 6 skipped. The failures were six Firefox media cases blocked by this execution sandbox and one 414px screenshot taken before a scroll-reveal observer ran. No magazine files were changed to resolve them.

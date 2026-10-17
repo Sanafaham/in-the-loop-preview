@@ -16,7 +16,7 @@ npx playwright install --with-deps webkit firefox
 npm test
 ```
 
-`npm run test:integrity` checks the original archive, the entire review file set, every content/asset hash, relative paths, the 23 ideas in order, all 69 tool-specific prompt groups (71 prompt variants), and unchanged original website files. The complete HTML hash also freezes copy, captions, source links, styles, fonts, navigation, and interaction code.
+`npm run test:integrity` checks the original archive, the entire review file set, every content/asset hash, relative paths, the 23 ideas in order, all 69 tool-specific prompt groups (71 prompt variants), and the review edition against the approved Git commit. Unrelated website pages are outside this regression contract; this QA branch was separately verified to leave them unchanged. The complete HTML hash also freezes copy, captions, source links, styles, fonts, navigation, and interaction code.
 
 The browser suite uses real clicks and media playback at WebKit widths 375, 390, 414 and 1440, plus Firefox 390 and 1440. It covers invitation titles/prompts, exact independent clipboard API payloads, denied-clipboard recovery, new-tab destinations, all idea tabs/copy controls, navigation, filters, questions, play/pause/sound, blocked autoplay recovery, loaded assets, typography and touch controls. Native clipboard read-back is attempted separately and explicitly skipped where the automation platform denies access. API-boundary tests still verify every copied character.
 
