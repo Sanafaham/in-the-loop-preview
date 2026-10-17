@@ -252,6 +252,7 @@ for (const [i, c] of contract.invitations.entries()) {
 test("all 23 ideas retain exact headings, descriptions and order; all 69 tool tabs copy all 71 exact prompt variants", async ({
   page,
 }) => {
+  test.setTimeout(180000); // 71 real copy actions must also finish on a busy CI runner.
   await clipboard(page);
   await ready(page);
   await openIdeas(page);
