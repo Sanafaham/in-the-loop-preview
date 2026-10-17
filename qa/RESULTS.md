@@ -21,7 +21,13 @@ Eleven committed component screenshots cover the cover, introduction, comparison
 - Integrity: 8/8 passed.
 - Controlled mutations in isolated temporary copies: changed HTML, changed MP4 and changed reference PNG were all rejected with a nonzero test exit. Approved files were untouched.
 - Both MP4 and WebM real play/sound/pause tests passed three consecutive runs at 390px after source-reset setup was corrected. The setup waits for the pause event before changing formats, avoiding an artificial stale button label caused by the test resetting a playing media source.
-- Full multi-profile execution and hosted Actions results are recorded in the follow-up execution section before delivery. This initial branch record does not claim those runs are complete.
+- The first complete local matrix finished with 113 passed, 7 failed and 6 skipped. The failures were six Firefox media cases blocked by this execution sandbox and one 414px screenshot taken before a scroll-reveal observer ran. No magazine files were changed to resolve them.
+- After waiting for metadata and scroll reveals, the visual cases passed at all four WebKit widths (44 component comparisons, zero changed pixels).
+- After allowing the local Firefox utility/audio subprocess, both media formats, sound/pause controls and blocked-autoplay recovery passed at Firefox 390px and 1440px: six targeted reruns passed.
+- All three invitations passed exact-copy, independent-feedback, popup-destination and clipboard-denial tests in every profile. Native clipboard write/read-back also passed for all three invitations in both Firefox profiles. Four WebKit native-read tests explicitly skipped on unavailable read permission.
+- All 23 ideas, all 69 tool tabs and all 71 approved prompt variants passed their real click/copy tests in every profile.
+- All image/font/video HTTP byte checks, relative paths, navigation, Start Reading, filters, featured cards, FAQs, touch/layout checks and JavaScript-error checks passed in every profile.
+- Hosted CI results and downloadable HTML reports/traces are available in [PR #1 checks](https://github.com/Sanafaham/in-the-loop-preview/pull/1/checks). Consult the check for the current head commit. The final delivery report states the verified hosted run result; this file records local execution separately.
 
 ## Platform and enforcement limitations
 
@@ -29,6 +35,10 @@ Eleven committed component screenshots cover the cover, introduction, comparison
 - Native clipboard read-back is attempted; denied or unresolved automation-platform permission is reported as a skip. Exact clipboard API payloads, all three independent invitation buttons, all 71 idea prompts, and rejection feedback are tested through real clicks independently of native permission.
 - ChatGPT destination buttons are actually clicked and their popup URLs checked against the approved destinations; the external response is intercepted so no prompt or private data is sent. Third-party service availability is not an uptime guarantee.
 - The archive contains one approved comparison reel in MP4 and WebM, not three distinct videos. Both original formats and the poster remain byte-identical.
-- The local browser sandbox requires a test-process workaround for Firefox (`MOZ_DISABLE_CONTENT_SANDBOX=1`); this does not change the website or CI deployment configuration.
+- The local browser sandbox requires a test-process workaround for Firefox (`MOZ_DISABLE_CONTENT_SANDBOX=1 MOZ_DISABLE_RDD_SANDBOX=1 MOZ_DISABLE_UTILITY_SANDBOX=1`); this does not change the website or CI deployment configuration.
 - The GitHub integration returned 403 `Resource not accessible by integration` for branch-protection administration. Required checks were not configured. CODEOWNERS and test jobs alone do not prevent direct pushes or merges.
 - This draft QA branch must be reviewed and merged before its PR workflow can protect future work. Nothing has been merged or deployed by this assignment.
+
+## Media inspection
+
+`ffprobe` verified both original 1280×720 assets have audio: MP4 uses H.264/AAC and WebM uses VP9/Opus. Browser tests verify advancing playback time, unmuted state/positive volume and stable paused time. Audible speaker output and physical iPhone playback are not claimed.
