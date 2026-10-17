@@ -1,0 +1,17 @@
+{
+  "name": "in-the-loop-regression-protection",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npm run test:integrity && npm run test:browser",
+    "test:integrity": "node --test qa/integrity.test.mjs",
+    "test:browser": "playwright test",
+    "qa:serve": "node qa/server.mjs",
+    "qa:guard": "node qa/guard-lock.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "pixelmatch": "8.0.0",
+    "pngjs": "7.0.0"
+  }
+}

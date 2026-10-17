@@ -1,0 +1,6 @@
+# Approval intent only. Enforced owner review requires branch-protection/ruleset administration.
+/review/ @Sanafaham
+/qa/ @Sanafaham
+/.github/ @Sanafaham
+/package*.json @Sanafaham
+/playwright.config.mjs @Sanafaham
