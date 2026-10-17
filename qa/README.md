@@ -34,7 +34,7 @@ Covered views: cover photograph and introduction, video and controls, each of th
 
 ## Merge enforcement and deployment
 
-The workflow runs on PRs and pushes to the QA branch. It has read-only repository permissions and no deployment step. After this QA PR is reviewed and merged, it will run for future PRs. Until then the workflow remains on this separate branch.
+The workflow runs on every PR and manual dispatch. A separate push trigger is omitted to avoid duplicate runs for the same PR commit. It has read-only repository permissions and no deployment step. After this QA PR is reviewed and merged, it will run for future PRs. Until then the workflow remains on this separate branch.
 
 Required statuses to configure administratively: `Approved edition lock`, `Content and asset integrity`, `Browser and visual regression`. Also require owner review for `CODEOWNERS`, prevent bypass/direct pushes to `gh-pages`, and do not permit baseline changes without owner review. Merely adding this workflow or CODEOWNERS does **not** configure branch protection.
 

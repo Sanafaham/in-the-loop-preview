@@ -42,3 +42,13 @@ Eleven committed component screenshots cover the cover, introduction, comparison
 ## Media inspection
 
 `ffprobe` verified both original 1280×720 assets have audio: MP4 uses H.264/AAC and WebM uses VP9/Opus. Browser tests verify advancing playback time, unmuted state/positive volume and stable paused time. Audible speaker output and physical iPhone playback are not claimed.
+
+## Hosted verification and transient-feedback sampling
+
+[Hosted PR run on d4f54dce](https://github.com/Sanafaham/in-the-loop-preview/actions/runs/38986561378) completed successfully: approval lock passed, all 9 integrity tests passed, and the browser job reported 120 passed and 6 expected skips. This includes both video formats and controls, all invitations, all 71 prompt variants, navigation, responsive checks and all 44 visual comparisons.
+
+The redundant push run on the same commit reported two failures when polling the temporary 1.8-second `Selected` label after a WebKit click returned. Its [failure evidence is preserved](https://github.com/Sanafaham/in-the-loop-preview/actions/runs/38986558514). The test now observes the actual label/selection/toast mutation during the real click, also checking the exact rejected clipboard payload and persistent complete text selection. Ten targeted repetitions at the affected 375px and 414px profiles passed. No magazine code was altered. The duplicate push trigger was removed; every PR and manual dispatch still runs the complete gate.
+
+A four-worker stress run also exceeded the former 90-second deadline for the 71-copy case. Its assertions were preserved and only that long case received a 180-second deadline; four simultaneous repetitions then passed. The workflow uses two workers by default.
+
+The current-head CI result is available from the PR checks link above; the final delivery report records that result separately from this historical evidence.

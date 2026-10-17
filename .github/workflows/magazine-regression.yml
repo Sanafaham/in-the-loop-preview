@@ -1,8 +1,6 @@
 name: Magazine regression protection
 on:
   pull_request:
-  push:
-    branches: [qa/approved-edition-regression]
   workflow_dispatch:
 permissions:
   contents: read

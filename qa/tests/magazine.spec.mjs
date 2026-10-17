@@ -294,8 +294,35 @@ test("idea-copy clipboard failure selects complete text for manual copying", asy
   await openIdeas(page);
   if ((await page.locator("#r-1").getAttribute("aria-expanded")) !== "true")
     await page.locator("#r-1").click();
+  await page.locator("#d-1 .copy").evaluate((button) => {
+    window.__fallbackFeedback = [];
+    new MutationObserver(() =>
+      window.__fallbackFeedback.push({
+        label: button.textContent,
+        selected: getSelection().toString(),
+        toast: document.querySelector("#toast").textContent,
+        shown: document.querySelector("#toast").classList.contains("show"),
+      }),
+    ).observe(button, { childList: true, subtree: true, characterData: true });
+  });
   await page.locator("#d-1 .copy").click();
-  await expect(page.locator("#d-1 .copy")).toHaveText("Selected");
+  // WebKit can finish its native selection handling after the brief label resets.
+  // Observe the real feedback event rather than requiring a later polling tick.
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        window.__fallbackFeedback.find((x) => x.label === "Selected"),
+      ),
+    )
+    .toEqual({
+      label: "Selected",
+      selected: contract.FREE[1].chatgpt.p,
+      toast: "Text selected. Use your device's Copy.",
+      shown: true,
+    });
+  expect(await page.evaluate(() => window.__writes)).toEqual([
+    contract.FREE[1].chatgpt.p,
+  ]);
   expect(await page.evaluate(() => getSelection().toString())).toBe(
     contract.FREE[1].chatgpt.p,
   );
