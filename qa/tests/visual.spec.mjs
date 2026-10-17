@@ -54,6 +54,13 @@ async function position(p, name, selector) {
   if (name === "night-invitation") target = ".spread .try-chatgpt >> nth=0";
   if (name === "bill-invitation") target = ".spread .try-chatgpt >> nth=1";
   const e = p.locator(target);
+  // Full-component screenshots extend beyond a viewport. Scroll each reveal into
+  // view first, so the reference is not captured before its scroll observer runs.
+  for (const reveal of await e.locator("[data-r]").all()) {
+    await reveal.evaluate(el=>scrollTo(0,el.getBoundingClientRect().top+scrollY-120));
+    await p.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  }
+  await p.waitForTimeout(100);
   await e.scrollIntoViewIfNeeded();
   await e.evaluate((el) => {
     document.documentElement.style.scrollBehavior = "auto";

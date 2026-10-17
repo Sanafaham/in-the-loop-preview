@@ -94,9 +94,9 @@ for (const ext of ["mp4", "webm"])
       v.load();
     }, ext);
     await page.locator("#reel").evaluate(async (v) => {
-      if (v.readyState < 2)
+      if (v.readyState < 1)
         await new Promise((resolve, reject) => {
-          v.addEventListener("loadeddata", resolve, { once: true });
+          v.addEventListener("loadedmetadata", resolve, { once: true });
           v.addEventListener(
             "error",
             () => reject(Error("Media load error " + v.error?.code)),
